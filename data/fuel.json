@@ -38,6 +38,18 @@
     "town": "Martorell"
    },
    {
+    "address": "Avinguda Compte del Llobregat, 35",
+    "hours": "L-D: 24H",
+    "lat": "41.484889",
+    "lon": "1.915806",
+    "name": "PETROLOWCOST SL",
+    "prices": {
+     "diesel": 1.689,
+     "g95": 1.409
+    },
+    "town": "Martorell"
+   },
+   {
     "address": "Cr N-2, 591,3",
     "hours": "L-D: 06:00-22:00",
     "lat": "41.464778",
@@ -46,6 +58,18 @@
     "prices": {
      "diesel": 1.864,
      "g95": 1.634
+    },
+    "town": "Martorell"
+   },
+   {
+    "address": "Avenida Comte Llobregat, 107",
+    "hours": "L-D: 24H",
+    "lat": "41.491111",
+    "lon": "1.912722",
+    "name": "NIEVES",
+    "prices": {
+     "diesel": 1.659,
+     "g95": 1.369
     },
     "town": "Martorell"
    },
@@ -74,30 +98,6 @@
     "town": "Martorell"
    },
    {
-    "address": "Avenida Comte Llobregat, 107",
-    "hours": "L-D: 24H",
-    "lat": "41.491111",
-    "lon": "1.912722",
-    "name": "NIEVES",
-    "prices": {
-     "diesel": 1.659,
-     "g95": 1.369
-    },
-    "town": "Martorell"
-   },
-   {
-    "address": "Avinguda Compte del Llobregat, 35",
-    "hours": "L-D: 24H",
-    "lat": "41.484889",
-    "lon": "1.915806",
-    "name": "PETROLOWCOST SL",
-    "prices": {
-     "diesel": 1.689,
-     "g95": 1.409
-    },
-    "town": "Martorell"
-   },
-   {
     "address": "Carretera Nacional Ii Km. 588",
     "hours": "L-D: 24H",
     "lat": "41.482111",
@@ -110,18 +110,6 @@
     "town": "Martorell"
    },
    {
-    "address": "Calle Lapedrosa, 20",
-    "hours": "L-D: 24H",
-    "lat": "41.496417",
-    "lon": "1.825611",
-    "name": "PEDROSA CENTER",
-    "prices": {
-     "diesel": 1.659,
-     "g95": 1.339
-    },
-    "town": "Masquefa"
-   },
-   {
     "address": "Poligono Ind. la Pedrosa, S/N",
     "hours": "L-D: 24H",
     "lat": "41.499528",
@@ -130,6 +118,18 @@
     "prices": {
      "diesel": 1.492,
      "g95": 1.229
+    },
+    "town": "Masquefa"
+   },
+   {
+    "address": "Calle Lapedrosa, 20",
+    "hours": "L-D: 24H",
+    "lat": "41.496417",
+    "lon": "1.825611",
+    "name": "PEDROSA CENTER",
+    "prices": {
+     "diesel": 1.599,
+     "g95": 1.339
     },
     "town": "Masquefa"
    },
@@ -252,7 +252,7 @@
     "town": "Gelida"
    }
   ],
-  "updated": "23/11/2026 14:29:53"
+  "updated": "23/11/2026 14:47:19"
  },
- "fetched": "2026-11-23T14:26:38+01:00"
+ "fetched": "2026-11-23T14:42:13+01:00"
 }
