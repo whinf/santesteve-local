@@ -1,6 +1,24 @@
 {
  "data": {
   "calls": {
+   "874975": {
+    "budget": 8990000,
+    "checked": "2026-11-23",
+    "end": "2026-12-31",
+    "id": "874975",
+    "level": "AUTONOMICA",
+    "organ": "DEPARTAMENT D'AGRICULTURA, RAMADERIA, PESCA I ALIMENTACIÓ",
+    "purpose": "Agricultura, Pesca y Alimentación",
+    "received": "2025-12-15",
+    "region": "CATALUÑA",
+    "start": "",
+    "term": "",
+    "title": "Ayudas a las líneas del Plan de seguros agrarios 2025 (Agroseguro)",
+    "title_ca": "Ajuts a les línies del Pla d'assegurances agràries 2025 (Agroseguro)",
+    "who": [
+     "business"
+    ]
+   },
    "882433": {
     "budget": 74804047,
     "checked": "2026-11-23",
@@ -780,6 +798,60 @@
      "business"
     ]
    },
+   "934800": {
+    "budget": 1000000,
+    "checked": "2026-11-23",
+    "end": "",
+    "id": "934800",
+    "level": "ESTADO",
+    "organ": "ENTIDAD ESTATAL DE SEGUROS AGRARIOS - ENESA",
+    "purpose": "Agricultura, Pesca y Alimentación",
+    "received": "2026-10-13",
+    "region": "MINISTERIO DE AGRICULTURA, PESCA Y ALIMENTACIÓN",
+    "start": "",
+    "term": "31/05/2027",
+    "title": "Ayudas para seguros de las poblaciones acuícolas marinas",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "934857": {
+    "budget": 200000,
+    "checked": "2026-11-23",
+    "end": "",
+    "id": "934857",
+    "level": "ESTADO",
+    "organ": "ENTIDAD ESTATAL DE SEGUROS AGRARIOS - ENESA",
+    "purpose": "Agricultura, Pesca y Alimentación",
+    "received": "2026-10-13",
+    "region": "MINISTERIO DE AGRICULTURA, PESCA Y ALIMENTACIÓN",
+    "start": "",
+    "term": "31/05/2027",
+    "title": "Ayudas para seguros de las poblaciones acuícolas continentales",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "936148": {
+    "budget": 282800,
+    "checked": "2026-11-23",
+    "end": "",
+    "id": "936148",
+    "level": "ESTADO",
+    "organ": "DIRECCIÓN GENERAL DEL INSTITUTO GEOGRÁFICO NACIONAL",
+    "purpose": "Educación",
+    "received": "2026-10-19",
+    "region": "MINISTERIO DE TRANSPORTES Y MOVILIDAD SOSTENIBLE",
+    "start": "",
+    "term": "20 días hábiles",
+    "title": "Resolución, de 5 de octubre de 2026, de la Subsecretaría de Transportes y Movilidad, por la que se hace pública la convocatoria de becas para la formación en el Instituto Geográfico Nacional",
+    "title_ca": "",
+    "who": [
+     "people"
+    ]
+   },
    "936187": {
     "budget": 230000,
     "checked": "2026-11-23",
@@ -852,6 +924,79 @@
      "business"
     ]
    },
+   "937455": {
+    "budget": 697200,
+    "checked": "2026-11-23",
+    "end": "2026-11-23",
+    "id": "937455",
+    "level": "ESTADO",
+    "organ": "CONSEJO ECONÓMICO Y SOCIAL",
+    "purpose": "Otras Prestaciones económicas",
+    "received": "2026-10-23",
+    "region": "MINISTERIO DE TRABAJO Y ECONOMÍA SOCIAL",
+    "start": "2026-10-23",
+    "term": "",
+    "title": "Resolución del presidente del consejo económico y social por la que se establecen las normas reguladoras para la concesión de compensaciones establecidas en el concepto 485 del presupuesto de gastos del ces para el año 2026",
+    "title_ca": "",
+    "who": [
+     "entities",
+     "people"
+    ]
+   },
+   "938077": {
+    "budget": 57000000,
+    "checked": "2026-11-23",
+    "end": "2028-12-31",
+    "id": "938077",
+    "level": "ESTADO",
+    "organ": "INSTITUTO DE CRÉDITO OFICIAL",
+    "purpose": "Otras actuaciones de carácter económico",
+    "received": "2026-10-27",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-23",
+    "term": "31/12/2028",
+    "title": "ESPAÑA CRECE - ICO CRECIMIENTO Y EXPANSIÓN (MRR) (minimis general)",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938086": {
+    "budget": 1800000,
+    "checked": "2026-11-23",
+    "end": "2028-12-31",
+    "id": "938086",
+    "level": "ESTADO",
+    "organ": "INSTITUTO DE CRÉDITO OFICIAL",
+    "purpose": "Otras actuaciones de carácter económico",
+    "received": "2026-10-27",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-23",
+    "term": "31/12/2028",
+    "title": "ESPAÑA CRECE - ICO CRECIMIENTO Y EXPANSIÓN (MRR) (minimis agrícola)",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938087": {
+    "budget": 1200000,
+    "checked": "2026-11-23",
+    "end": "2028-12-31",
+    "id": "938087",
+    "level": "ESTADO",
+    "organ": "INSTITUTO DE CRÉDITO OFICIAL",
+    "purpose": "Otras actuaciones de carácter económico",
+    "received": "2026-10-27",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-23",
+    "term": "31/12/2028",
+    "title": "ESPAÑA CRECE - ICO CRECIMIENTO Y EXPANSIÓN (MRR) (minimis pesca)",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
    "938088": {
     "budget": 160000,
     "checked": "2026-11-23",
@@ -888,6 +1033,240 @@
      "people"
     ]
    },
+   "938389": {
+    "budget": 80000,
+    "checked": "2026-11-23",
+    "end": "2027-10-04",
+    "id": "938389",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-28",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación BLECH EXPO Stuttgart del 26 de octubre de 2027 al 29 de octubre de 2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938391": {
+    "budget": 32900,
+    "checked": "2026-11-23",
+    "end": "2027-02-19",
+    "id": "938391",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-28",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación CIMT Pekín del 19 de abril de 2027 al 24 de abril de 2027.",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938394": {
+    "budget": 135000,
+    "checked": "2026-11-23",
+    "end": "2027-07-12",
+    "id": "938394",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-28",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación EMO Milán del 4 de octubre de 2027 al 8 de octubre de 2027.",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938401": {
+    "budget": 38700,
+    "checked": "2026-11-23",
+    "end": "2027-07-09",
+    "id": "938401",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-28",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación FABTECH Chicago del 13 de septiembre de 2027 al 16 de septiembre de 2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938404": {
+    "budget": 36300,
+    "checked": "2026-11-23",
+    "end": "2027-02-15",
+    "id": "938404",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-28",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación FASTENER FAIR Stuttgart del 6 de abril de 2027 al 8 de abril de 2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938414": {
+    "budget": 55000,
+    "checked": "2026-11-23",
+    "end": "2027-09-06",
+    "id": "938414",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-28",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación FORMNEXT Frankfurt del 26 de octubre de 2027 al 29 de octubre de 2027.",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938416": {
+    "budget": 6820,
+    "checked": "2026-11-23",
+    "end": "",
+    "id": "938416",
+    "level": "ESTADO",
+    "organ": "CENTRO DE INVESTIGACIONES SOCIOLÓGICAS",
+    "purpose": "Educación",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE LA PRESIDENCIA, JUSTICIA Y RELACIONES CON LAS CORTES",
+    "start": "",
+    "term": "15 días hábiles tras la publicación del extracto en BOE",
+    "title": "Resolución de Convocatoria de 20 de octubre de 2026 del XXXV Curso de Posgrado del CIS 2026-2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938420": {
+    "budget": 50000,
+    "checked": "2026-11-23",
+    "end": "2027-02-12",
+    "id": "938420",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-28",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación GLOBAL INDUSTRIE Lyon del 15 de marzo de 2027 al 18 de marzo de 2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938422": {
+    "budget": 23800,
+    "checked": "2026-11-23",
+    "end": "2027-04-20",
+    "id": "938422",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-28",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación TECMA Ciudad De México del 15 de junio de 2027 al 17 de junio de 2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938474": {
+    "budget": 16500,
+    "checked": "2026-11-23",
+    "end": "2026-12-04",
+    "id": "938474",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-28",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación MILANO FASHION & JEWELS Milán 20 febrerode 2027 al 22 febrero 2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938479": {
+    "budget": 17000,
+    "checked": "2026-11-23",
+    "end": "2026-11-25",
+    "id": "938479",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-28",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación PERFORMANCE DAYS I Munich del 17 de marzo de 2027 al 18 de marzo de 2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938482": {
+    "budget": 60000,
+    "checked": "2026-11-23",
+    "end": "2027-01-15",
+    "id": "938482",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-28",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación SEMANA DE LA MODA I 2027 Paris, 1 de marzo de 2027 al 9 de marzo de 2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938504": {
+    "budget": 100000,
+    "checked": "2026-11-23",
+    "end": "2027-01-15",
+    "id": "938504",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-30",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación MICAM Milano I Milán del 21 de febrero de 2027 al 23 de febrero de 2027.",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
    "938518": {
     "budget": 63000,
     "checked": "2026-11-23",
@@ -906,6 +1285,186 @@
      "entities"
     ]
    },
+   "938522": {
+    "budget": 40000,
+    "checked": "2026-11-23",
+    "end": "2026-11-25",
+    "id": "938522",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-30",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación BAREFOOT EUROPEAN SHOE FAIR I Offenbach del 29 al 31 de enero de 2027.",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938528": {
+    "budget": 100000,
+    "checked": "2026-11-23",
+    "end": "2026-11-30",
+    "id": "938528",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-30",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación WHO'S NEXT I París del 16 de enero de 2027 al 18 de enero de 2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938566": {
+    "budget": 50000,
+    "checked": "2026-11-23",
+    "end": "2027-01-15",
+    "id": "938566",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-30",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación THE ATLANTA SHOE MARKET I Atlanta del 13 al 15 de febrero 2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938573": {
+    "budget": 12000,
+    "checked": "2026-11-23",
+    "end": "2026-12-01",
+    "id": "938573",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-28",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la FA SPORT ACHAT HIVER Grenoble del 25 de enero de 2027 al 27 de enero de 2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938576": {
+    "budget": 60000,
+    "checked": "2026-11-23",
+    "end": "2026-11-25",
+    "id": "938576",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-28",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación MAISON&OBJET París del 14 de enero de 2027 al 18 de enero de 2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938580": {
+    "budget": 18000,
+    "checked": "2026-11-23",
+    "end": "2026-11-24",
+    "id": "938580",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-28",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación FA BAU 2027 Múnich del 11 de enero de 2027 al 15 de enero de 2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938586": {
+    "budget": 35000,
+    "checked": "2026-11-23",
+    "end": "2027-03-19",
+    "id": "938586",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-11-26",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación TOYS MILANO Milán del 9 de mayo de 2027 al 10 de mayo de 2027.",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938587": {
+    "budget": 40000,
+    "checked": "2026-11-23",
+    "end": "2027-06-30",
+    "id": "938587",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-11-26",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación KIND AND JUGEND Colonia del 7 de al 9 de septiembre de 2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938592": {
+    "budget": 42700,
+    "checked": "2026-11-23",
+    "end": "2027-01-15",
+    "id": "938592",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-28",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación en la Feria_Asociación Coterie,Magic,Designers&Agents y Brand Assembly Nueva York del 7-18/02/2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "938595": {
+    "budget": 55000,
+    "checked": "2026-11-23",
+    "end": "2026-11-30",
+    "id": "938595",
+    "level": "ESTADO",
+    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-10-28",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-28",
+    "term": "",
+    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación Whos' Next y SIL I 2027 París del 16 al 18 de enero de 2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
    "938809": {
     "budget": 450000,
     "checked": "2026-11-23",
@@ -922,6 +1481,24 @@
     "title_ca": "Ajuts per als estudiants matriculats en una universitat catalana que tinguin concedida una beca de caràcter general per a estudis postobligatoris o una beca Equitat per promoure la formació i l'acreditació de terceres llengües (Parla 3) del curs 2026-2027",
     "who": [
      "people"
+    ]
+   },
+   "939101": {
+    "budget": 0.01,
+    "checked": "2026-11-23",
+    "end": "2026-12-03",
+    "id": "939101",
+    "level": "ESTADO",
+    "organ": "DIRECCIÓN GENERAL DE ALIMENTACIÓN",
+    "purpose": "Agricultura, Pesca y Alimentación",
+    "received": "2026-10-30",
+    "region": "MINISTERIO DE AGRICULTURA, PESCA Y ALIMENTACIÓN",
+    "start": "",
+    "term": "",
+    "title": "Convocatoria Premio Alimentos de España Mejores Aceites de Oliva Virgen Extra, campaña 2026-2027.",
+    "title_ca": "",
+    "who": [
+     "business"
     ]
    },
    "939196": {
@@ -976,6 +1553,24 @@
     "title_ca": "Reemborsament prestació d'orfanesa 2026",
     "who": [
      "people"
+    ]
+   },
+   "940056": {
+    "budget": 1400000,
+    "checked": "2026-11-23",
+    "end": "",
+    "id": "940056",
+    "level": "ESTADO",
+    "organ": "DIRECCIÓN GENERAL DE POLÍTICA ENERGÉTICA Y MINAS",
+    "purpose": "Industria y Energía",
+    "received": "2026-11-05",
+    "region": "MINISTERIO PARA LA TRANSICIÓN ECOLÓGICA Y EL RETO DEMOGRÁFICO",
+    "start": "",
+    "term": "UN MES A PARTIR DE PUBLICACIÓN EXTRACTO EN BOE",
+    "title": "Resolución de la Secretaría de Estado de Energía por la que se aprueba la convocatoria para la concesión de ayudas públicas en 2027 del Programa Nacional de Exploración Minera 2026-2030",
+    "title_ca": "",
+    "who": [
+     "business"
     ]
    },
    "940568": {
@@ -1141,6 +1736,60 @@
      "entities"
     ]
    },
+   "941145": {
+    "budget": 14400000,
+    "checked": "2026-11-23",
+    "end": "2028-12-31",
+    "id": "941145",
+    "level": "ESTADO",
+    "organ": "INSTITUTO DE CRÉDITO OFICIAL",
+    "purpose": "Otras actuaciones de carácter económico",
+    "received": "2026-11-10",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-23",
+    "term": "31/12/2028",
+    "title": "ESPAÑA CRECE-ICO CRECIMIENTO Y EXPANSIÓN (MRR) (exenciones por categorías)",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "941154": {
+    "budget": 600000,
+    "checked": "2026-11-23",
+    "end": "2028-12-31",
+    "id": "941154",
+    "level": "ESTADO",
+    "organ": "INSTITUTO DE CRÉDITO OFICIAL",
+    "purpose": "Otras actuaciones de carácter económico",
+    "received": "2026-11-10",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "2026-10-23",
+    "term": "31/12/2028",
+    "title": "ESPAÑA CRECE-ICO AGRI CRECIMIENTO Y EXPANSIÓN (MRR) (exenciones por categorías agrícola)",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "941239": {
+    "budget": 150000000,
+    "checked": "2026-11-23",
+    "end": "2026-12-23",
+    "id": "941239",
+    "level": "ESTADO",
+    "organ": "CENTRO PARA EL DESARROLLO TECNOLÓGICO Y LA INNOVACIÓN E.P.E",
+    "purpose": "Investigación, desarrollo e innovación",
+    "received": "2026-11-10",
+    "region": "MINISTERIO DE CIENCIA, INNOVACIÓN Y UNIVERSIDADES",
+    "start": "2026-11-17",
+    "term": "",
+    "title": "Resolución de 6 de noviembre de 2026 de la Presidencia del CDTI E.P.E. por la que se aprueba la convocatoria para el año 2026 del procedimiento de concesión de ayudas destinadas a proyectos INNTERCONECTA-STEP, cofinanciada por FEDER",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
    "941551": {
     "budget": 1750000,
     "checked": "2026-11-23",
@@ -1175,6 +1824,42 @@
     "title_ca": "Convocatòria de subvencions per a l'adquisició de fons bibliogràfics o documentals destinats a biblioteques del Sistema de Lectura Pública de Catalunya en fires o mercats especialitzats",
     "who": [
      "entities"
+    ]
+   },
+   "941791": {
+    "budget": 30000,
+    "checked": "2026-11-23",
+    "end": "",
+    "id": "941791",
+    "level": "ESTADO",
+    "organ": "INSTITUTO NACIONAL DE ESTADÍSTICA",
+    "purpose": "Investigación, desarrollo e innovación",
+    "received": "2026-11-12",
+    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
+    "start": "",
+    "term": "El plazo de presentación de las candidaturas será de tres meses.",
+    "title": "Premio Nacional de Estadística 2026",
+    "title_ca": "",
+    "who": [
+     "people"
+    ]
+   },
+   "941797": {
+    "budget": 150000,
+    "checked": "2026-11-23",
+    "end": "2026-11-26",
+    "id": "941797",
+    "level": "ESTADO",
+    "organ": "SECRETARÍA DE ESTADO DE TELECOMUNICACIONES E INFRAESTRUCTURAS DIGITALES",
+    "purpose": "Investigación, desarrollo e innovación",
+    "received": "2026-11-12",
+    "region": "MINISTERIO PARA LA TRANSFORMACIÓN DIGITAL Y DE LA FUNCIÓN PÚBLICA",
+    "start": "2026-11-13",
+    "term": "",
+    "title": "Real Decreto 987/2026, de 11 de noviembre, por el que se regula la concesión directa de una subvención a la Asociación Española de Normalización (UNE) destinada a impulsar la actividad de normalización y estandarización, secretaría y acción internacional",
+    "title_ca": "",
+    "who": [
+     "people"
     ]
    },
    "941902": {
@@ -1229,6 +1914,24 @@
     "title_ca": "Activitats 2025 federacions i confederacions d'AFA",
     "who": [
      "entities"
+    ]
+   },
+   "941955": {
+    "budget": 1000000,
+    "checked": "2026-11-23",
+    "end": "2027-04-16",
+    "id": "941955",
+    "level": "ESTADO",
+    "organ": "INSTITUTO DE LA CINEMATOGRAFÍA Y DE LAS ARTES AUDIOVISUALES",
+    "purpose": "Cultura",
+    "received": "2026-11-13",
+    "region": "MINISTERIO DE CULTURA",
+    "start": "2027-03-29",
+    "term": "",
+    "title": "Resolución de 12 de noviembre de 2026 de la Dirección General del Instituto de la Cinematografía y de las Artes Audiovisuales, por la que se convocan para el año 2027 ayudas a la producción de cortometrajes realizados.",
+    "title_ca": "",
+    "who": [
+     "business"
     ]
    },
    "942053": {
@@ -1305,6 +2008,42 @@
      "entities"
     ]
    },
+   "942229": {
+    "budget": 106200,
+    "checked": "2026-11-23",
+    "end": "",
+    "id": "942229",
+    "level": "ESTADO",
+    "organ": "DIRECCIÓN GENERAL DE EVALUACIÓN Y COOPERACIÓN TERRITORIAL",
+    "purpose": "Educación",
+    "received": "2026-11-16",
+    "region": "MINISTERIO DE EDUCACIÓN, FORMACIÓN PROFESIONAL Y DEPORTES",
+    "start": "",
+    "term": "15 días naturales a partir del primer día hábil siguiente a la publicación en el BOE",
+    "title": "Resolución de la Secretaría de Estado de Educación, de 3 de noviembre de 2026, por la que se convocan plazas de asistencia a eventos de formación dentro del marco de la acción eTwinning para el año 2027.",
+    "title_ca": "",
+    "who": [
+     "people"
+    ]
+   },
+   "942269": {
+    "budget": 19780000,
+    "checked": "2026-11-23",
+    "end": "",
+    "id": "942269",
+    "level": "ESTADO",
+    "organ": "SECRETARÍA GENERAL DE UNIVERSIDADES",
+    "purpose": "Educación",
+    "received": "2026-11-16",
+    "region": "MINISTERIO DE CIENCIA, INNOVACIÓN Y UNIVERSIDADES",
+    "start": "",
+    "term": "Un mes desde la publicación del extracto de la convocatoria en el BOE.",
+    "title": "Orden de 13 de noviembre de 2026 del Ministerio de Ciencia, Innovación y Universidades por la que se convocan por tramitación anticipada las ayudas del programa de movilidad de estudiantes universitarios «Luisa de Medrano».",
+    "title_ca": "",
+    "who": [
+     "people"
+    ]
+   },
    "942437": {
     "budget": 4375000,
     "checked": "2026-11-23",
@@ -1337,6 +2076,24 @@
     "term": "",
     "title": "Ayudas para las inversiones para las instalaciones de transformación y comercialización vitivinícolas 2023-2027",
     "title_ca": "Ajuts per a les inversions per a les installacions de transformació i i comercialització vitivinícoles 2023-2027",
+    "who": [
+     "business"
+    ]
+   },
+   "942560": {
+    "budget": 250000000,
+    "checked": "2026-11-23",
+    "end": "",
+    "id": "942560",
+    "level": "ESTADO",
+    "organ": "SERVICIO PÚBLICO DE EMPLEO ESTATAL",
+    "purpose": "Fomento del Empleo",
+    "received": "2026-11-17",
+    "region": "MINISTERIO DE TRABAJO Y ECONOMÍA SOCIAL",
+    "start": "",
+    "term": "20 días hábiles",
+    "title": "Convocatoria programas de ambito estatal 2027",
+    "title_ca": "",
     "who": [
      "business"
     ]
@@ -1451,6 +2208,60 @@
      "entities"
     ]
    },
+   "943812": {
+    "budget": 60000,
+    "checked": "2026-11-23",
+    "end": "2026-11-27",
+    "id": "943812",
+    "level": "ESTADO",
+    "organ": "SECRETARÍA DE ESTADO DE TURISMO",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-11-20",
+    "region": "MINISTERIO DE INDUSTRIA Y TURISMO",
+    "start": "2026-11-21",
+    "term": "",
+    "title": "Subvención a FEMP, prevista en el RD 1016/2026, de 18 de noviembre, de concesión directa de subv en materia de turismo por el MINTUR, ejercicio 2026",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "943813": {
+    "budget": 80000,
+    "checked": "2026-11-23",
+    "end": "2026-11-27",
+    "id": "943813",
+    "level": "ESTADO",
+    "organ": "SECRETARÍA DE ESTADO DE TURISMO",
+    "purpose": "Comercio, Turismo y Pymes",
+    "received": "2026-11-20",
+    "region": "MINISTERIO DE INDUSTRIA Y TURISMO",
+    "start": "2026-11-21",
+    "term": "",
+    "title": "Subvención a la Confederación Empresarial de Hostelería de España CEHE , prevista en el RD 1016/2026, de 18 de noviembre, de concesión directa de subv en materia de turismo por el MINTUR, ejercicio 2026",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "943899": {
+    "budget": 1000000,
+    "checked": "2026-11-23",
+    "end": "",
+    "id": "943899",
+    "level": "ESTADO",
+    "organ": "SECRETARÍA DE ESTADO DE DIGITALIZACIÓN E INTELIGENCIA ARTIFICIAL",
+    "purpose": "Otras Prestaciones económicas",
+    "received": "2026-11-23",
+    "region": "MINISTERIO PARA LA TRANSFORMACIÓN DIGITAL Y DE LA FUNCIÓN PÚBLICA",
+    "start": "",
+    "term": "N/A",
+    "title": "Concesión directa de una subvención a la sociedad de garantía recíproca Audiovisual Fianzas SGR (CREA SGR) para facilitar el acceso a la financiación por parte de las PYMEs del sector audiovisual.",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
    "944127": {
     "budget": 5878800,
     "checked": "2026-11-23",
@@ -1472,10 +2283,257 @@
    }
   },
   "closed": [
+   "870720",
+   "870726",
+   "870729",
+   "870732",
+   "870743",
+   "870774",
+   "870813",
+   "870871",
+   "871045",
+   "871053",
+   "871062",
+   "871068",
+   "871077",
+   "871093",
+   "871162",
+   "871169",
+   "871209",
+   "871224",
+   "871227",
+   "871230",
+   "871377",
+   "871387",
+   "871409",
+   "871418",
+   "871422",
+   "871427",
+   "871443",
+   "871569",
+   "871574",
+   "871575",
+   "871582",
    "871616",
+   "871619",
+   "871650",
    "871654",
+   "871690",
+   "871691",
+   "871725",
+   "871726",
+   "871727",
+   "871739",
+   "871758",
+   "871764",
+   "871771",
+   "871773",
+   "871776",
+   "871777",
+   "871799",
+   "871800",
+   "871807",
+   "871809",
+   "871847",
+   "871859",
+   "871860",
+   "871869",
+   "871874",
+   "871886",
+   "871891",
+   "871892",
+   "871924",
+   "871925",
+   "871929",
+   "871933",
+   "872102",
+   "872116",
+   "872118",
+   "872155",
+   "872158",
+   "872218",
+   "872226",
+   "872229",
+   "872231",
+   "872238",
+   "872241",
+   "872243",
+   "872244",
+   "872284",
+   "872286",
+   "872297",
+   "872299",
+   "872300",
+   "872306",
+   "872313",
+   "872317",
+   "872320",
+   "872322",
+   "872525",
+   "872582",
+   "872589",
+   "872591",
+   "872592",
+   "872593",
+   "872602",
+   "872608",
+   "872615",
+   "872626",
+   "872782",
+   "872847",
+   "872893",
+   "872897",
+   "872952",
+   "872953",
+   "872977",
+   "872978",
+   "873059",
+   "873085",
+   "873088",
+   "873102",
+   "873135",
+   "873137",
+   "873139",
+   "873142",
+   "873144",
+   "873145",
+   "873150",
+   "873151",
+   "873408",
+   "873413",
+   "873416",
+   "873417",
+   "873418",
+   "873424",
+   "873425",
+   "873428",
+   "873432",
+   "873434",
+   "873570",
+   "873573",
+   "873607",
+   "873685",
+   "873686",
+   "873694",
+   "873915",
+   "873991",
+   "874048",
+   "874055",
+   "874062",
+   "874066",
+   "874073",
+   "874084",
+   "874086",
+   "874088",
+   "874193",
+   "874483",
+   "874498",
+   "874501",
+   "874645",
+   "874731",
+   "874868",
+   "874959",
+   "875038",
+   "875480",
+   "875482",
+   "875484",
+   "875489",
+   "875505",
+   "875511",
+   "875515",
+   "875519",
+   "875521",
+   "875690",
+   "875810",
+   "875820",
+   "875825",
+   "875833",
+   "875964",
+   "875971",
+   "876213",
+   "876258",
+   "876307",
+   "876343",
+   "876540",
    "876588",
+   "876611",
+   "876622",
    "876626",
+   "876637",
+   "876650",
+   "876672",
+   "876675",
+   "876680",
+   "876685",
+   "876736",
+   "876739",
+   "876742",
+   "876743",
+   "876746",
+   "876748",
+   "876765",
+   "876779",
+   "876787",
+   "876851",
+   "876987",
+   "876991",
+   "876993",
+   "876997",
+   "877033",
+   "877038",
+   "877088",
+   "877101",
+   "877106",
+   "877160",
+   "877164",
+   "877171",
+   "877173",
+   "877179",
+   "877186",
+   "877189",
+   "877191",
+   "877192",
+   "877239",
+   "877378",
+   "877383",
+   "877402",
+   "877407",
+   "877409",
+   "877422",
+   "877425",
+   "877427",
+   "877434",
+   "877440",
+   "877442",
+   "877496",
+   "877498",
+   "877504",
+   "877518",
+   "877523",
+   "877564",
+   "877597",
+   "878094",
+   "878106",
+   "878112",
+   "878139",
+   "878154",
+   "878158",
+   "878229",
+   "878378",
+   "878412",
+   "878514",
+   "878516",
+   "878517",
+   "878519",
+   "878520",
+   "878521",
+   "878779",
+   "878780",
+   "878781",
+   "878782",
+   "878783",
+   "878784",
+   "878785",
    "878786",
    "878787",
    "878788",
@@ -2436,6 +3494,7 @@
    "935106",
    "935107",
    "935128",
+   "935147",
    "935149",
    "935150",
    "935181",
@@ -2459,12 +3518,19 @@
    "937657",
    "938362",
    "938365",
+   "938437",
+   "938459",
    "938461",
+   "938468",
+   "938488",
+   "938491",
+   "938582",
    "938643",
    "938649",
    "938650",
    "938654",
    "938665",
+   "938982",
    "939190",
    "939198",
    "939277",
@@ -2593,5 +3659,5 @@
    "944079"
   ]
  },
- "fetched": "2026-11-23T20:40:05+01:00"
+ "fetched": "2026-11-23T21:19:50+01:00"
 }
