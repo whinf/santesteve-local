@@ -1,0 +1,62 @@
+[
+{
+"acces": "targeta",
+"adre_a": "GOLF SANT CUGAT - Carrer de Villà, 79, 08173",
+"designaci_descriptiva": "20XP22T3KK4AL01141",
+"latitud": "41.463154",
+"longitud": "2.076231",
+"municipi": "Sant Cugat del Vallès",
+"promotor_gestor": "Institut Català d'Energia - Ajuntament de Sant Cugat del Vallès",
+"tipus_velocitat": "semiRAPID"
+},
+{
+"acces": "tarjeta",
+"adre_a": "TENNIS VALLDOREIX - Carrer Goya, s/n, 08197",
+"designaci_descriptiva": "EdRR Scugat Tennis Valldoreig (AC-DC50kW)",
+"latitud": "41.45025",
+"longitud": "2.055897",
+"municipi": "Sant Cugat del Vallès",
+"promotor_gestor": "Institut Català d'Energia - Ajuntament de Sant Cugat del Vallès",
+"tipus_velocitat": "RAPID i semiRAPID"
+},
+{
+"acces": "",
+"adre_a": "Camí de Can Camps, 13",
+"designaci_descriptiva": "TESLA Supercarregador - Sant Cugat del Vallès (120kW)",
+"latitud": "41.49923",
+"longitud": "2.07282",
+"municipi": "Sant Cugat del Vallès",
+"promotor_gestor": "Institut Català d'Energia - Ajuntament de Sant Cugat del Vallés",
+"tipus_velocitat": "superRAPID"
+},
+{
+"acces": "targeta",
+"adre_a": "Avenida Rius I Taulet 137",
+"designaci_descriptiva": "ES Repris",
+"latitud": "41.477768",
+"longitud": "2.069592",
+"municipi": "Sant Cugat del Vallès",
+"promotor_gestor": "Institut Català d'Energia - Ajuntament de Sant Cugat del Vallès",
+"tipus_velocitat": "RAPID i semiRAPID"
+},
+{
+"acces": "VIA PUBLICA (AMB)",
+"adre_a": "Avinguda de la Via Augusta, 2-14",
+"designaci_descriptiva": "EdRR Sant Cugat (DC50kW AC43kW) AMB8",
+"latitud": "41.48303",
+"longitud": "2.05199",
+"municipi": "Sant Cugat del Vallès",
+"promotor_gestor": "Institut Català d'Energia - Ajuntament de Sant Cugat del Vallès",
+"tipus_velocitat": "RAPID i NORMAL"
+},
+{
+"acces": "targeta",
+"adre_a": "Av. Lluís Companys i Jover, 31, 08172 Sant",
+"designaci_descriptiva": "23XC11M2J03DB00137",
+"latitud": "41.472534",
+"longitud": "2.079477",
+"municipi": "Sant Cugat del Vallès",
+"promotor_gestor": "Institut Català d'Energia - Ajuntament de Sant Cugat del Vallès",
+"tipus_velocitat": "semiRAPID"
+}
+]

@@ -1,0 +1,1613 @@
+"""Genera el sitio estático de Sant Esteve a partir de los datos en caché."""
+import hashlib
+import json
+import re
+import shutil
+import unicodedata
+from datetime import date, datetime, timedelta
+from html import escape as esc
+from pathlib import Path
+from urllib.parse import quote, urlparse
+
+import i18n
+import icons
+import sources
+import tz
+from i18n import LANGS, t
+
+ROOT = Path(__file__).resolve().parent.parent
+# Aplica el tema guardado antes de pintar (evita el parpadeo); sin JS rige el tema del sistema.
+THEME_SCRIPT = ('<script>(function(){try{var t=localStorage.getItem("theme");'
+                'if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}})()</script>')
+THEME_COLOR = ('<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">\n'
+               '<meta name="theme-color" content="#1c1c1a" media="(prefers-color-scheme: dark)">')
+RODALIES = "https://rodalies.gencat.cat/ca/estat_servei/"
+FGC = "https://www.fgc.cat/"
+# Icono propio de esta web (Lucide «pill», ISC como el resto), fuera del marco común que comparten las tres webs.
+icons.LUCIDE.setdefault("pill", '<path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z" />'
+                                '<path d="m8.5 8.5 7 7" />')
+PHARMACY_TOWNS = {"Sant Esteve": "Sant Esteve Sesrovires"}
+# Lucide «vote» y «globe» (ISC) para la guía de participación política.
+icons.LUCIDE.setdefault("vote", '<path d="m9 12 2 2 4-4" /><path d="M5 7c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v12H5V7Z" />'
+                                '<path d="M22 19H2" />')
+icons.LUCIDE.setdefault("globe", '<circle cx="12" cy="12" r="10" /><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />'
+                                 '<path d="M2 12h20" />')
+POLITICS = ROOT / "curated" / "politics.json"  # guía «Participa», escrita a mano; revisión anual (`checked`)
+PICKS = ROOT / "curated" / "picks.json"  # recomendaciones escritas a mano; rotan cada semana
+PICKS_PER_WEEK = {"food": 3, "experience": 2}
+FILL_LITRES = 50  # «llenar el depósito» para comparar gasolineras
+SOCIAL_GROUPS = {"creators": "clapperboard", "media": "megaphone", "shops": "coffee", "sport": "trophy",
+                 "culture": "landmark", "science": "telescope"}  # grupo del directorio de redes -> icono
+NETWORKS = (("instagram", "Instagram"), ("tiktok", "TikTok"), ("youtube", "YouTube"), ("web", "Web"))
+VIDEO_WINDOW = 365  # «más vistos»: vídeos publicados en el último año
+VIDEOS_PER_CHANNEL = 2  # para que un canal grande no ocupe toda la lista
+RADAR = (("#sesrovires · TikTok", "https://www.tiktok.com/tag/sesrovires"),
+         ("#sesrovires · Instagram", "https://www.instagram.com/explore/tags/sesrovires/"),
+         ("#santestevesesrovires · Instagram", "https://www.instagram.com/explore/tags/santestevesesrovires/"),
+         ("Sant Esteve Sesrovires · YouTube", "https://www.youtube.com/results?search_query=sant+esteve+sesrovires"))
+BOARD_CATS = ("help", "give", "deal")  # tauler veïnal: ajuda, regal, ganga
+BOARD_ICONS = {"help": "handshake", "give": "gift", "deal": "tag"}
+FREE_WORDS = re.compile(r"\b(gratu[iï]t[ae]?s?|gratis|gratuit[oa]s?|entrada (?:lliure|libre)|free entry)\b", re.I)
+
+# Qué cuenta como fiesta: por categoría o por palabras del título (ca/es/en)
+FESTIVE_CATS = {"Festes populars", "Música", "Festivals", "Hostalaria", "Fires i mercats", "Nadal"}
+FESTIVE_WORDS = re.compile(
+    r"\b(fest[ae]s?|fiestas?|festival\w*|\w*halloween|castanyad\w*|carnaval|carnestoltes|revetlla|verbena|"
+    r"sant joan|concerts?|dj|disco\w*|balls?|baile|cercavila|correfoc|gegants|castellers?|castellera|"
+    r"sardan\w*|fira|jam|karaoke|tribut\w*|xou|show|terror|cap d'any|nochevieja|tardeo|rumba|flamenc\w*|"
+    r"corretapes|vermut|party|música en viu|en directe|en directo)\b", re.I)
+RAINY = ("rain", "sleet", "snow", "thunder", "showers")
+KIDS_WORDS = re.compile(r"\b(infantil\w*|famíli\w*|familiar\w*|nens|niños|kids|contacontes|cuentacuentos)\b", re.I)
+AUDIENCES = ("people", "business", "entities")
+LEVELS = ("LOCAL", "AUTONOMICA", "ESTADO")
+BDNS_CALL = "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/{}"
+BIG = 1_000_000  # «gran inversión»: contratos de 1 M€ o más, sin IVA
+INVEST_DAYS = 365  # grandes inversiones y anuncios con novedades en este tiempo
+COMPANY_DAYS = 90
+FEED_DAYS = 60
+SOON_PHASES = ("Alerta futura", "Consulta preliminar del mercat", "Anunci previ")
+# Horas sin actualizar a partir de las que un bloque avisa de que el dato puede estar desfasado. El build corre
+# un par de veces al día (unas 16 h entre el de la noche y el del mediodía), así que el mínimo deja pasar uno.
+STALE_HOURS = {"weather": 26, "alerts": 26, "air": 30, "agenda": 36, "fuel": 36, "pharmacy": 36,
+               "aids": 48, "cido": 48, "offers": 48, "contracts": 72, "companies": 72, "social": 96}
+STALE_DEFAULT = 120  # equipamientos, recarga y guía de ocio se releen una vez al día y cambian poco
+PHASE_TIER = {"Anunci de licitació": "t0", "Alerta futura": "t1", "Consulta preliminar del mercat": "t1",
+              "Anunci previ": "t1", "Expedient en avaluació": "t1"}  # el resto, gris
+
+
+def week_picks(items, today, n):
+    """n fichas de la semana ISO de today: orden fijo para todo el año y bloques seguidos, sin repetir
+    de una semana a la siguiente mientras haya al menos 2n fichas."""
+    year, week, _ = today.isocalendar()
+    pool = sorted(items, key=lambda p: hashlib.sha1(f'{year}:{p["id"]}'.encode()).hexdigest())
+    if not pool:
+        return []
+    start = week * n % len(pool)
+    return [pool[(start + i) % len(pool)] for i in range(min(n, len(pool)))]
+
+
+def pick_live(p, today):
+    """¿Toca recomendar la ficha hoy? `months` la limita a unos meses; `from`/`until` («MM-DD») afinan al día
+    (una fiesta deja de salir cuando acaba) y pueden cruzar el cambio de año."""
+    if today.month not in p.get("months", range(1, 13)):
+        return False
+    lo, hi, md = p.get("from"), p.get("until"), today.strftime("%m-%d")
+    if lo and hi and lo > hi:
+        return md >= lo or md <= hi
+    return (not lo or md >= lo) and (not hi or md <= hi)
+
+
+def load_picks():
+    return json.loads(PICKS.read_text(encoding="utf-8")) if PICKS.exists() else []
+
+
+def load_politics():
+    return json.loads(POLITICS.read_text(encoding="utf-8")) if POLITICS.exists() else {"levels": [], "common": []}
+
+
+def festive(e):
+    return e.get("category") in FESTIVE_CATS or bool(FESTIVE_WORDS.search(e["title"]))
+
+
+def is_free(e):
+    return bool(e.get("free")) or bool(FREE_WORDS.search(e["title"]))
+
+
+def for_kids(e):
+    return e.get("category") == "Infància" or bool(KIDS_WORDS.search(e["title"]))
+
+
+# Temas de las ayudas para el filtro: (clave, finalidades de la BDNS, raíces ca+es buscadas a principio de palabra
+# en el título sin acentos). Una ayuda puede caer en varios temas o en ninguno.
+AID_TOPICS = (
+    ("housing", ("Acceso a la vivienda y fomento de la edificación",),
+     "habitatge|vivienda|lloguer|alquiler|rehabilitaci|propietari"),
+    ("study", ("Educación",), "beca|beques|estudi|matricul|universit|formaci|menjador|comedor|escola|escuela"),
+    ("work", ("Fomento del Empleo", "Comercio, Turismo y Pymes"),
+     "ocupaci|empleo|contrataci|contractaci|autonom|emprened|pime|pyme|comerc|prestamo|prestec|financiaci"),
+    ("energy", ("Industria y Energía", "Subvenciones al transporte"),
+     "energ|fotovolt|autoconsum|eficienci|vehicle|vehiculo|renovabl"),
+    ("culture", ("Cultura",), "cultur|esport|deport|music|teatr|audiovisual|llibre|libro|premi"),
+    ("family", ("Servicios Sociales y Promoción Social", "Otras Prestaciones económicas", "Sanidad"),
+     "famil|infan|naixement|nacimiento|gent gran|mayores|dependenc|discapac|renda garantida|renta garantizada|jove"),
+    ("farm", ("Agricultura, Pesca y Alimentación",), "agrar|agricol|ramader|ganader|pesca|pesquer|forest"),
+    ("research", ("Investigación, desarrollo e innovación",), "recerca|investigaci|innovaci"),
+)
+_TOPIC_RE = {k: re.compile(rf"\b(?:{words})") for k, _, words in AID_TOPICS}
+PUBLIC_LEVELS = {"A1": "uni", "A2": "uni", "C1": "c1", "C2": "c2", "Agrupacions professionals": "ap"}  # grupo -> titulación
+
+
+def plain(text):
+    """Minúsculas sin acentos, para buscar palabras."""
+    return unicodedata.normalize("NFKD", (text or "").lower()).encode("ascii", "ignore").decode()
+
+
+def aid_topics(a):
+    text = plain(f'{a.get("title", "")} {a.get("title_ca") or ""}')
+    return [k for k, purposes, _ in AID_TOPICS if a.get("purpose") in purposes or _TOPIC_RE[k].search(text)]
+
+
+def job_tags(j):
+    """Etiquetas de filtro de una oferta del SOC, leídas de sus textos de contrato y jornada."""
+    c, h = plain(j.get("contract")), plain(j.get("hours"))
+    hits = (("indef", "indefinit" in c), ("temp", "temporal" in c), ("full", "completa" in h or "intensiva" in h),
+            ("part", "parcial" in h))
+    return [k for k, hit in hits if hit]
+
+
+def local_time(day, hour):
+    """Las `hour` en punto del día `day`, en hora de Madrid."""
+    naive = datetime(day.year, day.month, day.day, hour)
+    return naive.replace(tzinfo=tz.offset_at(naive.replace(tzinfo=tz.CET)))
+
+
+def event_start(e):
+    """Inicio del acto en hora de Madrid si trae una hora legible («17:30», «20 h»); si no, None."""
+    m = re.match(r"\s*(\d{1,2})(?::(\d\d)|\s*h\b)", e.get("time") or "")
+    if not m or int(m.group(1)) > 23 or int(m.group(2) or 0) > 59:
+        return None
+    local = datetime.fromisoformat(e["start"]).replace(hour=int(m.group(1)), minute=int(m.group(2) or 0))
+    return local.replace(tzinfo=tz.offset_at(local.replace(tzinfo=tz.CET)))
+
+
+def aid_level(a):
+    return a["level"] if a.get("level") in LEVELS else "AUTONOMICA"
+
+
+def fmt_dt(iso):
+    if not iso:
+        return ""
+    d = tz.to_madrid(tz.parse_iso(iso))
+    return f"{d.day:02d}/{d.month:02d}/{d.year} {d.hour:02d}:{d.minute:02d}"
+
+
+def jsonld_text(obj):
+    """JSON para <script type="application/ld+json">: «<» escapado para que un texto externo no cierre el script."""
+    return json.dumps(obj, ensure_ascii=False).replace("<", "\\u003c")
+
+
+def safe_url(url):
+    """Solo http(s); cualquier otro esquema de una fuente externa (javascript:, data:...) se descarta."""
+    url = (url or "").strip()
+    return url if url.startswith(("http://", "https://")) else ""
+
+
+def link(url, inner):
+    """<a> si la URL es segura; si no, solo el texto."""
+    url = safe_url(url)
+    return f'<a href="{esc(url)}">{inner}</a>' if url else inner
+
+
+def osm(lat, lon):
+    return f"https://www.openstreetmap.org/?mlat={lat}&mlon={lon}#map=18/{lat}/{lon}"
+
+
+class Site:
+    def __init__(self, cfg, data, out_dir, now, picks=None, social=None, politics=None):
+        self.cfg = cfg
+        self.politics = load_politics() if politics is None else politics
+        self.social = sources.load_social() if social is None else social  # directorio de redes, hecho a mano
+        self.picks = load_picks() if picks is None else picks
+        self.data = data  # {fuente: {"fetched": iso, "data": ...}}
+        self.out = Path(out_dir)
+        self.now = now
+        self.base_url = cfg["site_url"].rstrip("/")
+        self.prefix = urlparse(self.base_url).path.rstrip("/")
+        self.name = cfg["site_name"]
+        self.has_board = bool(cfg.get("board_api_url"))  # el tauler necesita su worker; sin él, la sección no sale
+        self.icons = set()  # iconos usados en la página en curso (para el sprite)
+
+    def i(self, name, label=None, cls="i"):
+        return icons.icon(self.icons, name, label, cls)
+
+    def wx(self, key, label, cls="wx"):
+        """Icono meteorológico de MET Norway (static/wx/<clave>.svg, MIT) como imagen."""
+        if not key:
+            return ""
+        return (f'<img class="{cls}" src="{self.href(f"/static/wx/{key}.svg")}" alt="{esc(label)}" '
+                f'title="{esc(label)}" width="48" height="48" loading="lazy">')
+
+    def get(self, key):
+        return (self.data.get(key) or {}).get("data")
+
+    # ---------- URLs ----------
+    def path(self, lang, kind):
+        return f"/{lang}/" if kind == "home" else f"/{lang}/{t(lang, 'slug_' + kind)}/"
+
+    def href(self, path):
+        return self.prefix + path
+
+    def absolute(self, path):
+        return self.base_url + path
+
+    def write(self, path, text):
+        target = self.out / path.lstrip("/")
+        if path.endswith("/"):
+            target = target / "index.html"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(text, encoding="utf-8")
+
+    # ---------- plantilla ----------
+    def layout(self, lang, kind, title, desc, body, jsonld=None, noindex=False, head=""):
+        alts = "".join(f'<link rel="alternate" hreflang="{lg}" href="{self.absolute(self.path(lg, kind))}">'
+                       for lg in LANGS)
+        x_default = self.absolute("/") if kind == "home" else self.absolute(self.path("ca", kind))
+        ld = "".join(f'<script type="application/ld+json">{jsonld_text(j)}</script>' for j in (jsonld or []))
+        switch = "".join(
+            f'<a href="{self.href(self.path(lg, kind))}" hreflang="{lg}" lang="{lg}"'
+            f'{" aria-current=\"true\"" if lg == lang else ""}><span class="lg-long">{t(lg, "lang_name")}</span>'
+            f'<span class="lg-short" aria-hidden="true">{lg}</span></a>' for lg in LANGS)
+        # 404 y «sin conexión» no son la portada: ni canonical ni alternativas ni chip activo
+        canonical = "" if noindex else (
+            f'<link rel="canonical" href="{self.absolute(self.path(lang, kind))}">\n{alts}'
+            f'<link rel="alternate" hreflang="x-default" href="{x_default}">\n'
+            f'<meta property="og:url" content="{self.absolute(self.path(lang, kind))}">')
+        nav = "".join(f'<li><a href="{self.href(self.path(lang, k))}"{" aria-current=\"page\"" if k == kind and not noindex else ""}>'
+                      f'{t(lang, "nav_" + k)}</a></li>'
+                      for k in ("home", "agenda", "leisure", "picks", "social", "board", "save", "aids", "jobs", "invest", "politics",
+                                "directory", "pharmacy", "emergency") if k != "board" or self.has_board)
+        theme = (f'<span class="theme-slot"><button class="theme" type="button" hidden data-theme-toggle '
+                 f'data-auto="{esc(t(lang, "theme_auto"))}" data-light="{esc(t(lang, "theme_light"))}" '
+                 f'data-dark="{esc(t(lang, "theme_dark"))}" aria-label="{esc(t(lang, "theme_auto"))}">'
+                 f'{self.i("monitor", cls="i i-auto")}{self.i("sun", cls="i i-light")}{self.i("moon", cls="i i-dark")}'
+                 f'</button></span>')
+        links = [f'<li><a href="{self.href(self.path(lang, "emergency"))}">{self.i("siren")} 112</a></li>'] + [
+            f'<li><a href="{self.href(self.path(lang, k))}">{t(lang, k)}</a></li>' for k in ("about", "legal", "privacy")]
+        studio_url = self.cfg.get("studio_url")
+        if studio_url:
+            links.append(f'<li><a href="{esc(studio_url.rstrip("/"))}/{lang}/">{t(lang, "studio")}</a></li>')
+        donate = (f'<p class="support"><a class="donate" href="{esc(self.cfg["donate_url"])}" rel="noopener">'
+                  f'{self.i("heart")} {t(lang, "donate")}</a></p>'
+                  if self.cfg.get("donate_url") else "")
+        install = self.install_block(lang)
+        visits = (f'<p class="visits" data-visits="{esc(self.cfg["visits_url"])}" data-text="{esc(t(lang, "visits"))}" hidden></p>'
+                  if self.cfg.get("visits_url") else "")
+        updated = max((v.get("fetched") or "" for v in self.data.values()), default="")
+        sprite = icons.sprite(self.icons)
+        self.icons.clear()
+        return f"""<!doctype html>
+<html lang="{lang}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{esc(title)}</title>
+<meta name="description" content="{esc(desc)}">
+{'<meta name="robots" content="noindex">' if noindex else ''}
+{canonical}
+<meta property="og:type" content="website">
+<meta property="og:title" content="{esc(title)}">
+<meta property="og:description" content="{esc(desc)}">
+<meta property="og:locale" content="{t(lang, 'locale')}">
+<meta property="og:site_name" content="{esc(self.name)}">
+<meta property="og:image" content="{self.absolute('/static/og.png')}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+{THEME_COLOR}
+<link rel="icon" href="{self.href('/static/favicon.svg')}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{self.href('/static/apple-touch-icon.png')}">
+<link rel="manifest" href="{self.href(f'/static/manifest.{lang}.webmanifest')}">
+<link rel="preload" href="{self.href('/static/fonts/inter-latin.var.woff2')}" as="font" type="font/woff2" crossorigin>
+{THEME_SCRIPT}
+<link rel="stylesheet" href="{self.href('/static/style.css')}">
+{head}{ld}
+<script src="{self.href('/static/ui.js')}" defer></script>
+<script src="{self.href('/static/app.js')}" data-sw="{self.href('/sw.js')}" defer></script>
+<script src="{self.href('/static/now.js')}" defer></script>
+</head>
+<body>
+{sprite}
+<a class="skip" href="#main">{t(lang, "skip")}</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="{self.href(self.path(lang, 'home'))}"><img src="{self.href('/static/favicon.svg')}" alt="" width="28" height="28"> {esc(self.name)}</a>
+<nav class="langs" aria-label="{t(lang, 'language')}">{switch}</nav>
+{theme}
+</div></header>
+<nav class="sections" aria-label="{t(lang, 'sections')}"><div class="wrap"><ul>{nav}</ul></div></nav>
+<main id="main" class="wrap">
+{body}
+</main>
+<footer class="foot"><div class="wrap">
+<p>{t(lang, "source_line", t=fmt_dt(updated))}</p>
+<ul class="foot-links">{"".join(links)}</ul>
+{visits}{install}{donate}
+</div></footer>
+</body>
+</html>
+"""
+
+    def install_block(self, lang, home=False):
+        """Botón «Instala la app» (PWA). Va oculto: app.js lo enseña solo donde el navegador permite instalar."""
+        btn = f'<button type="button" class="donate">{self.i("smartphone")} {t(lang, "install_button")}</button>'
+        help_ = f'<details><summary>{t(lang, "install_ios_q")}</summary><p>{t(lang, "install_ios")}</p></details>'
+        if home:
+            return (f'<aside class="tip install" hidden data-install>{self.i("smartphone")}<div>'
+                    f'<p><strong>{t(lang, "install_title")}</strong> {t(lang, "install_text")}</p><p>{btn}</p>{help_}</div></aside>')
+        return f'<div class="install" hidden data-install><p>{btn}</p>{help_}</div>'
+
+    def stamp(self, lang, *names):
+        """«Datos actualizados: …» del bloque, con la fuente más antigua de las que usa, y un aviso si lleva
+        demasiado sin responder. now.js lo recalcula en el navegador: si el build deja de ejecutarse, el aviso
+        puesto aquí no llegaría nunca."""
+        got = [(self.data[n]["fetched"], STALE_HOURS.get(n, STALE_DEFAULT)) for n in names
+               if (self.data.get(n) or {}).get("fetched")]
+        if not got:
+            return ""
+        fetched, max_h = min(got, key=lambda x: tz.parse_iso(x[0]))
+        stale = self.now - tz.parse_iso(fetched) > timedelta(hours=max_h)
+        return (f'<p class="note fresh" data-fetched="{esc(fetched)}" data-max-h="{max_h}">'
+                f'{t(lang, "fresh_at", t=fmt_dt(fetched))} <strong class="stale"{"" if stale else " hidden"}>'
+                f'{t(lang, "fresh_stale")}</strong></p>')
+
+    def filter_bar(self, lang, *groups):
+        """Buscador y chips de una lista. Va oculto y filter.js lo enseña: sin JS se ve la lista entera.
+        Cada grupo es una lista de (etiqueta, texto); dentro de un grupo se suman y entre grupos se cruzan."""
+        chips = "".join(
+            f'<button type="button" data-filter-tag="{tag}" data-filter-group="{g}" aria-pressed="false">{label}</button>'
+            for g, group in enumerate(groups) for tag, label in group)
+        q = esc(t(lang, "filter_q"))
+        return (f'<div class="filter" data-filter hidden>'
+                f'<input type="search" data-filter-q placeholder="{q}" aria-label="{q}" autocomplete="off">'
+                f'<div class="chips">{chips}</div><p class="note" data-filter-count '
+                f'data-text="{esc(t(lang, "filter_count"))}" aria-live="polite" hidden></p></div>')
+
+    def filter_empty(self, lang):
+        return f'<p data-filter-empty hidden>{t(lang, "filter_none")}</p>'
+
+    def filter_head(self):
+        return f'<script src="{self.href("/static/filter.js")}" defer></script>\n'
+
+    def suggest(self, lang):
+        """Alternativa a GitHub para proponer cambios: un correo al contacto de la web, si lo hay."""
+        mail = (self.cfg.get("owner") or {}).get("email")
+        if not mail:
+            return ""
+        subject = quote(f'{self.name}: {t(lang, "suggest_subject")}')
+        return " " + t(lang, "suggest_mail", mail=f"mailto:{esc(mail)}?subject={subject}")
+
+    def plural(self, lang, key, n):
+        """Texto según la cantidad: claves `_0`, `_1` y `_n`."""
+        return t(lang, f"{key}_{n if n < 2 else 'n'}", n=n)
+
+    def today_strip(self, lang):
+        """Franja «hoy» de la portada: lo que más se consulta, de un vistazo. Lo que depende de la hora (qué día
+        es, cuántos actos quedan) viaja también en `data-*` para que now.js lo corrija entre dos builds."""
+        today, items = self.now.date(), []
+        days = {d["date"]: f'{d["tmin"]}° / {d["tmax"]}°' for d in (self.get("weather") or {}).get("days") or []}
+        if today.isoformat() in days:
+            items.append(f'<a href="#weather" data-wx="{esc(json.dumps(days))}" data-text="{esc(t(lang, "today_wx"))}">'
+                         f'{self.i("cloud-sun")}<span>{t(lang, "today_wx").replace("{t}", days[today.isoformat()])}</span></a>')
+        alerts = self.get("alerts")
+        if alerts is not None:
+            items.append(f'<a href="#transport">{self.i("train-front")}<span>{self.plural(lang, "today_alerts", len(alerts))}</span></a>')
+        if self.get("agenda") is not None:
+            soon = {}  # día -> inicios («» si el acto no trae hora) de hoy y los dos días siguientes
+            for e in self.events_split()[0]:
+                if e["start"] <= (today + timedelta(days=2)).isoformat():
+                    begin = event_start(e)
+                    soon.setdefault(e["start"], []).append(begin.isoformat(timespec="minutes") if begin else "")
+            left = sum(e["start"] == today.isoformat() for e in self.upcoming())
+            texts = " ".join(f'data-t{k}="{esc(t(lang, f"today_events_{k}"))}"' for k in ("0", "1", "n"))
+            items.append(f'<a href="{self.href(self.path(lang, "agenda"))}" data-today-events="{esc(json.dumps(soon))}" {texts}>'
+                         f'{self.i("calendar")}<span>{self.plural(lang, "today_events", left)}</span></a>')
+        if self.get("pharmacy") is not None:
+            shifts = self.pharmacy_shifts(days=1)
+            short = lambda p: p["name"].removeprefix("Farmàcia ")  # noqa: E731
+            data = [{"from": a.isoformat(timespec="minutes"), "to": b.isoformat(timespec="minutes"), "name": short(p)}
+                    for a, b, _, p in shifts]
+            cur = next((p for a, b, _, p in shifts if a <= self.now < b), None)
+            label = t(lang, "pharmacy_chip", n=esc(short(cur))) if cur else t(lang, "pharmacy_chip_none")
+            items.append(f'<a href="{self.href(self.path(lang, "pharmacy"))}" data-shift-chip="{esc(json.dumps(data, ensure_ascii=False))}" '
+                         f'data-text="{esc(t(lang, "pharmacy_chip"))}" data-none="{esc(t(lang, "pharmacy_chip_none"))}">'
+                         f'{self.i("pill")}<span>{label}</span></a>')
+        if not items:
+            return ""
+        return (f'<nav class="today" aria-label="{esc(t(lang, "today_label"))}"><ul>'
+                f'{"".join(f"<li>{x}</li>" for x in items)}</ul></nav>')
+
+    # ---------- bloques ----------
+    def weather(self, lang):
+        w = self.get("weather")
+        if not w or not w.get("days"):
+            return ""
+        now = w.get("now") or {}
+        icon, text = i18n.sky(lang, now.get("symbol"))
+        rows = []
+        for d in w["days"]:
+            day = date.fromisoformat(d["date"])
+            di, dt_ = i18n.sky(lang, d["symbol"])
+            rows.append(f'<tr><td>{i18n.fmt_date(lang, day, weekday=True).split(",")[0]} {day.day}</td>'
+                        f'<td class="sky">{self.wx(di, dt_)} <span class="skytxt" aria-hidden="true">{esc(dt_)}</span></td>'
+                        f'<td class="num">{d["tmin"]}°</td><td class="num">{d["tmax"]}°</td>'
+                        f'<td class="num">{i18n.fmt_num(lang, d["rain_mm"], 1)}</td>'
+                        f'<td class="num">{d["wind_kmh"]}</td></tr>')
+        hero = ""
+        if now.get("temp") is not None:
+            hero = (f'<p class="hero card">{self.wx(icon, text, cls="wx wx-big")}'
+                    f'<span><span class="k">{t(lang, "now")}</span> <strong class="v">{round(now["temp"])}°C</strong> '
+                    f'<span class="sky">{esc(text)} · {t(lang, "wind")} {now["wind_kmh"]} km/h</span></span></p>')
+        return (f'<section id="weather"><h2>{self.i("cloud-sun")}{t(lang, "weather_title")}</h2>{hero}<table class="recent weather"><thead><tr>'
+                f'<th>{t(lang, "th_day")}</th><th>{t(lang, "th_sky")}</th><th class="num">{t(lang, "th_min")}</th>'
+                f'<th class="num">{t(lang, "th_max")}</th><th class="num">{t(lang, "th_rain")} (mm)</th>'
+                f'<th class="num">{t(lang, "th_wind")} (km/h)</th></tr></thead><tbody>{"".join(rows)}</tbody></table>'
+                f'<p class="note">{t(lang, "weather_note")}</p>{self.stamp(lang, "weather")}</section>')
+
+    def light(self, lang):
+        li = self.get("light")
+        if not li or li.get("date") != self.now.date().isoformat() or "3" not in li.get("cheapest", {}):
+            return ""
+        one = li["cheapest"].get("1", li["cheapest"]["3"])
+        price = i18n.fmt_num(lang, one["avg_eur_kwh"], 4)
+        site = li.get("site") or ""
+        home = f'{site.rstrip("/")}/{lang}/' if site else ""
+        more = f'<p><a href="{esc(home)}">{t(lang, "light_more")} →</a></p>' if home else ""
+        tip = t(lang, "light_tip")
+        try:  # la frase del sol solo si las 3 horas baratas caen de día (10–17 h), no de madrugada
+            first = datetime.fromisoformat(li["cheapest"]["3"]["start"]).hour
+            if 10 <= first <= 14:
+                tip += " " + t(lang, "light_tip_solar")
+        except (KeyError, ValueError):
+            pass
+        return (f'<section class="light"><h2>{self.i("zap")}{t(lang, "light_title")}</h2>'
+                f'<p>{t(lang, "light_text", w=li["cheapest"]["3"]["label"], h=one["label"], p=price)}</p>'
+                f'<p class="note">{tip}</p>{more}</section>')
+
+    def air(self, lang):
+        air = self.get("air")
+        if not air:
+            return ""
+        rows = []
+        for station in sorted(air):
+            cells = []
+            for pol in ("NO2", "O3", "PM10", "PM2.5"):
+                m = air[station].get(pol)
+                if not m:
+                    cells.append('<td class="num">–</td>')
+                    continue
+                lvl = i18n.aq_level(pol, m["value"])
+                cells.append(f'<td class="num">{round(m["value"])} <span class="aq a{lvl}">{t(lang, f"aq_{lvl}")}</span></td>')
+            latest = max(air[station].values(), key=lambda m: (m["date"], m["hour"]))
+            when = t(lang, "air_at", date=i18n.fmt_date(lang, date.fromisoformat(latest["date"]), weekday=False),
+                     h=f'{latest["hour"]:02d}')
+            rows.append(f'<tr><td>{esc(station)}<br><small class="muted">{when}</small></td>{"".join(cells)}</tr>')
+        return (f'<section><h2>{self.i("wind")}{t(lang, "air_title")}</h2><div class="scroll-x"><table class="recent"><thead><tr>'
+                f'<th>{t(lang, "station")}</th><th class="num">NO₂</th><th class="num">O₃</th>'
+                f'<th class="num">PM10</th><th class="num">{"PM2.5" if lang == "en" else "PM2,5"}</th></tr></thead>'
+                f'<tbody>{"".join(rows)}</tbody></table></div>'
+                f'<p class="note">{t(lang, "air_note")} µg/m³.</p>{self.stamp(lang, "air")}</section>')
+
+    def transport(self, lang):
+        alerts = self.get("alerts")
+        if alerts is None:
+            return ""
+        items = "".join(
+            f'<li><span class="line">{" ".join(esc(x) for x in a["lines"])}</span> '
+            f'{esc(a["text"].get(lang) or a["text"].get("ca") or a["text"].get("es") or next(iter(a["text"].values())))}</li>'
+            for a in alerts[:6])
+        body = f'<ul class="alerts">{items}</ul>' if items else f'<p>{t(lang, "transport_none")}</p>'
+        return (f'<section id="transport"><h2>{self.i("train-front")}{t(lang, "transport_title")}</h2>{body}'
+                f'{self.stamp(lang, "alerts")}<p><a href="{FGC}">{t(lang, "transport_more_fgc")} →</a> · '
+                f'<a href="{RODALIES}">{t(lang, "transport_more")} →</a></p></section>')
+
+    def started(self, e):
+        """Acto de un solo día, de hoy, cuya hora de inicio ya ha pasado. Sin hora de fin no se sabe si sigue."""
+        begin = event_start(e)
+        return bool(begin) and e.get("end", e["start"]) == e["start"] == self.now.date().isoformat() and begin <= self.now
+
+    def event_item(self, lang, e, attrs=""):
+        """`data-start`/`data-end` permiten a now.js marcar lo que empieza y esconder lo que acaba entre dos builds."""
+        d = date.fromisoformat(e["start"])
+        when = i18n.fmt_date(lang, d) + (f' · {esc(e["time"])}' if e.get("time") else "")
+        begin, on = event_start(e), self.started(e)
+        tags = " ".join(k for k, hit in (("free", is_free(e)), ("kids", for_kids(e))) if hit)
+        attrs += f' data-day="{esc(e["start"])}" data-end="{esc(e.get("end") or e["start"])}" data-tags="{tags}"'
+        if begin and e.get("end", e["start"]) == e["start"]:
+            attrs += f' data-start="{begin.isoformat(timespec="minutes")}"'
+            when += f' <span class="tier t3 on"{"" if on else " hidden"}>{t(lang, "started")}</span>'
+        if on:
+            attrs = ' class="started"' + attrs
+        if e.get("end") and e["end"] != e["start"]:
+            when += f' → {i18n.fmt_date(lang, date.fromisoformat(e["end"]), weekday=False)}'
+        title = link(e.get("url"), esc(e["title"]))
+        if festive(e):
+            title = f'{self.i("party-popper", t(lang, "festive"), cls="i badge")} {title}'
+        if for_kids(e):
+            title = f'{self.i("baby", t(lang, "kids"), cls="i badge")} {title}'
+        meta = " · ".join(x for x in (esc(i18n.agenda_cat(lang, e.get("category", ""))), esc(e.get("place", "")),
+                                       t(lang, "free") if is_free(e) else "", t(lang, "src_" + e["source"])) if x)
+        return f'<li{attrs}><span class="when">{when}</span><span class="what">{title}</span><small class="muted">{meta}</small></li>'
+
+    def events_split(self):
+        """(próximos, en curso): los actos de varios días que ya han empezado van aparte."""
+        today = self.now.date().isoformat()
+        events = [e for e in (self.get("agenda") or {}).get("events", []) if (e.get("end") or e["start"]) >= today]
+        return [e for e in events if e["start"] >= today], [e for e in events if e["start"] < today]
+
+    def upcoming(self):
+        """Próximos actos, sin los de hoy que ya han empezado."""
+        return [e for e in self.events_split()[0] if not self.started(e)]
+
+    def agenda_preview(self, lang, n=6, spare=4):
+        """Los n próximos, más unos de reserva ocultos que now.js enseña cuando empiezan los primeros."""
+        ag = self.get("agenda")
+        if ag is None:
+            return ""
+        events = self.upcoming()[:n + spare]
+        items = "".join(self.event_item(lang, e, " hidden" if i >= n else "") for i, e in enumerate(events))
+        body = f'<ul class="events" data-upcoming="{n}">{items}</ul>' if events else f'<p>{t(lang, "agenda_empty")}</p>'
+        return (f'<section><h2>{self.i("calendar")}{t(lang, "agenda_next")}</h2>{body}'
+                f'<p><a href="{self.href(self.path(lang, "agenda"))}">{t(lang, "agenda_all")} →</a></p></section>')
+
+    def weekend_events(self):
+        """Actos que caen entre el viernes y el domingo (este, si ya estamos en fin de semana), incluidos los
+        que ya han empezado y siguen."""
+        today = self.now.date()
+        fri = today if today.weekday() >= 4 else today + timedelta(days=4 - today.weekday())
+        sun = fri + timedelta(days=6 - fri.weekday())
+        upcoming, ongoing = self.events_split()
+        return [e for e in upcoming + ongoing
+                if e["start"] <= sun.isoformat() and (e.get("end") or e["start"]) >= fri.isoformat()]
+
+    def weekend(self, lang):
+        events = self.weekend_events()
+        body = (f'<ul class="events">{"".join(self.event_item(lang, e) for e in events)}</ul>'
+                if events else f'<p>{t(lang, "weekend_empty")}</p>')
+        return f'<section id="weekend"><h2>{self.i("calendar")}{t(lang, "weekend_title")}</h2>{body}</section>'
+
+    def aids_open(self):
+        """[(estado, fecha, ayuda)] que aún se pueden pedir: primero las de plazo conocido, por fecha de cierre."""
+        today, out = self.now.date(), []
+        for a in ((self.get("aids") or {}).get("calls") or {}).values():
+            st = sources.aid_state(a, today)
+            if st:
+                out.append((*st, a))
+        rank = {"open": 0, "approx": 0, "soon": 1, "check": 2}
+        return sorted(out, key=lambda x: (rank[x[0]], x[1] or date.max, x[2]["title"]))
+
+    def aid_item(self, lang, state, day, a):
+        today = self.now.date()
+        title = a["title_ca"] if lang == "ca" and a.get("title_ca") else a["title"]
+        if len(title) > 220:
+            title = title[:217].rsplit(" ", 1)[0] + "…"
+        d = i18n.fmt_deadline(lang, day, today) if day else ""
+        if state in ("open", "approx", "soon"):
+            when = t(lang, {"open": "aids_until", "approx": "aids_approx", "soon": "aids_opens"}[state], d=d)
+        else:
+            when = t(lang, "aids_check", t=esc(a["term"])) if a.get("term") else t(lang, "aids_check_none")
+        if state in ("open", "approx") and (day - today).days <= 7:
+            when = f'<strong title="{t(lang, "aids_soon")}">{self.i("hourglass")} {when}</strong>'
+        meta = [esc(i18n.organ_name(a["organ"]))]
+        if a.get("budget"):
+            meta.append(t(lang, "aids_budget", b=i18n.fmt_money(lang, a["budget"])))
+        return (f'<li data-tags="{" ".join(aid_topics(a))}"><span class="when">{when}</span>'
+                f'<span class="what"><a href="{BDNS_CALL.format(esc(a["id"]))}">'
+                f'{esc(title)}</a></span><small class="muted">{" · ".join(meta)}</small></li>')
+
+    def aids_preview(self, lang):
+        if self.get("aids") is None:
+            return ""
+        items = self.aids_open()
+        n = {w: sum(w in x[2]["who"] for x in items) for w in AUDIENCES}
+        mine = sorted((x for x in items if "people" in x[2]["who"] and x[0] in ("open", "approx")),
+                      key=lambda x: (LEVELS.index(aid_level(x[2])), x[1]))[:3]
+        top = f'<ul class="events">{"".join(self.aid_item(lang, *x) for x in mine)}</ul>' if mine else ""
+        return (f'<section><h2>{self.i("banknote")}{t(lang, "aids_home_title")}</h2>'
+                f'<p>{t(lang, "aids_home_text", p=n["people"], b=n["business"], e=n["entities"])}</p>{top}'
+                f'<p><a href="{self.href(self.path(lang, "aids"))}">{t(lang, "aids_all")} →</a></p></section>')
+
+    def aids_page(self, lang):
+        items = self.aids_open()
+        jump = " · ".join(f'<a href="#{w}">{t(lang, "aids_" + w)}</a> ({sum(w in x[2]["who"] for x in items)})'
+                          for w in AUDIENCES)
+        seen = {k for x in items for k in aid_topics(x[2])}
+        bar = self.filter_bar(lang, [(k, t(lang, "topic_" + k)) for k, *_ in AID_TOPICS if k in seen])
+        body = [f'<h1>{t(lang, "aids_title")}</h1><p class="lede">{t(lang, "aids_desc")}</p><p>{jump}</p>'
+                f'<div data-filter-scope>{bar}']
+        for who in AUDIENCES:
+            mine = [x for x in items if who in x[2]["who"]]
+            body.append(f'<h2 id="{who}">{t(lang, "aids_" + who)}</h2>')
+            if not mine:
+                body.append(f'<p>{t(lang, "aids_empty")}</p>')
+            for lvl in LEVELS:
+                group = [x for x in mine if aid_level(x[2]) == lvl]
+                if group:
+                    body.append(f'<details class="group">'
+                                f'<summary>{t(lang, "aids_lvl_" + lvl)} <span class="muted" data-count>({len(group)})</span></summary>'
+                                f'<ul class="events">{"".join(self.aid_item(lang, *x) for x in group)}</ul></details>')
+        body.append(f'{self.filter_empty(lang)}</div>')
+        body.append(f'<p class="note">{t(lang, "aids_note")}</p>{self.stamp(lang, "aids")}')
+        return self.layout(lang, "aids", f'{t(lang, "aids_title")} · {self.name}', t(lang, "aids_desc"), "".join(body),
+                           head=self.filter_head())
+
+    def public_jobs(self):
+        today = self.now.date().isoformat()
+        return [j for j in self.get("cido") or [] if not j["end"] or j["end"] >= today]
+
+    def job_item(self, lang, j):
+        meta = [esc(j["company"]), esc(j["contract"]), esc(j["hours"])]
+        if j.get("salary"):
+            meta.append("–".join(i18n.fmt_money(lang, x) for x in sorted(set(j["salary"]))))
+        when = t(lang, "jobs_posted", d=i18n.fmt_deadline(lang, date.fromisoformat(j["date"]), self.now.date()))
+        return (f'<li data-tags="{" ".join(job_tags(j))}"><span class="when">{when}</span><span class="what">{link(j["url"], esc(j["title"]))}'
+                f'</span><small class="muted">{" · ".join(x for x in meta if x)}</small></li>')
+
+    def public_job_item(self, lang, j):
+        today = self.now.date()
+        when = t(lang, "aids_until", d=i18n.fmt_deadline(lang, date.fromisoformat(j["end"]), today)) if j["end"] else ""
+        if j["end"] and (date.fromisoformat(j["end"]) - today).days <= 3:
+            when = f'<strong>{self.i("hourglass")} {when}</strong>'
+        size = t(lang, "jobs_pool") if j["pool"] else t(lang, "jobs_place") if j["places"] == 1 else (
+            t(lang, "jobs_places", n=j["places"]) if j["places"] else "")
+        meta = [esc(j["org"]), esc(j["kind"]), esc(j["group"]), size]
+        return (f'<li data-tags="{PUBLIC_LEVELS.get(j["group"], "")}"><span class="when">{when}</span><span class="what">{link(j["url"], esc(j["title"]))}'
+                f'</span><small class="muted">{" · ".join(x for x in meta if x)}</small></li>')
+
+    def jobs_page(self, lang):
+        offers, public = self.get("offers") or [], self.public_jobs()
+        chips = lambda *keys: [(k, t(lang, "job_f_" + k)) for k in keys]  # noqa: E731
+        body = [f'<h1>{t(lang, "jobs_title")}</h1><p class="lede">{t(lang, "jobs_desc")}</p>'
+                f'<p><a href="#offers">{t(lang, "jobs_offers")}</a> ({len(offers)}) · '
+                f'<a href="#public">{t(lang, "jobs_public")}</a> ({len(public)})</p>',
+                f'<h2 id="offers">{t(lang, "jobs_offers")}</h2><div data-filter-scope>'
+                f'{self.filter_bar(lang, chips("indef", "temp"), chips("full", "part"))}']
+        towns = {}
+        for j in offers:
+            towns.setdefault(j["town"], []).append(j)
+        for town, items in towns.items():
+            body.append(f'<details class="group">'
+                        f'<summary>{esc(i18n.organ_name(town))} <span class="muted" data-count>({len(items)})</span></summary>'
+                        f'<ul class="events">{"".join(self.job_item(lang, j) for j in items)}</ul></details>')
+        if not offers:
+            body.append(f'<p>{t(lang, "jobs_empty")}</p>')
+        body.append(f'{self.filter_empty(lang)}</div><h2 id="public">{t(lang, "jobs_public")}</h2><div data-filter-scope>'
+                    f'{self.filter_bar(lang, chips("uni", "c1", "c2", "ap"))}')
+        near = [j for j in public if j["km"] is not None and j["km"] <= 4.5]
+        for key, items in (("jobs_near", near), ("jobs_far", [j for j in public if j not in near])):
+            if items:
+                body.append(f'<details class="group">'
+                            f'<summary>{t(lang, key)} <span class="muted" data-count>({len(items)})</span></summary>'
+                            f'<ul class="events">{"".join(self.public_job_item(lang, j) for j in items)}</ul></details>')
+        if not public:
+            body.append(f'<p>{t(lang, "jobs_empty")}</p>')
+        body.append(f'{self.filter_empty(lang)}</div>')
+        body.append(f'<p class="note">{t(lang, "jobs_note")}</p>{self.stamp(lang, "offers", "cido")}')
+        return self.layout(lang, "jobs", f'{t(lang, "jobs_title")} · {self.name}', t(lang, "jobs_desc"), "".join(body),
+                           head=self.filter_head())
+
+    def jobs_preview(self, lang):
+        if self.get("offers") is None and self.get("cido") is None:
+            return ""
+        text = t(lang, "jobs_home_text", o=len(self.get("offers") or []), p=len(self.public_jobs()))
+        return (f'<section><h2>{self.i("briefcase")}{t(lang, "jobs_home")}</h2><p>{text}</p>'
+                f'<p><a href="{self.href(self.path(lang, "jobs"))}">{t(lang, "jobs_all")} →</a></p></section>')
+
+    def fuel_rows(self, lang, stations, fuel_best):
+        rows = []
+        for s in stations:
+            cells = []
+            for k in ("g95", "diesel"):
+                p = s["prices"].get(k)
+                txt = i18n.fmt_num(lang, p, 3) if p else "–"
+                cells.append(f'<td class="num">{"<strong>" + txt + "</strong>" if p and p == fuel_best[k] else txt}</td>')
+            where = esc(s["address"]) + ("" if s["town"] == sources.FUEL_TOWNS[sources.FUEL_HOME] else f', {esc(s["town"])}')
+            link = f' · <a href="{osm(s["lat"], s["lon"])}">{t(lang, "map")}</a>' if s.get("lat") else ""
+            rows.append(f'<tr><td><strong>{esc(s["name"])}</strong><br><small class="muted">{where} · '
+                        f'{esc(s["hours"])}{link}</small></td>{"".join(cells)}</tr>')
+        return "".join(rows)
+
+    def fuel(self, lang):
+        f = self.get("fuel")
+        if not f or not f.get("stations"):
+            return ""
+        by_g95 = sorted(f["stations"], key=lambda s: (s["prices"].get("g95", 99), s["prices"].get("diesel", 99)))
+        here = [s for s in by_g95 if s["town"] == sources.FUEL_TOWNS[sources.FUEL_HOME]]
+        near = [s for s in by_g95 if s["town"] != sources.FUEL_TOWNS[sources.FUEL_HOME]][:5]
+        head = (f'<thead><tr><th>{t(lang, "fuel_station")}</th><th class="num">{t(lang, "fuel_g95")}</th>'
+                f'<th class="num">{t(lang, "fuel_diesel")}</th></tr></thead>')
+        best = {k: min((s["prices"][k] for s in here if k in s["prices"]), default=None) for k in ("g95", "diesel")}
+        out = [f'<h2 id="fuel">{self.i("fuel")}{t(lang, "fuel_title")}</h2>']
+        for key, items, mark in (("fuel_town", here, best), ("fuel_near", near, {})):
+            if items:
+                out.append(f'<h3>{t(lang, key)}</h3><div class="scroll-x"><table class="recent">{head}<tbody>'
+                           f'{self.fuel_rows(lang, items, {"g95": mark.get("g95"), "diesel": mark.get("diesel")})}'
+                           f'</tbody></table></div>')
+        out.append(f'<p class="note">{t(lang, "fuel_note", t=esc(f.get("updated", "")))}</p>')
+        return "".join(out)
+
+    def fuel_preview(self, lang):
+        here = [s for s in (self.get("fuel") or {}).get("stations", []) if s["town"] == sources.FUEL_TOWNS[sources.FUEL_HOME]]
+        best = {}
+        for k in ("g95", "diesel"):
+            cands = [s for s in here if k in s["prices"]]
+            if cands:
+                best[k] = min(cands, key=lambda s: s["prices"][k])
+        if len(best) < 2:
+            return ""
+        name = lambda s: f'{esc(s["name"])} ({esc(s["address"])})'  # noqa: E731
+        text = t(lang, "fuel_home_text", g=i18n.fmt_num(lang, best["g95"]["prices"]["g95"], 3), gs=name(best["g95"]),
+                 d=i18n.fmt_num(lang, best["diesel"]["prices"]["diesel"], 3), ds=name(best["diesel"]))
+        return (f'<section><h2>{self.i("fuel")}{t(lang, "fuel_home")}</h2><p>{text}</p>'
+                f'<p><a href="{self.href(self.path(lang, "directory"))}#fuel">{t(lang, "fuel_more")} →</a></p></section>')
+
+    def contracts(self):
+        """(grandes inversiones, licitaciones abiertas, anunciadas): lo anulado no sale."""
+        now = self.now.strftime("%Y-%m-%dT%H:%M")
+        since = (self.now.date() - timedelta(days=INVEST_DAYS)).isoformat()
+        live = [c for c in self.get("contracts") or [] if c["phase"] != "Anul·lació"]
+        big = sorted((c for c in live if c["amount"] >= BIG and c["date"] >= since), key=lambda c: -c["amount"])
+        bids = sorted((c for c in live if c["phase"] == "Anunci de licitació" and c["deadline"] >= now),
+                      key=lambda c: c["deadline"])
+        soon = [c for c in live if c["phase"] in SOON_PHASES and c["date"] >= since]
+        return big, bids, soon
+
+    def phase_key(self, c):
+        closed = c["phase"] == "Anunci de licitació" and c["deadline"] and c["deadline"] < self.now.strftime("%Y-%m-%dT%H:%M")
+        return "closed_bids" if closed else c["phase"]
+
+    def contract_item(self, lang, c):
+        today, key = self.now.date(), self.phase_key(c)
+        when = [f'<strong>{i18n.fmt_big(lang, c["amount"])}</strong>' if c["amount"] else ""]
+        if key == "Anunci de licitació" and c["deadline"]:
+            d = date.fromisoformat(c["deadline"][:10])
+            until = t(lang, "invest_until", d=i18n.fmt_deadline(lang, d, today))
+            when.append(f'{self.i("hourglass")} {until}' if (d - today).days <= 3 else until)
+        else:
+            when.append(i18n.fmt_deadline(lang, date.fromisoformat(c["date"]), today))
+        badge = f'<span class="tier {PHASE_TIER.get(key, "t3")}">{esc(i18n.phase(lang, key))}</span>'
+        meta = [esc(c["organ"]), esc(i18n.contract_type(lang, c["type"])),
+                t(lang, "invest_lots", n=c["lots"]) if c["lots"] > 1 else ""]
+        if c["winners"]:
+            more = f' +{len(c["winners"]) - 3}' if len(c["winners"]) > 3 else ""
+            meta.append(t(lang, "invest_winners", w=esc(", ".join(c["winners"][:3]) + more)))
+        title = link(c.get("url"), esc(c["title"]))
+        return (f'<li><span class="when">{badge} {" · ".join(x for x in when if x)}</span><span class="what">{title}</span>'
+                f'<small class="muted">{" · ".join(x for x in meta if x)}</small></li>')
+
+    def company_events(self):
+        since = (self.now.date() - timedelta(days=COMPANY_DAYS)).isoformat()
+        return [e for e in (self.get("companies") or {}).get("events", []) if e["date"] >= since]
+
+    def company_meta(self, lang, e):
+        """Datos de un acto del BORME, en texto: capital, actividad o municipio de destino."""
+        meta = []
+        if e.get("capital"):
+            sign = {"capital": "+", "capital_down": "−"}.get(e["kind"], "")
+            c = sign + i18n.fmt_money(lang, e["capital"])
+            meta.append(t(lang, "invest_capital_change", c=c, t=i18n.fmt_money(lang, e["total"])) if e.get("total")
+                        else t(lang, "invest_capital", c=c))
+        meta += [e.get("activity") or "", "→ " + i18n.organ_name(e["town"]) if e.get("town") else ""]
+        return [x for x in meta if x]
+
+    def company_item(self, lang, e):
+        meta = [esc(x) for x in self.company_meta(lang, e)] + [f'<a href="{esc(e["url"])}">BORME</a>']
+        return (f'<li><span class="when">{i18n.fmt_date(lang, date.fromisoformat(e["date"]))}</span>'
+                f'<span class="what">{esc(e["name"])}</span><small class="muted">{" · ".join(meta)}</small></li>')
+
+    def invest_page(self, lang):
+        big, bids, soon = self.contracts()
+        sections = (("big", "invest_big", big), ("open", "invest_open", bids), ("soon", "invest_soon", soon))
+        icon = {"big": "construction", "open": "megaphone", "soon": "telescope"}
+        comp, events = self.get("companies"), self.company_events()
+        jump = [f'<a href="#{k}">{t(lang, key)}</a> ({len(items)})' for k, key, items in sections]
+        if comp is not None:
+            jump.append(f'<a href="#companies">{t(lang, "invest_companies")}</a> ({len(events)})')
+        body = [f'<h1>{t(lang, "invest_title")}</h1><p class="lede">{t(lang, "invest_desc")}</p><p>{" · ".join(jump)}</p>']
+        for k, key, items in sections:
+            body.append(f'<h2 id="{k}">{self.i(icon[k])}{t(lang, key)}</h2><p>{t(lang, key + "_text")}</p>')
+            body.append(f'<ul class="events">{"".join(self.contract_item(lang, c) for c in items)}</ul>'
+                        if items else f'<p>{t(lang, "invest_empty")}</p>')
+        if comp is not None:
+            kinds = {k: [e for e in events if e["kind"] == k] for k in i18n.COMPANY_KINDS}
+            body.append(f'<h2 id="companies">{self.i("building")}{t(lang, "invest_companies")}</h2><p>' + t(
+                lang, "invest_companies_text", d=COMPANY_DAYS, n=len(kinds["new"]), m=len(kinds["moved_in"]),
+                u=len(kinds["capital"]), c=i18n.fmt_money(lang, sum(e.get("capital") or 0 for e in kinds["new"]))) + "</p>")
+            for k, items in kinds.items():
+                if items:
+                    body.append(f'<details class="group">'
+                                f'<summary>{esc(i18n.company_kind(lang, k))} <span class="muted">({len(items)})</span></summary>'
+                                f'<ul class="events">{"".join(self.company_item(lang, e) for e in items)}</ul></details>')
+        feed = self.href(self.path(lang, "invest") + "feed.xml")
+        body.append(f'<aside class="tip">{self.i("bell")}<p>{t(lang, "invest_feed", url=feed)}</p></aside>')
+        day = lambda iso: i18n.fmt_deadline(lang, date.fromisoformat(iso), self.now.date()) if iso else "–"  # noqa: E731
+        body.append(f'<p class="note">{t(lang, "invest_note", t=day((comp or {}).get("last")), since=day((comp or {}).get("since")))}</p>')
+        body.append(self.stamp(lang, "contracts", "companies"))
+        head = f'<link rel="alternate" type="application/atom+xml" title="{esc(t(lang, "invest_title"))}" href="{feed}">\n'
+        return self.layout(lang, "invest", f'{t(lang, "invest_title")} · {self.name}', t(lang, "invest_desc"),
+                           "".join(body), head=head)
+
+    def invest_preview(self, lang):
+        if self.get("contracts") is None and self.get("companies") is None:
+            return ""
+        big, bids, _ = self.contracts()
+        arrived = [e for e in self.company_events() if e["kind"] in ("new", "moved_in")]
+        latest = sorted(big, key=lambda c: c["date"], reverse=True)[:3]
+        text = t(lang, "invest_home_text", o=len(bids), b=len(big), n=len(arrived), d=COMPANY_DAYS)
+        top = f'<ul class="events">{"".join(self.contract_item(lang, c) for c in latest)}</ul>' if latest else ""
+        return (f'<section><h2>{self.i("construction")}{t(lang, "invest_home")}</h2><p>{text}</p>{top}'
+                f'<p><a href="{self.href(self.path(lang, "invest"))}">{t(lang, "invest_all")} →</a></p></section>')
+
+    def feed(self, lang):
+        """Canal Atom con las novedades de la página de inversiones: un cambio de fase cuenta como novedad."""
+        big, bids, soon = self.contracts()
+        since = (self.now.date() - timedelta(days=FEED_DAYS)).isoformat()
+        entries = []
+        for c in {c["id"]: c for c in big + bids + soon}.values():
+            if c["date"] >= since:
+                key = self.phase_key(c)
+                title = " · ".join(x for x in (i18n.phase(lang, key), i18n.fmt_big(lang, c["amount"]) if c["amount"] else "",
+                                               c["title"]) if x)
+                summary = " · ".join(x for x in (c["organ"], i18n.contract_type(lang, c["type"])) if x)
+                entries.append((c["date"], f'{c["id"]}|{key}', title, c["url"], summary))
+        for e in self.company_events():
+            if e["date"] >= since:
+                entries.append((e["date"], e["id"], f'{i18n.company_kind(lang, e["kind"])} · {e["name"]}', e["url"],
+                                " · ".join(self.company_meta(lang, e))))
+        page = self.absolute(self.path(lang, "invest"))
+        host = urlparse(self.base_url).hostname
+        items = "".join(
+            f'<entry><title>{esc(title)}</title><link href="{esc(url or page)}"/>'
+            f'<id>tag:{host},2026:{hashlib.sha1(key.encode()).hexdigest()[:20]}</id>'
+            f'<updated>{day}T12:00:00Z</updated><summary>{esc(summary)}</summary></entry>\n'
+            for day, key, title, url, summary in sorted(entries, reverse=True)[:80])
+        return ('<?xml version="1.0" encoding="utf-8"?>\n'
+                f'<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{lang}">\n'
+                f'<title>{esc(t(lang, "invest_title"))}</title><subtitle>{esc(t(lang, "invest_desc"))}</subtitle>\n'
+                f'<link rel="alternate" href="{page}"/><link rel="self" href="{page}feed.xml"/>\n'
+                f'<id>{page}</id><updated>{self.now.astimezone(tz.UTC).strftime("%Y-%m-%dT%H:%M:%SZ")}</updated>'
+                f'<author><name>{esc(self.name)}</name></author>\n{items}</feed>\n')
+
+    def emergency_page(self, lang):
+        items = []
+        for e in self.get("equipments") or []:
+            if e["cat"] != "Emergències. Seguretat":
+                continue
+            phone = re.sub(r"[^+0-9]", "", e.get("phone", ""))
+            extra = [esc(e["address"]) if e.get("address") else "",
+                     f'{t(lang, "phone")} <a href="tel:{phone}">{esc(e["phone"])}</a>' if phone else "",
+                     f'<a href="{osm(e["lat"], e["lon"])}">{t(lang, "map")}</a>' if e.get("lat") else ""]
+            items.append(f'<li><strong>{esc(e["name"])}</strong><br>{" · ".join(x for x in extra if x)}</li>')
+        local = f'<h2>{self.i("siren")}{t(lang, "emergency_local")}</h2><ul class="dir">{"".join(items)}</ul>' if items else ""
+        return self.layout(lang, "emergency", f'{t(lang, "emergency_title")} · {self.name}', t(lang, "emergency_desc"),
+                           f'<h1>{t(lang, "emergency_title")}</h1>{t(lang, "emergency_body", local=local)}'
+                           f'{self.pharmacy_block(lang, n=2)}')
+
+    def politics_way(self, lang, w):
+        return f'<li><strong>{link(w.get("url"), esc(w["name"][lang]))}</strong> — {esc(w["text"][lang])}</li>'
+
+    def politics_page(self, lang):
+        """Guía «Participa»: del municipio al planeta, quién decide qué, cómo se elige y cómo influir."""
+        levels = self.politics.get("levels", [])
+        n = len(levels)
+        steps, cards = [], []
+        for k, lv in enumerate(levels, 1):
+            vote = f'<span class="vote v-{lv["vote"]}">{t(lang, "politics_vote_" + lv["vote"])}</span>'
+            steps.append(f'<li style="--k:{k}/{n}"><a href="#{lv["id"]}"><span class="dot" aria-hidden="true"></span>'
+                         f'<span class="what">{esc(lv["name"][lang])}</span>'
+                         f'<span class="muted">{esc(lv["body"][lang])} · {esc(lv["size"][lang])}</span>{vote}</a></li>')
+            ways = "".join(self.politics_way(lang, w) for w in lv["ways"])
+            cards.append(f'<section class="level card" id="{lv["id"]}"><h2><span class="lvl" aria-hidden="true">{k}</span>'
+                         f'<span>{esc(lv["name"][lang])}<small>{esc(lv["body"][lang])} · {esc(lv["size"][lang])}</small></span></h2>'
+                         f'<dl class="facts"><dt>{t(lang, "politics_who")}</dt><dd>{esc(lv["who"][lang])}</dd>'
+                         f'<dt>{t(lang, "politics_elected")}</dt><dd>{vote} {esc(lv["elected"][lang])}</dd>'
+                         f'<dt>{t(lang, "politics_decides")}</dt><dd>{esc(lv["decides"][lang])}</dd></dl>'
+                         f'<h3>{t(lang, "politics_ways")}</h3><ul class="ways">{ways}</ul></section>')
+        common = "".join(self.politics_way(lang, w) for w in self.politics.get("common", []))
+        checked = self.politics.get("checked")
+        when = i18n.fmt_date(lang, date.fromisoformat(checked), weekday=False) if checked else ""
+        body = (f'<h1>{t(lang, "politics_title")}</h1><p class="lede">{t(lang, "politics_desc")}</p>'
+                f'<aside class="tip">{self.i("info")}<p>{t(lang, "politics_neutral")}</p></aside>'
+                f'<section><h2>{self.i("globe")}{t(lang, "politics_ladder")}</h2><p class="muted">{t(lang, "politics_ladder_note")}</p>'
+                f'<ol class="ladder">{"".join(steps)}</ol></section>'
+                f'<aside class="tip">{self.i("info")}<p>{t(lang, "politics_tip")}</p></aside>'
+                f'{"".join(cards)}'
+                f'<section class="level card" id="always"><h2>{self.i("vote")}<span>{t(lang, "politics_common")}</span></h2>'
+                f'<ul class="ways">{common}</ul></section>'
+                f'<p class="note">{t(lang, "politics_note", d=when, repo=esc(self.cfg.get("repo_url") or "https://github.com"))}{self.suggest(lang)}</p>')
+        return self.layout(lang, "politics", f'{t(lang, "politics_title")} · {self.name}', t(lang, "politics_desc"), body)
+
+    def this_week(self):
+        live = [p for p in self.picks if pick_live(p, self.now.date())]  # fiestas: solo en su época
+        return {k: week_picks([p for p in live if p["kind"] == k], self.now.date(), n)
+                for k, n in PICKS_PER_WEEK.items()}
+
+    def pick_item(self, lang, p, full=True):
+        icon = self.i("utensils" if p["kind"] == "food" else "sparkles")
+        name = link(p.get("url"), esc(p["name"]))
+        tags = " · ".join(x for x in (esc(p["tags"][lang]), p.get("price", "")) if x)
+        extra = [esc(p["why"][lang])]
+        if full and p.get("address"):
+            q = quote(f'{p["name"]}, {p["address"]}')
+            extra.append(f'{esc(p["address"])} · <a href="https://www.openstreetmap.org/search?query={q}">{t(lang, "map")}</a>')
+        return (f'<li><span class="when">{icon} {tags}</span><span class="what">{name}</span>'
+                f'<small class="muted">{"<br>".join(extra)}</small></li>')
+
+    def picks_preview(self, lang):
+        week = self.this_week()
+        items = week["food"] + week["experience"]
+        if not items:
+            return ""
+        return (f'<section><h2>{self.i("sparkles")}{t(lang, "picks_home")}</h2>'
+                f'<ul class="events">{"".join(self.pick_item(lang, p, full=False) for p in items)}</ul>'
+                f'<p><a href="{self.href(self.path(lang, "picks"))}">{t(lang, "picks_more")} →</a></p></section>')
+
+    def picks_page(self, lang):
+        week = self.this_week()
+        monday = self.now.date() - timedelta(days=self.now.date().weekday())
+        body = [f'<h1>{t(lang, "picks_title")}</h1><p class="lede">{t(lang, "picks_desc")}</p>',
+                f'<p>{t(lang, "picks_week", d=i18n.fmt_date(lang, monday, weekday=False))}</p>']
+        for k in PICKS_PER_WEEK:
+            if week[k]:
+                body.append(f'<h2>{self.i("utensils" if k == "food" else "sparkles")}{t(lang, "picks_" + k)}</h2>'
+                            f'<ul class="events">{"".join(self.pick_item(lang, p) for p in week[k])}</ul>')
+        body.append(f'<p class="note">{t(lang, "picks_note", n=len(self.picks), repo=esc(self.cfg.get("repo_url") or "https://github.com"))}{self.suggest(lang)}</p>')
+        return self.layout(lang, "picks", f'{t(lang, "picks_title")} · {self.name}', t(lang, "picks_desc"), "".join(body))
+
+    # ---------- redes ----------
+    def top_videos(self, n=8):
+        """Los vídeos más vistos del último año de los canales del directorio, con tope por canal."""
+        since = (self.now.date() - timedelta(days=VIDEO_WINDOW)).isoformat()
+        known = {p["id"] for p in self.social}
+        per, out = {}, []
+        for v in sorted((self.get("social") or {}).get("videos", []), key=lambda v: (-v["views"], v["id"])):
+            if v["published"] < since or v["channel"] not in known or per.get(v["channel"], 0) >= VIDEOS_PER_CHANNEL:
+                continue
+            per[v["channel"]] = per.get(v["channel"], 0) + 1
+            out.append(v)
+        return out[:n]
+
+    def video_item(self, lang, v):
+        vid = quote(v["id"])
+        url = f"https://www.youtube.com/shorts/{vid}" if v.get("short") else f"https://www.youtube.com/watch?v={vid}"
+        who = next(p["name"] for p in self.social if p["id"] == v["channel"])
+        day = date.fromisoformat(v["published"])
+        meta = [esc(who), t(lang, "social_views", n=i18n.fmt_count(lang, v["views"])),
+                f"{i18n.fmt_date(lang, day, weekday=False)} {day.year}"]
+        return (f'<li><a href="{url}" rel="noopener"><img src="https://i.ytimg.com/vi/{vid}/mqdefault.jpg" alt="" '
+                f'width="320" height="180" loading="lazy" referrerpolicy="no-referrer">'
+                f'<span class="what">{esc(v["title"])}</span></a>'
+                f'<small class="muted">{" · ".join(meta)}</small></li>')
+
+    def profile_item(self, lang, p):
+        links = " · ".join(f'<a href="{esc(safe_url(p["links"][k]))}" rel="noopener">{label}</a>'
+                           for k, label in NETWORKS if safe_url(p["links"].get(k)))
+        return f'<li><strong>{esc(p["name"])}</strong> — {esc(p["desc"][lang])}<br>{links}</li>'
+
+    def social_preview(self, lang):
+        top = self.top_videos(3)
+        if not top:
+            return ""
+        return (f'<section><h2>{self.i("trending-up")}{t(lang, "social_home")}</h2>'
+                f'<ul class="videos">{"".join(self.video_item(lang, v) for v in top)}</ul>'
+                f'<p><a href="{self.href(self.path(lang, "social"))}">{t(lang, "social_more")} →</a></p></section>')
+
+    def social_page(self, lang):
+        body = [f'<h1>{t(lang, "social_title")}</h1><p class="lede">{t(lang, "social_desc")}</p>']
+        top = self.top_videos()
+        if top:
+            body.append(f'<section><h2>{self.i("trending-up")}{t(lang, "social_top")}</h2>'
+                        f'<ul class="videos">{"".join(self.video_item(lang, v) for v in top)}</ul>'
+                        f'<p class="note">{t(lang, "social_top_note", t=fmt_dt(self.data["social"].get("fetched")))}</p></section>')
+        body.append(f'<h2>{self.i("message-circle")}{t(lang, "social_who")}</h2><p>{t(lang, "social_who_text")}</p>')
+        for g, icon in SOCIAL_GROUPS.items():
+            group = [p for p in self.social if p["group"] == g]
+            if group:
+                body.append(f'<h3>{self.i(icon)} {t(lang, "social_g_" + g)}</h3>'
+                            f'<ul class="dir">{"".join(self.profile_item(lang, p) for p in group)}</ul>')
+        radar = "".join(f'<li><a href="{esc(u)}" rel="noopener">{esc(label)}</a></li>' for label, u in RADAR)
+        body.append(f'<section><h2>{self.i("link")}{t(lang, "social_radar")}</h2><p>{t(lang, "social_radar_text")}</p>'
+                    f'<ul class="months">{radar}</ul></section>')
+        body.append(f'<p class="note">{t(lang, "social_note", repo=esc(self.cfg.get("repo_url") or "https://github.com"))}{self.suggest(lang)}</p>')
+        return self.layout(lang, "social", f'{t(lang, "social_title")} · {self.name}', t(lang, "social_desc"), "".join(body))
+
+    def free_events(self, days=30):
+        limit = (self.now.date() + timedelta(days=days)).isoformat()
+        return [e for e in self.events_split()[0] if e["start"] <= limit and is_free(e)]
+
+    def fuel_saving(self):
+        """(estación más barata, más cara, euros de diferencia en 50 L) de gasolina 95 en Sant Esteve."""
+        here = [s for s in (self.get("fuel") or {}).get("stations", [])
+                if s["town"] == sources.FUEL_TOWNS[sources.FUEL_HOME] and "g95" in s["prices"]]
+        if len(here) < 2:
+            return None
+        cheap = min(here, key=lambda s: s["prices"]["g95"])
+        dear = max(here, key=lambda s: s["prices"]["g95"])
+        return cheap, dear, (dear["prices"]["g95"] - cheap["prices"]["g95"]) * FILL_LITRES
+
+    def save_preview(self, lang):
+        saving, free = self.fuel_saving(), self.free_events()
+        parts = []
+        if saving and saving[2] >= 0.5:
+            parts.append(t(lang, "save_home_fuel", e=i18n.fmt_num(lang, saving[2], 2), l=FILL_LITRES))
+        if free:
+            parts.append(t(lang, "save_home_free", n=len(free)))
+        return (f'<section><h2>{self.i("piggy-bank")}{t(lang, "save_home")}</h2><p>{" ".join(parts) or t(lang, "save_home_text")}</p>'
+                f'<p><a href="{self.href(self.path(lang, "save"))}">{t(lang, "save_all")} →</a></p></section>')
+
+    def save_page(self, lang):
+        body = [f'<h1>{t(lang, "save_title")}</h1><p class="lede">{t(lang, "save_desc")}</p>', self.light(lang)]
+        saving = self.fuel_saving()
+        if saving:
+            cheap, dear, euros = saving
+            name = lambda s: f'{esc(s["name"])} ({esc(s["address"])})'  # noqa: E731
+            body.append(f'<section><h2>{self.i("fuel")}{t(lang, "save_fuel")}</h2><p>' + t(
+                lang, "save_fuel_text", c=name(cheap), cp=i18n.fmt_num(lang, cheap["prices"]["g95"], 3), d=name(dear),
+                dp=i18n.fmt_num(lang, dear["prices"]["g95"], 3), e=i18n.fmt_num(lang, euros, 2), l=FILL_LITRES) +
+                f'</p><p><a href="{self.href(self.path(lang, "directory"))}#fuel">{t(lang, "fuel_more")} →</a></p></section>')
+        free = self.free_events()
+        body.append(f'<section><h2>{self.i("ticket")}{t(lang, "save_free")}</h2>')
+        body.append(f'<ul class="events">{"".join(self.event_item(lang, e) for e in free[:15])}</ul>'
+                    if free else f'<p>{t(lang, "save_free_empty")}</p>')
+        body.append(f'<p class="note">{t(lang, "save_free_note")}</p></section>')
+        mine = [x for x in self.aids_open() if "people" in x[2]["who"] and x[0] in ("open", "approx")]
+        if self.get("aids") is not None:
+            mine.sort(key=lambda x: (LEVELS.index(aid_level(x[2])), x[1]))
+            top = f'<ul class="events">{"".join(self.aid_item(lang, *x) for x in mine[:5])}</ul>' if mine else ""
+            body.append(f'<section><h2>{self.i("banknote")}{t(lang, "save_aids")}</h2><p>{t(lang, "save_aids_text", n=len(mine))}</p>{top}'
+                        f'<p><a href="{self.href(self.path(lang, "aids"))}#people">{t(lang, "aids_all")} →</a></p></section>')
+        body.append(f'<section><h2>{self.i("link")}{t(lang, "save_links")}</h2>{t(lang, "save_links_body")}</section>')
+        body.append(f'<p class="note">{t(lang, "save_note", repo=esc(self.cfg.get("repo_url") or "https://github.com"))}{self.suggest(lang)}</p>')
+        return self.layout(lang, "save", f'{t(lang, "save_title")} · {self.name}', t(lang, "save_desc"), "".join(body))
+
+    # ---------- farmacias de guardia ----------
+    def pharmacies(self):
+        """{id: ficha}: el directorio municipal más las farmacias que solo salen en los calendarios."""
+        ph, out = self.get("pharmacy") or {}, {}
+        for roster in (ph.get("rosters") or {}).values():
+            out.update({k: dict(v, id=k) for k, v in (roster.get("extra") or {}).items()})
+        out.update({p["id"]: p for p in ph.get("directory") or []})
+        return out
+
+    def pharmacy_shifts(self, days=2):
+        """[(desde, hasta, turno, farmacia)] de los turnos que aún no han acabado, hasta dentro de `days` días.
+        El de noche (o el de 24 h) de ayer sigue vivo hasta las 9 de hoy."""
+        rosters, known, out = (self.get("pharmacy") or {}).get("rosters") or {}, self.pharmacies(), []
+        for off in range(-1, days + 1):
+            d = self.now.date() + timedelta(days=off)
+            slot = ((rosters.get(d.strftime("%Y-%m")) or {}).get("days") or {}).get(str(d.day))
+            if not slot:
+                continue
+            nine, night, end = local_time(d, 9), local_time(d, 21), local_time(d + timedelta(days=1), 9)
+            parts = [(nine, end, "all", slot["all"])] if "all" in slot else [
+                (nine, night, "day", slot.get("day")), (night, end, "night", slot.get("night"))]
+            out += [(a, b, kind, known[i]) for a, b, kind, i in parts if b > self.now and i in known]
+        return out
+
+    def pharmacy_contact(self, lang, p):
+        town = PHARMACY_TOWNS.get(p["town"], p["town"])
+        bits = [esc(" · ".join(x for x in (p.get("address"), town) if x))]
+        if p.get("phone"):
+            bits.append(f'{t(lang, "phone")} <a href="tel:{esc(p["phone"].replace(" ", ""))}">{esc(p["phone"])}</a>')
+        if p.get("lat") and p.get("lon"):
+            bits.append(f'<a href="{osm(p["lat"], p["lon"])}">{t(lang, "map")}</a>')
+        elif p.get("address"):
+            q = quote(f'{p["address"]}, {town}')
+            bits.append(f'<a href="https://www.openstreetmap.org/search?query={q}">{t(lang, "map")}</a>')
+        return " · ".join(bits)
+
+    def shift_item(self, lang, a, b, kind, p):
+        """Un turno con su intervalo en `data-from`/`data-to`: now.js marca el que está en curso y esconde los
+        acabados. Sin JS se ven todos con sus horas, que ya dicen cuál toca."""
+        when = t(lang, "pharmacy_shift_" + kind, d=i18n.fmt_date(lang, a.date()))
+        return (f'<li data-from="{a.isoformat(timespec="minutes")}" data-to="{b.isoformat(timespec="minutes")}" data-hide-past>'
+                f'<span class="when"><span class="tier t0 now-tag">{t(lang, "pharmacy_now")}</span> {when}</span>'
+                f'<span class="what">{esc(p["name"])}</span>'
+                f'<small class="muted">{self.pharmacy_contact(lang, p)}</small></li>')
+
+    def pharmacy_block(self, lang, n=3, more=True):
+        """Quién está de guardia ahora y después. Si no hay calendario fiable de hoy, solo el enlace oficial."""
+        ph = self.get("pharmacy")
+        if ph is None:
+            return ""
+        shifts = self.pharmacy_shifts()
+        src = esc(safe_url(ph.get("source")) or sources.PHARMACY_URL)
+        none = f'<p data-shifts-empty{{}}>{t(lang, "pharmacy_none", url=src)}</p>'
+        if shifts and shifts[0][0] <= self.now:
+            body = (f'<ul class="events shifts" data-shifts>{"".join(self.shift_item(lang, *s) for s in shifts[:n])}</ul>'
+                    + none.format(" hidden"))
+        else:
+            body = none.format("")
+        link = (f'<p><a href="{self.href(self.path(lang, "pharmacy"))}">{t(lang, "pharmacy_more")} →</a></p>' if more else "")
+        return (f'<section id="pharmacy"><h2>{self.i("pill")}{t(lang, "pharmacy_home")}</h2>{body}'
+                f'<p class="note">{t(lang, "pharmacy_note", url=src)}</p>{link}</section>')
+
+    def pharmacy_page(self, lang):
+        ph, known, today = self.get("pharmacy") or {}, self.pharmacies(), self.now.date()
+        body = [f'<h1>{t(lang, "pharmacy_title")}</h1><p class="lede">{t(lang, "pharmacy_desc")}</p>',
+                self.pharmacy_block(lang, n=6, more=False)]
+        roster = (ph.get("rosters") or {}).get(today.strftime("%Y-%m"))
+        if roster:
+            name = lambda i: esc(known[i]["name"]) if i in known else "–"  # noqa: E731
+            rows = []
+            for n in sorted(roster["days"], key=int):
+                d, slot = today.replace(day=int(n)), roster["days"][n]
+                a, b = local_time(d, 9), local_time(d + timedelta(days=1), 9)
+                cells = (f'<td colspan="2">{name(slot["all"])} <small class="muted">({t(lang, "pharmacy_all24")})</small></td>'
+                         if "all" in slot else f'<td>{name(slot.get("day"))}</td><td>{name(slot.get("night"))}</td>')
+                rows.append(f'<tr data-from="{a.isoformat(timespec="minutes")}" data-to="{b.isoformat(timespec="minutes")}">'
+                            f'<td>{i18n.fmt_date(lang, d, weekday=True).split(",")[0]} {d.day}</td>{cells}</tr>')
+            pdf = link(roster.get("url"), t(lang, "pharmacy_pdf"))
+            body.append(f'<h2>{self.i("calendar")}{t(lang, "pharmacy_month", m=i18n.MONTHS[lang][today.month - 1], y=today.year)}</h2>'
+                        f'<div class="scroll-x"><table class="recent roster"><thead><tr><th>{t(lang, "th_day")}</th>'
+                        f'<th>{t(lang, "pharmacy_th_day")}</th><th>{t(lang, "pharmacy_th_night")}</th></tr></thead>'
+                        f'<tbody>{"".join(rows)}</tbody></table></div><p class="note">{pdf}</p>')
+        body.append(f'<h2>{self.i("map-pin")}{t(lang, "pharmacy_dir")}</h2>')
+        for town, full in PHARMACY_TOWNS.items():
+            items = "".join(f'<li><strong>{esc(p["name"])}</strong><br>{self.pharmacy_contact(lang, p)}</li>'
+                            for p in sorted(known.values(), key=lambda p: plain(p["name"])) if p["town"] == town)
+            if items:
+                body.append(f'<h3>{esc(full)}</h3><ul class="dir">{items}</ul>')
+        body.append(self.stamp(lang, "pharmacy"))
+        return self.layout(lang, "pharmacy", f'{t(lang, "pharmacy_title")} · {self.name}', t(lang, "pharmacy_desc"),
+                           "".join(body))
+
+    # ---------- avisos del Ayuntamiento y plazos ----------
+    def deadlines(self, days=14):
+        """[(fecha, tipo, objeto, aproximada)] de lo que cierra en `days` días: ayudas, oposiciones y licitaciones."""
+        today = self.now.date()
+        limit, out = today + timedelta(days=days), []
+        for state, day, a in self.aids_open():
+            if state in ("open", "approx") and day and today <= day <= limit:
+                out.append((day, "aid", a, state == "approx"))
+        for j in self.public_jobs():
+            if j["end"] and date.fromisoformat(j["end"]) <= limit:
+                out.append((date.fromisoformat(j["end"]), "job", j, False))
+        for c in self.contracts()[1]:
+            if c["deadline"] and date.fromisoformat(c["deadline"][:10]) <= limit:
+                out.append((date.fromisoformat(c["deadline"][:10]), "bid", c, False))
+        return sorted(out, key=lambda x: (x[0], x[1], x[2]["title"]))
+
+    def deadlines_block(self, lang, n=8):
+        """Cuántos plazos cierran pronto, por tipo, y la lista de los que más interesan a un vecino: las ayudas
+        a personas y familias. El resto se consulta (y se filtra) en su página."""
+        items, today = self.deadlines(), self.now.date()
+        if not items:
+            return ""
+        count = {k: sum(kind == k for _, kind, *_ in items) for k in ("aid", "job", "bid")}
+        lis = []
+        for day, kind, o, approx in [x for x in items if x[1] == "aid" and "people" in x[2]["who"]][:n]:
+            title = o["title_ca"] if lang == "ca" and o.get("title_ca") else o["title"]
+            if len(title) > 150:
+                title = title[:147].rsplit(" ", 1)[0] + "…"
+            when = t(lang, "aids_approx" if approx else "aids_until", d=i18n.fmt_deadline(lang, day, today))
+            if (day - today).days <= 3:
+                when = f'<strong>{self.i("hourglass")} {when}</strong>'
+            lis.append(f'<li data-end="{day.isoformat()}"><span class="when">{when}</span>'
+                       f'<span class="what">{link(BDNS_CALL.format(o["id"]), esc(title))}</span>'
+                       f'<small class="muted">{esc(i18n.organ_name(o["organ"]))}</small></li>')
+        people = f'<p>{t(lang, "deadlines_people")}</p><ul class="events">{"".join(lis)}</ul>' if lis else ""
+        pages = " · ".join(f'<a href="{self.href(self.path(lang, k))}">{t(lang, "nav_" + k)}</a>' for k in ("aids", "jobs", "invest"))
+        return (f'<section id="deadlines"><h2>{self.i("hourglass")}{t(lang, "deadlines_title")}</h2>'
+                f'<p>{t(lang, "deadlines_text", d=14, a=count["aid"], j=count["job"], b=count["bid"])}</p>{people}'
+                f'<p>{pages}</p></section>')
+
+    # ---------- tauler veïnal ----------
+    def board_posts(self):
+        """Anuncios vivos de la última lectura del worker (data/board.json), ya ordenados por el worker."""
+        posts = (self.get("board") or {}).get("posts") or []
+        return [p for p in posts if p.get("cat") in BOARD_ICONS and p.get("title") and p.get("body")]
+
+    def board_item(self, lang, p):
+        cat = p["cat"]
+        created = datetime.fromtimestamp(int(p.get("created") or 0), tz=tz.UTC)
+        posted = t(lang, "board_posted", d=i18n.fmt_date(lang, tz.to_madrid(created).date(), weekday=False))
+        price = f' <span class="tier t0">{esc(str(p["price"]))}</span>' if p.get("price") else ""
+        flag = f' <span class="tier t3" lang="{esc(p["lang"])}">{esc(p["lang"])}</span>' if p.get("lang") in LANGS and p["lang"] != lang else ""
+        contact = (f'<p class="contact"><b>{t(lang, "board_contact_show")}:</b> {esc(str(p["contact"]))}</p>'
+                   if p.get("contact") else "")
+        text = "<br>".join(esc(line) for line in str(p["body"]).splitlines() if line.strip())
+        return (f'<li id="p-{esc(str(p.get("id") or ""))}" class="post" data-cat="{cat}">'
+                f'<span class="when">{self.i(BOARD_ICONS[cat])}{t(lang, "board_cat_" + cat)}{price}{flag}</span>'
+                f'<span class="what">{esc(str(p["title"]))}</span><p class="body">{text}</p>{contact}'
+                f'<small class="muted">{esc(str(p.get("name") or ""))} · {posted}</small></li>')
+
+    def board_preview(self, lang):
+        if not self.has_board:
+            return ""
+        n = len(self.board_posts())
+        count = f" {t(lang, 'board_home_n', n=n)}" if n else ""
+        return (f'<section><h2>{self.i("megaphone")}{t(lang, "board_home")}</h2><p>{t(lang, "board_home_text")}{count}</p>'
+                f'<p><a href="{self.href(self.path(lang, "board"))}">{t(lang, "board_all")} →</a></p></section>')
+
+    def board_page(self, lang):
+        api = (self.cfg.get("board_api_url") or "").rstrip("/")
+        sitekey = self.cfg.get("turnstile_site_key") or ""
+        posts = self.board_posts()
+        filters = [f'<button type="button" data-cat="" aria-pressed="true">{t(lang, "board_cat_all")}</button>'] + [
+            f'<button type="button" data-cat="{c}" aria-pressed="false">{self.i(BOARD_ICONS[c])}{t(lang, "board_cat_" + c)}</button>'
+            for c in BOARD_CATS]
+        cats = "".join(f'<li>{self.i(BOARD_ICONS[c])}<b>{t(lang, "board_cat_" + c)}</b>: {t(lang, "board_cat_" + c + "_desc")}</li>'
+                       for c in BOARD_CATS)
+        if posts:
+            listing = f'<ul class="events board-list">{"".join(self.board_item(lang, p) for p in posts)}</ul>'
+        else:
+            listing = f'<ul class="events board-list" hidden></ul><p class="board-empty">{t(lang, "board_empty")}</p>'
+        status = t(lang, "board_static_note") if api else t(lang, "board_offline")
+        strings = {k[6:]: v for k, v in i18n.STRINGS[lang].items() if k.startswith("board_")}
+        strings["cats"] = list(BOARD_CATS)
+        i18n_json = json.dumps(strings, ensure_ascii=False).replace("</", "<\\/")
+        body = [f'<h1>{t(lang, "board_title")}</h1><p class="lede">{t(lang, "board_desc")}</p>',
+                f'<p>{t(lang, "board_intro")}</p><ul class="board-cats">{cats}</ul>',
+                f'<aside class="tip">{self.i("info")}<div>{t(lang, "board_rules")}</div></aside>',
+                f'<div class="board-head"><nav class="board-filters" aria-label="{esc(t(lang, "board_f_cat"))}">{"".join(filters)}</nav>',
+                f'<button type="button" class="donate board-new" data-board-new hidden>{self.i("megaphone")} {t(lang, "board_new")}</button></div>',
+                f'<div id="board" data-api="{esc(api)}" data-lang="{lang}" data-sitekey="{esc(sitekey)}">',
+                f'<p class="note" data-board-status>{status}</p>{listing}</div>',
+                f'<noscript><p class="note">{t(lang, "board_nojs")}</p></noscript>',
+                f'<p class="note">{t(lang, "board_privacy", privacy=self.href(self.path(lang, "privacy")))}</p>',
+                f'<script type="application/json" id="board-i18n">{i18n_json}</script>']
+        head = ""
+        if api:
+            head = f'<script src="{self.href("/static/board.js")}" defer></script>'
+            if sitekey:
+                head += '<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>'
+        return self.layout(lang, "board", f'{t(lang, "board_title")} · {self.name}', t(lang, "board_desc"),
+                           "".join(body), head=head)
+
+    # ---------- páginas ----------
+    def home(self, lang):
+        quick = (f'<section><h2>{self.i("link")}{t(lang, "quick_title")}</h2><ul class="quick">'
+                 f'<li><a href="{self.href(self.path(lang, "agenda"))}">{t(lang, "agenda_title")}</a></li>'
+                 f'<li><a href="{self.href(self.path(lang, "leisure"))}#weekend">{t(lang, "weekend_title")}</a></li>'
+                 f'<li><a href="{self.href(self.path(lang, "picks"))}">{t(lang, "picks_title")}</a></li>'
+                 f'<li><a href="{self.href(self.path(lang, "social"))}">{t(lang, "social_title")}</a></li>'
+                 + (f'<li><a href="{self.href(self.path(lang, "board"))}">{t(lang, "board_title")}</a></li>' if self.has_board else "") +
+                 f'<li><a href="{self.href(self.path(lang, "save"))}">{t(lang, "save_title")}</a></li>'
+                 f'<li><a href="{self.href(self.path(lang, "aids"))}">{t(lang, "aids_title")}</a></li>'
+                 f'<li><a href="{self.href(self.path(lang, "invest"))}">{t(lang, "invest_title")}</a></li>'
+                 f'<li><a href="{self.href(self.path(lang, "politics"))}">{t(lang, "politics_home")}</a></li>'
+                 f'<li><a href="{self.href(self.path(lang, "leisure"))}">{t(lang, "leisure_title")}</a></li>'
+                 f'<li><a href="{self.href(self.path(lang, "directory"))}">{t(lang, "directory_title")}</a></li>'
+                 f'<li><a href="{self.href(self.path(lang, "directory"))}#chargers">{t(lang, "chargers_title")}</a></li>'
+                 f'<li><a href="{self.href(self.path(lang, "pharmacy"))}">{t(lang, "pharmacy_home")}</a></li>'
+                 f'<li><a href="{self.href(self.path(lang, "emergency"))}">{t(lang, "emergency_title")}</a></li></ul></section>')
+        body = (f'<div class="banner" aria-hidden="true"></div><h1>{t(lang, "home_title")}</h1><p class="lede">{i18n.fmt_date(lang, self.now.date())} · '
+                f'{t(lang, "tagline")}</p>{self.today_strip(lang)}{self.weather(lang)}{self.install_block(lang, home=True)}'
+                f'{quick}{self.pharmacy_block(lang, n=2)}{self.light(lang)}{self.transport(lang)}'
+                f'{self.agenda_preview(lang)}{self.picks_preview(lang)}{self.social_preview(lang)}{self.board_preview(lang)}{self.save_preview(lang)}{self.aids_preview(lang)}{self.deadlines_block(lang)}{self.jobs_preview(lang)}{self.invest_preview(lang)}'
+                f'{self.fuel_preview(lang)}'
+                f'{self.air(lang)}')
+        ld = [{"@context": "https://schema.org", "@type": "WebSite", "name": self.name, "inLanguage": lang,
+               "url": self.absolute(self.path(lang, "home")), "description": t(lang, "home_desc")}]
+        return self.layout(lang, "home", f'{t(lang, "home_title")} · {self.name}', t(lang, "home_desc"), body, ld)
+
+    def agenda_page(self, lang):
+        ag = self.get("agenda") or {}
+        permanent = ag.get("permanent", [])
+        upcoming, ongoing = self.events_split()
+        events = upcoming + ongoing
+        ongoing = [e for e in upcoming if self.started(e)] + ongoing  # los de hoy ya empezados, con su etiqueta
+        upcoming = [e for e in upcoming if not self.started(e)]
+        bar = self.filter_bar(lang, [("today", t(lang, "f_today")), ("weekend", t(lang, "f_weekend"))],
+                              [("free", t(lang, "free")), ("kids", t(lang, "kids"))])
+        body = [f'<h1>{t(lang, "agenda_title")}</h1><p class="lede">{t(lang, "agenda_desc")}</p><div data-filter-scope>{bar}']
+        body.append(f'<ul class="events">{"".join(self.event_item(lang, e) for e in upcoming)}</ul>'
+                    if upcoming else f'<p>{t(lang, "agenda_empty")}</p>')
+        if ongoing:
+            body.append(f'<h2>{self.i("clock")}{t(lang, "ongoing_title")}</h2>'
+                        f'<ul class="events">{"".join(self.event_item(lang, e) for e in ongoing)}</ul>')
+        body.append(f'{self.filter_empty(lang)}</div>{self.stamp(lang, "agenda")}')
+        body.append(f'<aside class="tip">{self.i("calendar")}<p>{t(lang, "ics_link", url=self.absolute("/agenda.ics"))}</p></aside>'
+                    f'<p class="note">{t(lang, "add_event", repo=esc(self.cfg.get("repo_url") or "https://github.com"))}{self.suggest(lang)}</p>')
+        if permanent:
+            items = "".join(f'<li>{link(p.get("url"), esc(p["title"]))}'
+                            f' <small class="muted">{esc(p.get("place", ""))}</small></li>' for p in permanent)
+            body.append(f'<h2>{t(lang, "agenda_permanent")}</h2><ul class="months">{items}</ul>')
+        ld = [{"@context": "https://schema.org", "@type": "Event", "name": e["title"],
+               "startDate": e["start"] + (f'T{e["time"]}' if re.fullmatch(r"\d\d:\d\d", e.get("time", "")) else ""),
+               "endDate": e.get("end") or e["start"],
+               "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+               "eventStatus": "https://schema.org/EventScheduled",
+               "location": {"@type": "Place", "name": e.get("place") or "Sant Esteve Sesrovires",
+                            "address": {"@type": "PostalAddress", "addressLocality": "Sant Esteve Sesrovires",
+                                        "addressRegion": "Barcelona", "addressCountry": "ES"}},
+               **({"url": safe_url(e["url"])} if safe_url(e.get("url")) else {})} for e in events[:30]]
+        return self.layout(lang, "agenda", f'{t(lang, "agenda_title")} · {self.name}', t(lang, "agenda_desc"),
+                           "".join(body), ld, head=self.filter_head())
+
+    def directory_page(self, lang):
+        body = [f'<h1>{t(lang, "directory_title")}</h1><p class="lede">{t(lang, "directory_desc")}</p>', self.fuel(lang)]
+        chargers = self.get("chargers") or []
+        if chargers:
+            items = "".join(
+                f'<li><strong>{esc(c["name"])}</strong> · {esc(c["address"])} · {esc(c["speed"])}'
+                f'{f" · <a href=\"{osm(c["lat"], c["lon"])}\">{t(lang, "map")}</a>" if c.get("lat") else ""}</li>'
+                for c in chargers)
+            body.append(f'<h2 id="chargers">{self.i("plug-zap")}{t(lang, "chargers_title")}</h2><ul class="months">{items}</ul>')
+        groups = {}
+        for e in self.get("equipments") or []:
+            groups.setdefault(e["cat"], []).append(e)
+        for cat in sorted(groups, key=lambda c: (c == "", i18n.category(lang, c))):
+            items = []
+            for e in groups[cat]:
+                extra = [esc(f'{e["address"]}, {e["cp"]}') if e["address"] else ""]
+                if e.get("phone"):
+                    extra.append(f'{t(lang, "phone")} <a href="tel:{esc(e["phone"].replace("-", "").replace(" ", ""))}">{esc(e["phone"])}</a>')
+                if e.get("lat"):
+                    extra.append(f'<a href="{osm(e["lat"], e["lon"])}">{t(lang, "map")}</a>')
+                items.append(f'<li><strong>{esc(e["name"])}</strong> <small class="muted">{esc(e["sub"])}</small>'
+                             f'<br>{" · ".join(x for x in extra if x)}</li>')
+            body.append(f'<details class="group"><summary>{esc(i18n.category(lang, cat))} '
+                        f'<span class="muted">({len(groups[cat])})</span></summary><ul class="dir">{"".join(items)}</ul></details>')
+        body.append(self.stamp(lang, "equipments", "chargers"))
+        return self.layout(lang, "directory", f'{t(lang, "directory_title")} · {self.name}',
+                           t(lang, "directory_desc"), "".join(body))
+
+    def place_item(self, lang, p):
+        name = link(p.get("web"), esc(p["name"]))
+        kind = i18n.place_type(lang, p["type"])
+        if p.get("cuisine"):
+            kind += " · " + i18n.cuisine(lang, p["cuisine"])
+        if re.match(r"(GR|PR|SL)\b|B\d", p.get("ref", "")) and p["ref"] not in p["name"]:  # GR 92, PR-C 35, Bicivia B6
+            kind += " · " + p["ref"]
+        extra = [esc(p.get("address", "")), f'{i18n.fmt_num(lang, float(p["km"]), 1)} km' if p.get("km") else "",
+                 f'{self.i("clock")} {esc(i18n.hours(lang, p["hours"]))}' if p.get("hours") else ""]
+        if p.get("phone"):
+            extra.append(f'{t(lang, "phone")} <a href="tel:{esc(re.sub(r"[^+0-9]", "", p["phone"]))}">{esc(p["phone"])}</a>')
+        url = f'https://www.openstreetmap.org/{p["osm"]}' if p.get("osm") else osm(p["lat"], p["lon"])
+        extra.append(f'<a href="{esc(url)}">{t(lang, "map")}</a>')
+        return (f'<li><strong>{name}</strong> <small class="muted">{esc(kind)}</small>'
+                f'<br>{" · ".join(x for x in extra if x)}</li>')
+
+    def plan_today(self, lang, places):
+        """Ideas para hoy según el tiempo: al aire libre si no llueve, a cubierto si llueve."""
+        days = (self.get("weather") or {}).get("days") or []
+        today = next((d for d in days if d["date"] == self.now.date().isoformat()), None)
+        if not today:
+            return ""
+        rainy = today["rain_mm"] >= 2 or any(w in (today.get("symbol") or "") for w in RAINY)
+        if rainy:
+            pool = [p for p in places if p["group"] == "culture" and p["type"] != "attraction"]
+            intro = t(lang, "plan_in", mm=i18n.fmt_num(lang, today["rain_mm"], 1))
+        else:
+            pool = [p for p in places if p["type"] in ("spring", "viewpoint", "peak", "picnic_site", "castle", "archaeological_site")
+                    or (p["group"] == "routes" and p.get("km") and float(p["km"]) <= 15)]
+            intro = t(lang, "plan_out", sky=i18n.sky(lang, today["symbol"])[1].lower() or "–", tmax=today["tmax"])
+        if not pool:
+            return ""
+        # cambia cada día, sin azar; separadas un tercio de la lista para mezclar fuentes, miradores, rutas...
+        start, step = self.now.date().toordinal() % len(pool), max(1, len(pool) // 3)
+        picks = list({id(p): p for p in (pool[(start + i * step) % len(pool)] for i in range(3))}.values())
+        todays = [e for e in self.upcoming() if e["start"] == self.now.date().isoformat()]
+        more = (f'<p><a href="{self.href(self.path(lang, "agenda"))}">{t(lang, "plan_events", n=len(todays))} →</a></p>'
+                if todays else "")
+        return (f'<section><h2>{self.i("map-pin")}{t(lang, "plan_title")}</h2><p>{intro}</p>'
+                f'<ul class="dir">{"".join(self.place_item(lang, p) for p in picks)}</ul>{more}</section>')
+
+    def leisure_page(self, lang):
+        places = sources.merge_places(self.get("leisure") or [], self.get("nightlife") or [])
+        upcoming, ongoing = self.events_split()
+        limit = (self.now.date() + timedelta(days=45)).isoformat()
+        parties = [e for e in upcoming if festive(e) and e["start"] <= limit][:15]
+        body = [f'<h1>{t(lang, "leisure_title")}</h1><p class="lede">{t(lang, "leisure_desc")}</p>',
+                self.plan_today(lang, places), self.weekend(lang),
+                f'<section><h2>{self.i("party-popper")}{t(lang, "festive_title")}</h2>']
+        body.append(f'<ul class="events">{"".join(self.event_item(lang, e) for e in parties)}</ul>'
+                    if parties else f'<p>{t(lang, "festive_empty")}</p>')
+        body.append(f'<p><a href="{self.href(self.path(lang, "agenda"))}">{t(lang, "agenda_all")} →</a></p>'
+                    f'<p class="note">{t(lang, "add_event", repo=esc(self.cfg.get("repo_url") or "https://github.com"))}{self.suggest(lang)}</p></section>')
+        groups = {}
+        for p in places:
+            groups.setdefault(p["group"], []).append(p)
+        for key in i18n.LEISURE_GROUPS:
+            items = groups.get(key)
+            if not items:
+                continue
+            icon, label = i18n.group(lang, key)
+            body.append(f'<details class="group" id="{key}"><summary>{self.i(icon)} {esc(label)} '
+                        f'<span class="muted">({len(items)})</span></summary>'
+                        f'<ul class="dir">{"".join(self.place_item(lang, p) for p in items)}</ul></details>')
+        if places:
+            body.append(f'<p class="note">{t(lang, "osm_note")}</p>')
+        extra = sorted({s[0].upper() + s[1:] for p in places for s in p.get("src", [])})
+        if extra:
+            body.append(f'<p class="note">{t(lang, "overture_note", src=esc(", ".join(extra)))}</p>')
+        return self.layout(lang, "leisure", f'{t(lang, "leisure_title")} · {self.name}', t(lang, "leisure_desc"),
+                           "".join(body))
+
+    def text_page(self, lang, kind):
+        repo = self.cfg.get("repo_url") or "https://github.com/"
+        owner = self.cfg.get("owner") or {}
+        parts = []
+        if owner.get("name"):
+            parts.append(esc(owner["name"]) + (f" · NIF {esc(owner['nif'])}" if owner.get("nif") else ""))
+        if owner.get("email"):
+            parts.append(f'<a href="mailto:{esc(owner["email"])}">{esc(owner["email"])}</a>')
+        # Sin nombre, al menos el correo de contacto (responsable del tauler); sin nada, remite a GitHub.
+        owner_html = " · ".join(parts) if parts else t(lang, "owner_missing", repo=repo)
+        api = urlparse(self.cfg.get("light_api_url") or "")
+        light = (self.get("light") or {}).get("site") or (f"{api.scheme}://{api.netloc}/" if api.netloc else repo)
+        body = t(lang, f"{kind}_body", site=esc(self.name), repo=repo, owner=owner_html, light=esc(light),
+                 board=self.href(self.path(lang, "board")))
+        # lo que habla del tauler solo sale si está en marcha
+        body = body.replace("<!--board-->", "").replace("<!--/board-->", "") if self.has_board else re.sub(
+            r"<!--board-->.*?<!--/board-->", "", body, flags=re.S)
+        return self.layout(lang, kind, f'{t(lang, kind)} · {self.name}', t(lang, "home_desc"),
+                           f'<article class="prose"><h1>{t(lang, kind)}</h1>{body}</article>')
+
+    def root_page(self):
+        links = "".join(f'<li><a href="{self.href(self.path(lg, "home"))}" hreflang="{lg}" lang="{lg}">'
+                        f'{t(lg, "lang_name")} — {t(lg, "home_title")}</a></li>' for lg in LANGS)
+        alts = "".join(f'<link rel="alternate" hreflang="{lg}" href="{self.absolute(self.path(lg, "home"))}">'
+                       for lg in LANGS)
+        return f"""<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{esc(self.name)} · {esc(t("ca", "home_title"))}</title>
+<meta name="description" content="{esc(t('ca', 'home_desc'))}">
+<link rel="canonical" href="{self.absolute('/')}">
+{alts}<link rel="alternate" hreflang="x-default" href="{self.absolute('/')}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{esc(self.name)} · {esc(t("ca", "home_title"))}">
+<meta property="og:description" content="{esc(t('ca', 'home_desc'))}">
+<meta property="og:url" content="{self.absolute('/')}">
+<meta property="og:site_name" content="{esc(self.name)}">
+<meta property="og:image" content="{self.absolute('/static/og.png')}">
+<meta name="twitter:card" content="summary_large_image">
+{THEME_COLOR}
+<link rel="icon" href="{self.href('/static/favicon.svg')}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{self.href('/static/apple-touch-icon.png')}">
+<link rel="manifest" href="{self.href('/static/manifest.webmanifest')}">
+{THEME_SCRIPT}
+<link rel="stylesheet" href="{self.href('/static/style.css')}">
+<script>
+(function(){{var m={{ca:"ca",es:"es",gl:"es",eu:"es",en:"en"}};var l=(navigator.languages||[navigator.language||"ca"]);
+for(var i=0;i<l.length;i++){{var k=m[(l[i]||"").slice(0,2).toLowerCase()];if(k){{location.replace("{self.prefix}/"+k+"/");return;}}}}
+location.replace("{self.prefix}/ca/");}})();
+</script>
+</head>
+<body><main class="wrap"><h1>{esc(self.name)}</h1><p>{t("ca", "choose")} · {t("es", "choose")} · {t("en", "choose")}</p><ul class="months">{links}</ul></main></body>
+</html>
+"""
+
+    def not_found(self):
+        body = "".join(f'<p lang="{lg}"><strong>{t(lg, "notfound_title")}.</strong> '
+                       f'<a href="{self.href(self.path(lg, "home"))}">{t(lg, "notfound_text")}</a></p>' for lg in LANGS)
+        return self.layout("ca", "home", t("ca", "notfound_title"), "", body, noindex=True)
+
+    def offline_page(self):
+        """Página que sirve el service worker cuando no hay conexión ni copia guardada de la pedida."""
+        body = "".join(f'<p lang="{lg}"><strong>{t(lg, "offline_title")}.</strong> '
+                       f'<a href="{self.href(self.path(lg, "home"))}">{t(lg, "offline_text")}</a></p>' for lg in LANGS)
+        return self.layout("ca", "home", t("ca", "offline_title"), "", body, noindex=True)
+
+    def ics(self):
+        """Agenda en iCalendar para suscribirse desde el móvil o Google Calendar (sin los actos de semanas)."""
+        def text(s):
+            return re.sub(r"([\\,;])", r"\\\1", s).replace("\n", "\\n")
+
+        def fold(line):  # RFC 5545: líneas de 75 octetos como máximo
+            out, raw = [], line.encode("utf-8")
+            while len(raw) > 75:
+                cut = 75 if not out else 74
+                while raw[cut] & 0xC0 == 0x80:  # no partir un carácter UTF-8
+                    cut -= 1
+                out.append(raw[:cut].decode("utf-8"))
+                raw = raw[cut:]
+            out.append(raw.decode("utf-8"))
+            return "\r\n ".join(out)
+
+        stamp = self.now.astimezone(tz.UTC).strftime("%Y%m%dT%H%M%SZ")
+        lines = ["BEGIN:VCALENDAR", "VERSION:2.0", f"PRODID:-//{self.name}//agenda//CA", "CALSCALE:GREGORIAN",
+                 "METHOD:PUBLISH", f"X-WR-CALNAME:{text(t('ca', 'agenda_title'))}", "X-WR-TIMEZONE:Europe/Madrid",
+                 "REFRESH-INTERVAL;VALUE=DURATION:PT12H"]
+        upcoming, ongoing = self.events_split()
+        for e in upcoming + ongoing:
+            start, end = date.fromisoformat(e["start"]), date.fromisoformat(e.get("end") or e["start"])
+            if (end - start).days > 3:
+                continue
+            uid = hashlib.sha1(f'{e["title"]}|{e["start"]}|{e["source"]}'.encode()).hexdigest()[:20]
+            lines += ["BEGIN:VEVENT", f"UID:{uid}@{urlparse(self.base_url).hostname}", f"DTSTAMP:{stamp}"]
+            if re.fullmatch(r"\d\d:\d\d", e.get("time", "")):
+                local = datetime.fromisoformat(f'{e["start"]}T{e["time"]}')
+                utc = local.replace(tzinfo=tz.offset_at(local.replace(tzinfo=tz.CET))).astimezone(tz.UTC)
+                lines.append(f'DTSTART:{utc.strftime("%Y%m%dT%H%M%SZ")}')
+            else:
+                lines += [f'DTSTART;VALUE=DATE:{start.strftime("%Y%m%d")}',
+                          f'DTEND;VALUE=DATE:{(end + timedelta(days=1)).strftime("%Y%m%d")}']
+            lines.append(f'SUMMARY:{text(e["title"])}')
+            if e.get("place"):
+                lines.append(f'LOCATION:{text(e["place"] + ", Sant Esteve Sesrovires")}')
+            if safe_url(e.get("url")):
+                lines.append(f'URL:{safe_url(e["url"])}')
+            lines.append("END:VEVENT")
+        lines.append("END:VCALENDAR")
+        return "".join(fold(x) + "\r\n" for x in lines)
+
+    def sitemap(self):
+        today = self.now.date().isoformat()
+        urls = []
+        daily = tuple(k for k in ("home", "agenda", "leisure", "picks", "social", "board", "save", "aids", "jobs", "invest",
+                                  "directory", "pharmacy") if k != "board" or self.has_board)
+        for kind in daily + ("politics", "emergency", "about", "legal", "privacy"):
+            alts = "".join(f'<xhtml:link rel="alternate" hreflang="{lg}" href="{self.absolute(self.path(lg, kind))}"/>'
+                           for lg in LANGS)
+            for lg in LANGS:
+                lastmod = f"<lastmod>{today}</lastmod>" if kind in daily else ""
+                urls.append(f"<url><loc>{self.absolute(self.path(lg, kind))}</loc>{lastmod}{alts}</url>")
+        return ('<?xml version="1.0" encoding="utf-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+                'xmlns:xhtml="http://www.w3.org/1999/xhtml">' + "".join(urls) + "</urlset>\n")
+
+    def write_css(self):
+        """Un solo style.css servido = base.css (marco común) + site.css (reglas propias de esta web)."""
+        static = self.out / "static"
+        css = "\n".join((static / f).read_text("utf-8") for f in ("base.css", "site.css"))
+        (static / "style.css").write_text(css, "utf-8")
+        for f in ("base.css", "site.css"):
+            (static / f).unlink()
+
+    def write_sw(self):
+        """El service worker se sirve en la raíz (así controla toda la web); la fecha del build versiona la caché."""
+        src = self.out / "static" / "sw.js"
+        (self.out / "sw.js").write_text(src.read_text("utf-8").replace("__BUILD__", self.now.strftime("%Y%m%d%H%M%S")), "utf-8")
+        src.unlink()
+
+    def manifest(self, lang):
+        """Un manifest por idioma: la app arranca en el idioma desde el que se instaló; `id` común = una sola app."""
+        return {"id": self.href("/"), "name": self.name, "short_name": self.name, "description": t(lang, "home_desc"),
+                "lang": lang, "start_url": self.href(self.path(lang, "home")), "scope": self.href("/"),
+                "display": "standalone", "background_color": "#f9f9f7", "theme_color": "#0b6b3a",
+                "shortcuts": [{"name": t(lang, "nav_" + k), "url": self.href(self.path(lang, k))}
+                              for k in ("agenda", "board", "emergency", "pharmacy") if k != "board" or self.has_board],
+                "icons": [{"src": self.href("/static/icon-192.png"), "sizes": "192x192", "type": "image/png"},
+                          {"src": self.href("/static/icon-512.png"), "sizes": "512x512", "type": "image/png",
+                           "purpose": "any maskable"}]}
+
+    def build(self):
+        if self.out.exists():
+            shutil.rmtree(self.out)
+        self.out.mkdir(parents=True)
+        shutil.copytree(ROOT / "static", self.out / "static")
+        self.write_css()
+        self.write_sw()
+        for lang in LANGS:
+            self.write(f"/static/manifest.{lang}.webmanifest", json.dumps(self.manifest(lang), ensure_ascii=False))
+        self.write("/static/manifest.webmanifest", json.dumps(self.manifest(LANGS[0]), ensure_ascii=False))
+        for lang in LANGS:
+            self.write(self.path(lang, "home"), self.home(lang))
+            self.write(self.path(lang, "agenda"), self.agenda_page(lang))
+            self.write(self.path(lang, "leisure"), self.leisure_page(lang))
+            self.write(self.path(lang, "picks"), self.picks_page(lang))
+            self.write(self.path(lang, "social"), self.social_page(lang))
+            if self.has_board:
+                self.write(self.path(lang, "board"), self.board_page(lang))
+            self.write(self.path(lang, "save"), self.save_page(lang))
+            self.write(self.path(lang, "aids"), self.aids_page(lang))
+            self.write(self.path(lang, "jobs"), self.jobs_page(lang))
+            self.write(self.path(lang, "invest"), self.invest_page(lang))
+            self.write(self.path(lang, "invest") + "feed.xml", self.feed(lang))
+            self.write(self.path(lang, "emergency"), self.emergency_page(lang))
+            self.write(self.path(lang, "politics"), self.politics_page(lang))
+            self.write(self.path(lang, "pharmacy"), self.pharmacy_page(lang))
+            self.write(self.path(lang, "directory"), self.directory_page(lang))
+            for kind in ("about", "legal", "privacy"):
+                self.write(self.path(lang, kind), self.text_page(lang, kind))
+        self.write("/", self.root_page())
+        self.write("/404.html", self.not_found())
+        self.write("/offline.html", self.offline_page())
+        self.write("/sitemap.xml", self.sitemap())
+        (self.out / "agenda.ics").write_bytes(self.ics().encode("utf-8"))
+        self.write("/robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {self.absolute('/sitemap.xml')}\n")
+        self.write("/.nojekyll", "")
+        return self.out

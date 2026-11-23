@@ -1,0 +1,27 @@
+{
+ "data": {
+  "directory": [
+   {
+    "address": "Carrer Serafí Julià, 36",
+    "id": "marce-del-canto-m-begonya",
+    "lat": 41.49418,
+    "lon": 1.8727515,
+    "name": "Farmàcia Marce del Canto, M. Begonya",
+    "phone": "937 714 152",
+    "town": "Sant Esteve"
+   },
+   {
+    "address": "Carrer de Mossèn Cinto Verdaguer, 20",
+    "id": "rojas-cano-miquel",
+    "lat": 41.4929446,
+    "lon": 1.8725986,
+    "name": "Farmàcia Rojas Cano, Miquel",
+    "phone": "937 798 935",
+    "town": "Sant Esteve"
+   }
+  ],
+  "rosters": {},
+  "source": "https://www.farmaguia.net/"
+ },
+ "fetched": "2026-11-23T14:26:38+01:00"
+}

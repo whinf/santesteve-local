@@ -1,0 +1,94 @@
+{
+"data": [
+{
+"attributes": {
+"accesTramit": "https://seu.santcugat.cat/seu/Procedimientos.aspx?id_grupo=503#p503",
+"borsaTreball": true,
+"dataFinalitzacio": "2026-11-27",
+"grupTitulacio": "A2 - Grau universitari (correspondència amb diplomatures)",
+"institucioDesenvolupat": "Ajuntament de Sant Cugat del Vallès - Organisme Autònom Municipal d'Educació (OAME)",
+"latitud": 41.4705117,
+"longitud": 2.080417,
+"numPlaces": 0,
+"tipusPersonal": "Laboral temporal",
+"titol": "Borsa de treball de places de Mestre d'escola bressol",
+"urlCido": "https://cido.diba.cat/oposicions/22409836"
+}
+},
+{
+"attributes": {
+"accesTramit": null,
+"borsaTreball": true,
+"dataFinalitzacio": "2026-12-02",
+"grupTitulacio": "A2 - Grau universitari (correspondència amb diplomatures)",
+"institucioDesenvolupat": "Ajuntament de Terrassa",
+"latitud": 41.5631525,
+"longitud": 2.0100449,
+"numPlaces": 1,
+"tipusPersonal": "Laboral temporal",
+"titol": "1 plaça de Fisioterapeuta per a les escoles d'educació especial del servei d'educació",
+"urlCido": "https://cido.diba.cat/oposicions/22516286"
+}
+},
+{
+"attributes": {
+"accesTramit": "https://tauli.talentclue.com/ca/node/130431122/12623479",
+"borsaTreball": true,
+"dataFinalitzacio": "2026-12-02",
+"grupTitulacio": "C2 - ESO, graduat escolar, FP 1r grau, cicles formatius grau mitjà",
+"institucioDesenvolupat": "Consorci Corporació Sanitària Parc Taulí de Sabadell",
+"latitud": 41.557592,
+"longitud": 2.1110469,
+"numPlaces": 0,
+"tipusPersonal": "Laboral temporal",
+"titol": "Borsa de treball de places d'Ajudant de cuina",
+"urlCido": "https://cido.diba.cat/oposicions/22512782"
+}
+},
+{
+"attributes": {
+"accesTramit": "https://tauli.talentclue.com/es/node/130433076/12623479",
+"borsaTreball": false,
+"dataFinalitzacio": "2026-12-01",
+"grupTitulacio": "A1 - Grau universitari (correspondència amb llicenciatures)",
+"institucioDesenvolupat": "Consorci Corporació Sanitària Parc Taulí de Sabadell",
+"latitud": 41.557592,
+"longitud": 2.1110469,
+"numPlaces": 1,
+"tipusPersonal": "Laboral temporal",
+"titol": "1 plaça de Metge especialista en aparell digestiu",
+"urlCido": "https://cido.diba.cat/oposicions/22512944"
+}
+},
+{
+"attributes": {
+"accesTramit": "https://tauli.talentclue.com/es/node/130445536/12623479",
+"borsaTreball": false,
+"dataFinalitzacio": "2026-12-01",
+"grupTitulacio": "A1 - Grau universitari (correspondència amb llicenciatures)",
+"institucioDesenvolupat": "Consorci Corporació Sanitària Parc Taulí de Sabadell",
+"latitud": 41.557592,
+"longitud": 2.1110469,
+"numPlaces": 1,
+"tipusPersonal": "Laboral temporal",
+"titol": "1 plaça de Metge especialista en sistema digestiu",
+"urlCido": "https://cido.diba.cat/oposicions/22512977"
+}
+},
+{
+"attributes": {
+"accesTramit": null,
+"borsaTreball": false,
+"dataFinalitzacio": "2026-11-27",
+"grupTitulacio": "A1 - Grau universitari (correspondència amb llicenciatures)",
+"institucioDesenvolupat": "Centre de Visió per Computador (CVC)",
+"latitud": 41.5028125,
+"longitud": 2.1081021,
+"numPlaces": 1,
+"tipusPersonal": "Laboral temporal",
+"titol": "1 plaça de Postdoc on Adaptive Agentic AI",
+"urlCido": "https://cido.diba.cat/oposicions/22513464"
+}
+}
+]
+}

@@ -1,0 +1,819 @@
+{
+ "data": [
+  {
+   "company": "Beguverd, SLU",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-19",
+   "hours": "Jornada completa",
+   "salary": [
+    1600,
+    1650
+   ],
+   "title": "Administratiu/iva",
+   "town": "SANT ESTEVE SESROVIRES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92329195"
+  },
+  {
+   "company": "Serveis Municipals Sant Esteve Ssesrovires S.L.U",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-11",
+   "hours": "Jornada parcial matí (765 hores - jornada anual)",
+   "salary": [
+    670,
+    770
+   ],
+   "title": "Personal de neteja caps de setmana",
+   "town": "SANT ESTEVE SESROVIRES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92328721"
+  },
+  {
+   "company": "AJUNTAMENT DE RUBI",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-09",
+   "hours": "Jornada completa",
+   "salary": [
+    1900,
+    2000
+   ],
+   "title": "Personal conductor/a de camió rígid amb sistema de ganxo porta_contenidors (codi: 7617)",
+   "town": "SANT ESTEVE SESROVIRES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92328492"
+  },
+  {
+   "company": "EMPRESA D'AUTOMOCIÓ",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-06",
+   "hours": "Jornada intensiva",
+   "salary": [
+    1500,
+    2500
+   ],
+   "title": "Técnico/a electromecánico/a de mantenimiento industrial – automoción",
+   "town": "SANT ESTEVE SESROVIRES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92328459"
+  },
+  {
+   "company": "EMPRESA GENT GRAN",
+   "contract": "Contracte laboral temporal (3 mesos)",
+   "date": "2026-11-05",
+   "hours": "Jornada completa",
+   "salary": [
+    1221,
+    1350
+   ],
+   "title": "Auxiliar de geriatria",
+   "town": "SANT ESTEVE SESROVIRES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92328308"
+  },
+  {
+   "company": "Empresa de neteja",
+   "contract": "Contracte laboral temporal (6 mesos)",
+   "date": "2026-10-30",
+   "hours": "Jornada completa",
+   "salary": [
+    1221,
+    1400
+   ],
+   "title": "Personal de limpieza para centro penitenciario brians",
+   "town": "SANT ESTEVE SESROVIRES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327937"
+  },
+  {
+   "company": "FUNDACIÓN",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-26",
+   "hours": "Jornada completa",
+   "salary": [
+    2400,
+    2500
+   ],
+   "title": "Médico/ca general - cas brians",
+   "town": "SANT ESTEVE SESROVIRES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327664"
+  },
+  {
+   "company": "Serveis Municipals",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-20",
+   "hours": "Jornada completa",
+   "salary": [
+    2650,
+    2694
+   ],
+   "title": "Infermer/ infermera due",
+   "town": "SANT ESTEVE SESROVIRES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327219"
+  },
+  {
+   "company": "Empresa del sector de neteja",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-19",
+   "hours": "Jornada parcial matí (2 hores - jornada setmanal)",
+   "salary": [
+    100,
+    105
+   ],
+   "title": "Limpiador/a en vallirana",
+   "town": "SANT ESTEVE SESROVIRES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327051"
+  },
+  {
+   "company": "Empresa de Sant Esteve Sesrovires",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-16",
+   "hours": "Jornada completa",
+   "salary": [
+    1885,
+    1886
+   ],
+   "title": "Fisioterapeuta residència geriàtrica",
+   "town": "SANT ESTEVE SESROVIRES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326963"
+  },
+  {
+   "company": "Residència",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-16",
+   "hours": "Jornada parcial tarda (20 hores - jornada setmanal)",
+   "salary": [
+    942,
+    943
+   ],
+   "title": "Fisioterapeuta mitja jornada residència geriàtrica",
+   "town": "SANT ESTEVE SESROVIRES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326958"
+  },
+  {
+   "company": "SERNET SERVEIS",
+   "contract": "Contracte laboral temporal (1 mesos)",
+   "date": "2026-10-09",
+   "hours": "Jornada completa",
+   "salary": [],
+   "title": "Operario/a de limpieza - sant esteves de sosrovires - vacaciones",
+   "town": "SANT ESTEVE SESROVIRES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326559"
+  },
+  {
+   "company": "Serveis Municipals Sant Esteve Ssesrovires S.L.U",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-07",
+   "hours": "Jornada parcial matí (720 hores - jornada anual)",
+   "salary": [
+    757,
+    857
+   ],
+   "title": "Personal gerocultor residència geriàtrica (matí caps de setmana)",
+   "town": "SANT ESTEVE SESROVIRES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326402"
+  },
+  {
+   "company": "Serveis Municipals Sant Esteve Ssesrovires S.L.U",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-05",
+   "hours": "Jornada parcial tarda (720 hores - jornada anual)",
+   "salary": [
+    757,
+    857
+   ],
+   "title": "Personal gerocultor residència geriàtrica (tarda caps de setmana)",
+   "town": "SANT ESTEVE SESROVIRES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326226"
+  },
+  {
+   "company": "Serveis Municipals Sant Esteve Ssesrovires S.L.U",
+   "contract": "Contracte laboral temporal (6 mesos)",
+   "date": "2026-09-30",
+   "hours": "Jornada completa",
+   "salary": [
+    1552,
+    1615
+   ],
+   "title": "Gerocultor/a residència geriàtrica suplència tardes",
+   "town": "SANT ESTEVE SESROVIRES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92325846"
+  },
+  {
+   "company": "GRUP CATALA DE TREBALL, ETT, S.L.",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-23",
+   "hours": "Jornada completa",
+   "salary": [
+    1800,
+    2500
+   ],
+   "title": "TÉCNICO/A ELÉCTRICO/A - MÁQUINAS INDUSTRIALES (OFICIAL 3ª)",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92329346"
+  },
+  {
+   "company": "TALLERES SERRA S.L.",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-18",
+   "hours": "Jornada completa",
+   "salary": [
+    2002,
+    2002
+   ],
+   "title": "Técnico/a eléctrico/a oficial/oficiala de 3a",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92329140"
+  },
+  {
+   "company": "Oficina de Treball del SOC",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-18",
+   "hours": "Jornada completa",
+   "salary": [
+    1522,
+    1522
+   ],
+   "title": "Personal de neteja o netejadors/ores",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202632419"
+  },
+  {
+   "company": "RAMCON EMPRESA DE SERVICIOS, S.A",
+   "contract": "Contracte laboral temporal (3 mesos)",
+   "date": "2026-11-11",
+   "hours": "Jornada parcial (12 hores - jornada setmanal)",
+   "salary": [
+    400,
+    410
+   ],
+   "title": "Operario/aria de limpieza en martorell",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92328720"
+  },
+  {
+   "company": "EMPRESA DEL SECTOR DE LA FORMACIÓ",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-09",
+   "hours": "Jornada completa",
+   "salary": [
+    2215,
+    2230
+   ],
+   "title": "Orientador/a laboral projecte fpo dual",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92328513"
+  },
+  {
+   "company": "Supermercado de Martorell",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-05",
+   "hours": "Jornada parcial (15 hores - jornada setmanal)",
+   "salary": [
+    500,
+    550
+   ],
+   "title": "Dependiente/a - cajero/a fines de semana 15 h",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92328269"
+  },
+  {
+   "company": "Supermercat de Martorell",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-05",
+   "hours": "Jornada completa",
+   "salary": [
+    1221,
+    1525
+   ],
+   "title": "Dependiente/a - cajero/a de supermercado tardes",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92328268"
+  },
+  {
+   "company": "Empresa sector alimentari",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-02",
+   "hours": "Jornada parcial (10 hores - jornada setmanal)",
+   "salary": [
+    350,
+    450
+   ],
+   "title": "Dependiente/a - cajero/a de supermercado",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92328003"
+  },
+  {
+   "company": "Empresa sector alimentari",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-02",
+   "hours": "Jornada parcial tarda (36 hores - jornada setmanal)",
+   "salary": [
+    1250,
+    1400
+   ],
+   "title": "Dependiente/a - cajero/a de supermercado",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92328002"
+  },
+  {
+   "company": "BonArea",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-28",
+   "hours": "Jornada parcial tarda (30 hores - jornada setmanal)",
+   "salary": [
+    1050,
+    1200
+   ],
+   "title": "Dependiente/a - cajero/a de supermercado",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327830"
+  },
+  {
+   "company": "ACTUA SCCL",
+   "contract": "Contracte laboral temporal (12 mesos)",
+   "date": "2026-10-27",
+   "hours": "Jornada completa",
+   "salary": [
+    1221,
+    1300
+   ],
+   "title": "Aprenents/es d’electromecànica de vehicles",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327711"
+  },
+  {
+   "company": "ACTUA SCCL",
+   "contract": "Contracte laboral temporal (12 mesos)",
+   "date": "2026-10-26",
+   "hours": "Jornada completa",
+   "salary": [
+    1221,
+    1300
+   ],
+   "title": "Aprenents/es de carrosseria i pintura de vehicles",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327620"
+  },
+  {
+   "company": "ACTUA SCCL",
+   "contract": "Contracte laboral temporal (12 mesos)",
+   "date": "2026-10-26",
+   "hours": "Jornada completa",
+   "salary": [
+    1221,
+    1300
+   ],
+   "title": "Aprenents/es d’assessorament tècnic i atenció al client en automoció",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327621"
+  },
+  {
+   "company": "Empresa sector enginyeria industrial",
+   "contract": "Contracte laboral temporal (1 mesos)",
+   "date": "2026-10-23",
+   "hours": "Jornada intensiva",
+   "salary": [
+    1666,
+    2083
+   ],
+   "title": "Técnicos/as junior de automoción y electromecánica (proyecto temporal)",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327545"
+  },
+  {
+   "company": "SERNET SERVEIS",
+   "contract": "Contracte laboral temporal (1 mesos)",
+   "date": "2026-10-22",
+   "hours": "Jornada completa",
+   "salary": [
+    1424,
+    1424
+   ],
+   "title": "Operario/ria de limpieza - sant esteves de sosrovires - vacaciones",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327350"
+  },
+  {
+   "company": "UPC formació i Mobilitat",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-22",
+   "hours": "Jornada completa",
+   "salary": [
+    2000,
+    2300
+   ],
+   "title": "Coordinador/a- tècnic/a de formació subvencionada",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327354"
+  },
+  {
+   "company": "EULEN.SA",
+   "contract": "Contracte laboral temporal (1 mesos)",
+   "date": "2026-10-21",
+   "hours": "Jornada intensiva",
+   "salary": [
+    1603,
+    1603
+   ],
+   "title": "Mozos/as con diploma de carretilla - martorell",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327279"
+  },
+  {
+   "company": "Ajuntament de Martorell",
+   "contract": "Contracte laboral temporal (9 mesos)",
+   "date": "2026-10-21",
+   "hours": "Jornada intensiva",
+   "salary": [
+    2142,
+    2142
+   ],
+   "title": "Tècnic/a acompanyament pla de barris",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327319"
+  },
+  {
+   "company": "TOYS CENTRE SL",
+   "contract": "Contracte laboral temporal (2 mesos)",
+   "date": "2026-10-21",
+   "hours": "Jornada parcial (20 hores - jornada setmanal)",
+   "salary": [
+    757,
+    757
+   ],
+   "title": "Ajudants/es de botiga joguines ( campanya nadal) - martorell",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327317"
+  },
+  {
+   "company": "Empresa de Martorell",
+   "contract": "Contracte laboral temporal (1 mesos)",
+   "date": "2026-10-14",
+   "hours": "Jornada completa",
+   "salary": [
+    1248,
+    1248
+   ],
+   "title": "Personal auxiliar informació estacions d'hospitalet, martorell, rubi i sant cugat",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326801"
+  },
+  {
+   "company": "Empresa de mantenimiento y reparación",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-13",
+   "hours": "Jornada intensiva",
+   "salary": [
+    1636,
+    1980
+   ],
+   "title": "Personal peó / ajudant de manteniment i muntatge mecànic (h/d)",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326654"
+  },
+  {
+   "company": "Empresa de mantenimiento y reparación",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-13",
+   "hours": "Jornada intensiva",
+   "salary": [
+    1800,
+    2063
+   ],
+   "title": "Oficial/a de 2a de manteniment i muntatge mecànic industrial",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326676"
+  },
+  {
+   "company": "TALLERES SERRA S.L.",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-13",
+   "hours": "Jornada completa",
+   "salary": [],
+   "title": "Mecánico/a senior maquinaria industrial",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326668"
+  },
+  {
+   "company": "BARNAPORTERS,S.L.",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-08",
+   "hours": "Jornada completa",
+   "salary": [],
+   "title": "Auxiliar de servicios (martorell) (h/d)",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326459"
+  },
+  {
+   "company": "ACTUA SCCL",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-05",
+   "hours": "Jornada completa",
+   "salary": [
+    2215,
+    2230
+   ],
+   "title": "Orientadors/es laborals projecte fpo dual",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326220"
+  },
+  {
+   "company": "EULEN.SA",
+   "contract": "Contracte laboral temporal (2 mesos)",
+   "date": "2026-10-01",
+   "hours": "Jornada completa",
+   "salary": [
+    1217,
+    1217
+   ],
+   "title": "Limpiador/a - jornada completa (martorell)",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326011"
+  },
+  {
+   "company": "Empresa sector construcció",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-17",
+   "hours": "Jornada completa",
+   "salary": [
+    1750,
+    1750
+   ],
+   "title": "Técnico/a postventa",
+   "town": "SANT ANDREU DE LA BARCA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92328989"
+  },
+  {
+   "company": "Oficina de Treball del SOC",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-12",
+   "hours": "Jornada completa",
+   "salary": [
+    1603,
+    1603
+   ],
+   "title": "Tècnic/a superior en prevenció de riscos laborals - ref. 32152",
+   "town": "SANT ANDREU DE LA BARCA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202632152"
+  },
+  {
+   "company": "Oficina de Treball del SOC",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-06",
+   "hours": "Jornada completa",
+   "salary": [
+    1285,
+    1285
+   ],
+   "title": "Operador/a de qualitat en indústries gràfiques_31534",
+   "town": "SANT ANDREU DE LA BARCA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202631534"
+  },
+  {
+   "company": "Càritas Diocesana de Sant Feliu de Llobregat",
+   "contract": "Contracte laboral temporal (6 mesos)",
+   "date": "2026-10-30",
+   "hours": "Jornada completa",
+   "salary": [
+    2190,
+    2190
+   ],
+   "title": "Treballador/a – baix llobregat",
+   "town": "SANT ANDREU DE LA BARCA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327938"
+  },
+  {
+   "company": "Fundación Seeliger y Conde",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-20",
+   "hours": "Jornada completa",
+   "salary": [
+    1560,
+    1790
+   ],
+   "title": "Mozos/zas especialistas - carretilleros/as - sant andreu de la barca - lliçà d'amun",
+   "town": "SANT ANDREU DE LA BARCA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327215"
+  },
+  {
+   "company": "Com a casa menjadors escolars S.L",
+   "contract": "Contracte laboral indiferent",
+   "date": "2026-10-13",
+   "hours": "Jornada parcial (3 hores - jornada diaria)",
+   "salary": [],
+   "title": "Monitors/monitores de menjador (sant andreu de la barca)",
+   "town": "SANT ANDREU DE LA BARCA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326742"
+  },
+  {
+   "company": "JAN BCS, S.L",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-06",
+   "hours": "Jornada parcial tarda (1 hores - jornada setmanal)",
+   "salary": [],
+   "title": "Tallerista coral - sant andreu de la barca",
+   "town": "SANT ANDREU DE LA BARCA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326288"
+  },
+  {
+   "company": "EULEN.SA",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-06",
+   "hours": "Jornada parcial (8 hores - jornada setmanal)",
+   "salary": [
+    243,
+    304
+   ],
+   "title": "Limpiadores/as - fin de semana / indefinido (sant andreu de la barca)",
+   "town": "SANT ANDREU DE LA BARCA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326359"
+  },
+  {
+   "company": "SOLDUCT S.L",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-09-25",
+   "hours": "Jornada completa",
+   "salary": [],
+   "title": "Tecnico/a prevencion (construccion)",
+   "town": "SANT ANDREU DE LA BARCA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92325547"
+  },
+  {
+   "company": "EMPRESA SECTOR QUÍMIC",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-19",
+   "hours": "Jornada intensiva",
+   "salary": [
+    1700,
+    2000
+   ],
+   "title": "Operario/operaria de producción i+d",
+   "town": "ABRERA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92329228"
+  },
+  {
+   "company": "CELYMAR SERVICIOS DE OUTSOURCING,S.L.",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-17",
+   "hours": "Jornada parcial matí (8 hores - jornada setmanal)",
+   "salary": [
+    300,
+    305
+   ],
+   "title": "Limpiador/a para clínica dental (abrera)",
+   "town": "ABRERA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92328997"
+  },
+  {
+   "company": "Oficina de Treball del SOC",
+   "contract": "Contracte laboral temporal (9 mesos)",
+   "date": "2026-11-11",
+   "hours": "Jornada parcial matí (6 hores - jornada diaria)",
+   "salary": [
+    850,
+    850
+   ],
+   "title": "Empleat/da administratiu/va comercials",
+   "town": "ABRERA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202631992"
+  },
+  {
+   "company": "Empresa de mecànica industrial",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-05",
+   "hours": "Jornada completa",
+   "salary": [
+    1800,
+    1900
+   ],
+   "title": "Mecànic/a industrial",
+   "town": "ABRERA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92328261"
+  },
+  {
+   "company": "Oficina de Treball del SOC",
+   "contract": "Contracte laboral temporal (2 mesos)",
+   "date": "2026-11-03",
+   "hours": "Jornada completa",
+   "salary": [
+    1688,
+    1688
+   ],
+   "title": "Operari/ària de fàbrica - ref. 31370",
+   "town": "ABRERA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202631370"
+  },
+  {
+   "company": "Empresa de càtering",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-28",
+   "hours": "Jornada parcial (3 hores - jornada diaria)",
+   "salary": [
+    400,
+    500
+   ],
+   "title": "Monitors/monitores de menjador (abrera)",
+   "town": "ABRERA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327783"
+  },
+  {
+   "company": "ANANDA GESTION ETT",
+   "contract": "Contracte laboral temporal (5 mesos)",
+   "date": "2026-10-27",
+   "hours": "Jornada completa",
+   "salary": [
+    2506,
+    2706
+   ],
+   "title": "Administrativa/o - zona abrera",
+   "town": "ABRERA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327718"
+  },
+  {
+   "company": "TOYS CENTRE SL",
+   "contract": "Contracte laboral temporal (2 mesos)",
+   "date": "2026-10-22",
+   "hours": "Jornada parcial (20 hores - jornada setmanal)",
+   "salary": [
+    757,
+    757
+   ],
+   "title": "Ajudants/antes de botiga joguines ( campanya nadal) - abrera",
+   "town": "ABRERA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327341"
+  },
+  {
+   "company": "CELYMAR SERVICIOS DE OUTSOURCING,S.L.",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-09-30",
+   "hours": "Jornada intensiva",
+   "salary": [
+    580,
+    590
+   ],
+   "title": "Limpiador/a oficinas en abrera y esparreguera 15.30h horas semana",
+   "town": "ABRERA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92325872"
+  },
+  {
+   "company": "Empresa automoción",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-09-25",
+   "hours": "Jornada completa",
+   "salary": [
+    1300,
+    1500
+   ],
+   "title": "Administrativo/a logística",
+   "town": "ABRERA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92325592"
+  },
+  {
+   "company": "LLAR SANT JORDI, S.L",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-01",
+   "hours": "Jornada parcial tarda (886 hores - jornada anual)",
+   "salary": [
+    750,
+    780
+   ],
+   "title": "Enfermero/a",
+   "town": "GELIDA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326019"
+  },
+  {
+   "company": "LLAR SANT JORDI, S.L",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-01",
+   "hours": "Jornada parcial tarda (886 hores - jornada anual)",
+   "salary": [
+    589,
+    590
+   ],
+   "title": "Educacion sociocultural",
+   "town": "GELIDA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326020"
+  },
+  {
+   "company": "RESIDÈNCIA PER LA TERCERA EDAT L'ONADA SL",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-09",
+   "hours": "Jornada completa",
+   "salary": [
+    1500,
+    1600
+   ],
+   "title": "Gerocultors/es a jornada completa a onacare can sunyer a castellví de rosanes (barcelona)",
+   "town": "CASTELLVÍ DE ROSANES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326650"
+  },
+  {
+   "company": "Oficina de Treball del SOC",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-10-16",
+   "hours": "Jornada parcial (25 hores - jornada setmanal)",
+   "salary": [
+    1020,
+    1020
+   ],
+   "title": "Cuiner/a - 30486",
+   "town": "PIERA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202630486"
+  }
+ ],
+ "fetched": "2026-11-23T14:08:48+01:00"
+}

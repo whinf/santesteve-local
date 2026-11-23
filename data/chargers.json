@@ -1,0 +1,68 @@
+{
+ "data": [
+  {
+   "access": "targeta",
+   "address": "CLUB DE GOLF BARCELONA Av. Golf Masia Bach",
+   "lat": "41.49209",
+   "lon": "1.848522",
+   "name": "C6E06BCC21JAHWSMNH",
+   "operator": "Institut Català d'Energia - Ajuntament de Sant Esteve Sesrovires",
+   "speed": "RAPID i semiRAPID"
+  },
+  {
+   "access": "targeta",
+   "address": "Carrer Martorell, 08635 Sant Esteve Sesrov...",
+   "lat": "41.49304",
+   "lon": "1.87452",
+   "name": "Carrer Martorell, Sant Esteve Sesrovires",
+   "operator": "Institut Català d'Energia - Ajuntament de Sant Esteve Sesrovires",
+   "speed": "semiRAPID"
+  },
+  {
+   "access": "targeta",
+   "address": "CLUB DE GOLF BARCELONA Av. Golf Masia Bach",
+   "lat": "41.492058",
+   "lon": "1.848557",
+   "name": "C6E06BCC21GBJMCHMG",
+   "operator": "Institut Català d'Energia - Ajuntament de Sant Esteve Sesrovires",
+   "speed": "RAPID i semiRAPID"
+  },
+  {
+   "access": "targeta",
+   "address": "Calle de Isaac Peral",
+   "lat": "41.50124",
+   "lon": "1.88388",
+   "name": "ATLANTE - Nieves Sant Esteve",
+   "operator": "Institut Català d'Energia - Ajuntament de Sant Esteve Sesrovires",
+   "speed": "superRAPID i semiRAPID"
+  },
+  {
+   "access": "targeta",
+   "address": "Calle de Isaac Peral",
+   "lat": "41.50124",
+   "lon": "1.88388",
+   "name": "Atlante - Nieves Sant Esteve",
+   "operator": "Institut Català d'Energia - Ajuntament de Sant Esteve Sesrovires",
+   "speed": "superRAPID i semiRAPID"
+  },
+  {
+   "access": "targeta",
+   "address": "Carrer Pou del Merli, 58,",
+   "lat": "41.478863",
+   "lon": "1.896761",
+   "name": "Ajuntament de Martorell - XCHARGE EdRR 17",
+   "operator": "Institut Català d'Energia - Ajuntament de Sant Esteve Sesrovires",
+   "speed": "superRAPID i semiRAPID"
+  },
+  {
+   "access": "targeta",
+   "address": "CLUB DE GOLF BARCELONA Av. Golf Masia Bach",
+   "lat": "41.492126",
+   "lon": "1.848447",
+   "name": "21XP22T3KK4AM00312",
+   "operator": "Institut Català d'Energia - Ajuntament de Sant Esteve Sesrovires",
+   "speed": "semiRAPID"
+  }
+ ],
+ "fetched": "2026-11-23T14:08:48+01:00"
+}

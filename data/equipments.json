@@ -1,0 +1,425 @@
+{
+ "data": [
+  {
+   "address": "Major",
+   "cat": "Administració pública",
+   "cp": "08635",
+   "lat": "41.4931977",
+   "lon": "1.8744603",
+   "name": "Ajuntament de Sant Esteve Sesrovires",
+   "phone": "937713017",
+   "sub": "Ens locals"
+  },
+  {
+   "address": "Major",
+   "cat": "Comerç. Consum",
+   "cp": "08635",
+   "lat": "41.493229096",
+   "lon": "1.87436907",
+   "name": "Oficina Municipal d'Informació al Consumidor de Sant Esteve Sesrovires",
+   "phone": "937713017",
+   "sub": "Servei públic de Consum"
+  },
+  {
+   "address": "NA",
+   "cat": "Cultura",
+   "cp": "08635",
+   "lat": "41.494265068",
+   "lon": "1.877520079",
+   "name": "ARXIU MUNICIPAL DE SANT ESTEVE SESROVIRES",
+   "phone": "937715392",
+   "sub": "Arxius"
+  },
+  {
+   "address": "Carretera de Martorell a Capellades, Km. 23",
+   "cat": "Cultura",
+   "cp": "08635",
+   "lat": "41.467506221",
+   "lon": "1.883995839",
+   "name": "BIBLIOTECA DEL CENTRE PENITENCIARI BRIANS 1",
+   "phone": "937758000",
+   "sub": "Biblioteques"
+  },
+  {
+   "address": "Carretera de Martorell a Capellades, Km. 23",
+   "cat": "Cultura",
+   "cp": "08635",
+   "lat": "41.467515343",
+   "lon": "1.884007658",
+   "name": "BIBLIOTECA DEL CENTRE PENITENCIARI BRIANS 2",
+   "phone": "936935000",
+   "sub": "Biblioteques"
+  },
+  {
+   "address": "Avinguda Montserrat, 10",
+   "cat": "Cultura",
+   "cp": "08635",
+   "lat": "41.494248991",
+   "lon": "1.873380452",
+   "name": "BIBLIOTECA JOAN POMAR I SOLÀ",
+   "phone": "937713328",
+   "sub": "Biblioteques"
+  },
+  {
+   "address": "Avinguda Sant Esteve, 49",
+   "cat": "Cultura",
+   "cp": "08635",
+   "lat": "41.5049597",
+   "lon": "1.8795593",
+   "name": "CASAL SOCIAL I CULTURAL DE CA N'AMAT",
+   "phone": "937713017",
+   "sub": "Centres culturals: ateneus, centres cívics i cases de cultura"
+  },
+  {
+   "address": "Carrer Santiago Rusiñol, s/n",
+   "cat": "Cultura",
+   "cp": "08635",
+   "lat": "41.5037762",
+   "lon": "1.8596703",
+   "name": "CASAL SOCIAL I CULTURAL DE VALLSERRAT",
+   "phone": "937713017",
+   "sub": "Centres culturals: ateneus, centres cívics i cases de cultura"
+  },
+  {
+   "address": "Plaça Del Doctor Tarrès, s/n",
+   "cat": "Cultura",
+   "cp": "08635",
+   "lat": "41.4935449",
+   "lon": "1.8737783",
+   "name": "CENTRE CULTURAL DE SANT ESTEVE SESROVIRES",
+   "phone": "937713434",
+   "sub": "Centres culturals: ateneus, centres cívics i cases de cultura"
+  },
+  {
+   "address": "Carrer Dr Pau Costas, 49",
+   "cat": "Cultura",
+   "cp": "08635",
+   "lat": "41.4932982",
+   "lon": "1.8720778",
+   "name": "SALA D'EXPOSICIONS DOMÈNECH I ESTAPÀ",
+   "phone": "937713017",
+   "sub": "Espais d'arts visuals"
+  },
+  {
+   "address": "Carrer Martorell, s/n",
+   "cat": "Cultura",
+   "cp": "08635",
+   "lat": "41.4915878",
+   "lon": "1.8745675",
+   "name": "SALA D'EXPOSICIONS EL CELLER",
+   "phone": "937713017",
+   "sub": "Espais d'arts visuals"
+  },
+  {
+   "address": "Carrer sant joan, 15",
+   "cat": "Cultura",
+   "cp": "08635",
+   "lat": "41.6874771",
+   "lon": "2.16454935",
+   "name": "EL CASINO",
+   "phone": "937713120",
+   "sub": "Espais escènics i musicals"
+  },
+  {
+   "address": "Carrer Sant Joan, 15",
+   "cat": "Cultura",
+   "cp": "08635",
+   "lat": "41.4936184",
+   "lon": "1.8719861",
+   "name": "TEATRE MUNICIPAL EL CASINO",
+   "phone": "937713017",
+   "sub": "Espais escènics i musicals"
+  },
+  {
+   "address": "ctra. de Martorell a Capellades, km 23",
+   "cat": "Educació. Formació",
+   "cp": "08635",
+   "lat": "41.475259",
+   "lon": "1.880637",
+   "name": "CFA Víctor Català",
+   "phone": "936935034",
+   "sub": "Curs d’accés als cicles formatius de grau mitjà (AA01)"
+  },
+  {
+   "address": "c. Pau Costas, 51",
+   "cat": "Educació. Formació",
+   "cp": "08635",
+   "lat": "41.493393",
+   "lon": "1.871837",
+   "name": "Llar d'infants El Picarol",
+   "phone": "937714461",
+   "sub": "Educació infantil de 1r cicle (EINF1C)"
+  },
+  {
+   "address": "av. Vallserrat, 52",
+   "cat": "Educació. Formació",
+   "cp": "08635",
+   "lat": "41.50227",
+   "lon": "1.865586",
+   "name": "Llar d'infants La Ginesta",
+   "phone": "",
+   "sub": "Educació infantil de 1r cicle (EINF1C)"
+  },
+  {
+   "address": "c. Puig de Mira, 15-21",
+   "cat": "Educació. Formació",
+   "cp": "08635",
+   "lat": "41.485341",
+   "lon": "1.858106",
+   "name": "Àgora-Masia Bach",
+   "phone": "937798928",
+   "sub": "Educació infantil de 1r cicle (EINF1C)"
+  },
+  {
+   "address": "av. Montserrat, s/n",
+   "cat": "Educació. Formació",
+   "cp": "08635",
+   "lat": "41.496333",
+   "lon": "1.872233",
+   "name": "Escola La Roureda",
+   "phone": "937714852",
+   "sub": "Educació infantil de 2n cicle (EINF2C)"
+  },
+  {
+   "address": "c. Ignasi Mas i c. Escoles",
+   "cat": "Educació. Formació",
+   "cp": "08635",
+   "lat": "41.504097",
+   "lon": "1.865195",
+   "name": "Escola Vinya del Sastret",
+   "phone": "937798842",
+   "sub": "Educació infantil de 2n cicle (EINF2C)"
+  },
+  {
+   "address": "av. de Josep Llobet/ Camí de Ca n'Amat",
+   "cat": "Educació. Formació",
+   "cp": "08635",
+   "lat": "41.495585",
+   "lon": "1.874254",
+   "name": "Institut Montserrat Colomer",
+   "phone": "937798105",
+   "sub": "Educació secundària obligatòria (ESO)"
+  },
+  {
+   "address": "ctra. de Martorell a Capellades, km 23",
+   "cat": "Educació. Formació",
+   "cp": "08635",
+   "lat": "41.474749",
+   "lon": "1.880892",
+   "name": "CFA Artur Martorell",
+   "phone": "937758018",
+   "sub": "Formació de persones adultes (ADULTS)"
+  },
+  {
+   "address": "Carrer Major, 12",
+   "cat": "Emergències. Seguretat",
+   "cp": "08635",
+   "lat": "41.493547152",
+   "lon": "1.874473665",
+   "name": "Policia Local de Sant Esteve Sesrovires",
+   "phone": "93 771 40 11",
+   "sub": "Policies Locals"
+  },
+  {
+   "address": "C. dels Esports, s/n, Sant Esteve Sesrovires",
+   "cat": "Esports. Lleure",
+   "cp": "08635",
+   "lat": "41.4975075287918",
+   "lon": "1.86982394113453",
+   "name": "CAMP FUTBOL MUNICIPAL",
+   "phone": "937713017",
+   "sub": "Instal·lacions esportives"
+  },
+  {
+   "address": "C. Josep Maria de Segarra, 36, Sant Esteve Sesrovires",
+   "cat": "Esports. Lleure",
+   "cp": "08635",
+   "lat": "41.5032074391274",
+   "lon": "1.85780304432748",
+   "name": "CASAL SOCIAL VALLSERRAT",
+   "phone": "",
+   "sub": "Instal·lacions esportives"
+  },
+  {
+   "address": "C. Josep Fusalba, s/n, Sant Esteve Sesrovires",
+   "cat": "Esports. Lleure",
+   "cp": "08635",
+   "lat": "41.4955743781086",
+   "lon": "1.87292450340551",
+   "name": "COMPLEX ESPORTIU MUNICIPAL",
+   "phone": "937759650",
+   "sub": "Instal·lacions esportives"
+  },
+  {
+   "address": "Av. Moixeró, 35, Sant Esteve Sesrovires",
+   "cat": "Esports. Lleure",
+   "cp": "08635",
+   "lat": "41.5024335052871",
+   "lon": "1.8506397023289",
+   "name": "PARC MASÍA BACH",
+   "phone": "",
+   "sub": "Instal·lacions esportives"
+  },
+  {
+   "address": "C. Escoles Noves, s/n, Sant Esteve Sesrovires",
+   "cat": "Esports. Lleure",
+   "cp": "08635",
+   "lat": "41.4959885235836",
+   "lon": "1.8729053426839",
+   "name": "PAVELLÓ POLIESPORTIU MUNICIPAL",
+   "phone": "937713017",
+   "sub": "Instal·lacions esportives"
+  },
+  {
+   "address": "Pg. de Les Oliveres, s/n, Sant Esteve Sesrovires",
+   "cat": "Esports. Lleure",
+   "cp": "08635",
+   "lat": "41.4947403614087",
+   "lon": "1.87054293643881",
+   "name": "PISTA COBERTA MUNICIPAL F. CASTELLET",
+   "phone": "",
+   "sub": "Instal·lacions esportives"
+  },
+  {
+   "address": "Av. Sant Esteve, s/n, Sant Esteve Sesrovires",
+   "cat": "Esports. Lleure",
+   "cp": "08635",
+   "lat": "41.5054869420164",
+   "lon": "1.87800076706126",
+   "name": "ZONA ESPORTIVA CA N'AMAT",
+   "phone": "",
+   "sub": "Instal·lacions esportives"
+  },
+  {
+   "address": "Carretera de Martorell a Capellades,, km 23 (Brians 1)",
+   "cat": "Justícia",
+   "cp": "08635",
+   "lat": "41.4689105203",
+   "lon": "1.882428624",
+   "name": "Centre Penitenciari Brians 1",
+   "phone": "93 775 80 00",
+   "sub": "Centres penitenciaris"
+  },
+  {
+   "address": "Carretera de Martorell a Capellades,, Km 23 (Brians 2)",
+   "cat": "Justícia",
+   "cp": "08635",
+   "lat": "41.472538",
+   "lon": "1.880146",
+   "name": "Centre Penitenciari Brians 2",
+   "phone": "93 693 50 00",
+   "sub": "Centres penitenciaris"
+  },
+  {
+   "address": "Pau Costas",
+   "cat": "Justícia",
+   "cp": "08635",
+   "lat": "41.4925768",
+   "lon": "1.8739579",
+   "name": "Oficina de Justícia de Sant Esteve Sesrovires",
+   "phone": "937715190",
+   "sub": "Jutjats de pau"
+  },
+  {
+   "address": "Finca Can Duran",
+   "cat": "Justícia",
+   "cp": "08760",
+   "lat": "41.4977786",
+   "lon": "1.8695787",
+   "name": "CP Brians",
+   "phone": "",
+   "sub": "Jutjats i tribunals"
+  },
+  {
+   "address": "C/ DE MIQUEL SERVET 23",
+   "cat": "Medi ambient",
+   "cp": "08635",
+   "lat": "3.02202283494366",
+   "lon": "37.5216564916314",
+   "name": "DEIXALLERIA DE SANT ESTEVE SESROVIRES",
+   "phone": "937713017",
+   "sub": "Deixalleries"
+  },
+  {
+   "address": "Av. Montserrat, 2, bxs 1ª",
+   "cat": "Serveis socials bàsics",
+   "cp": "08781",
+   "lat": "41.49377715",
+   "lon": "1.8747741",
+   "name": "S.S.A.P. - Patronat Municipal de Serveis Socials, Cultura i Esports",
+   "phone": "937713679",
+   "sub": "Servei bàsic d'atenció social"
+  },
+  {
+   "address": "C.  Alba, 2-4, loc 1ª",
+   "cat": "Serveis socials bàsics",
+   "cp": "08635",
+   "lat": "41.49303139",
+   "lon": "1.8752355600000001",
+   "name": "Appcuida",
+   "phone": "609059417",
+   "sub": "Servei d'ajuda a domicili"
+  },
+  {
+   "address": "C.  Masia Can Serra, s/n",
+   "cat": "Serveis socials especialitzats",
+   "cp": "08635",
+   "lat": "41.4977786",
+   "lon": "1.8695787",
+   "name": "Centre de dia Can Serra",
+   "phone": "937713017",
+   "sub": "Serveis adreçats a persones grans amb dependència o risc social"
+  },
+  {
+   "address": "C.  Masia de Can Serra, s/n",
+   "cat": "Serveis socials especialitzats",
+   "cp": "08635",
+   "lat": "41.4977786",
+   "lon": "1.8695787",
+   "name": "Residència assistida Can Serra",
+   "phone": "937713017",
+   "sub": "Serveis adreçats a persones grans amb dependència o risc social"
+  },
+  {
+   "address": "Carrer Pau Costas s/n",
+   "cat": "Societat. Ciutadania. Famílies",
+   "cp": "08635",
+   "lat": "41.4931766",
+   "lon": "1.8727503",
+   "name": "Sant Esteve Sesrovires - Casal de Joves",
+   "phone": "93 771 39 30",
+   "sub": "Serveis d'Informació Juvenil"
+  },
+  {
+   "address": "Crt. Martorell a Capellades Km. 23",
+   "cat": "Tecnologia. Innovació",
+   "cp": "08635",
+   "lat": "41.501368",
+   "lon": "1.8225669",
+   "name": "Centre Penitenciari Brians Dones",
+   "phone": "93 775 80 00",
+   "sub": "Punt TIC"
+  },
+  {
+   "address": "Crt. Martorell a Capellades Km. 23",
+   "cat": "Tecnologia. Innovació",
+   "cp": "08635",
+   "lat": "41.501368",
+   "lon": "1.8225669",
+   "name": "Centre Penitenciari Brians Homes",
+   "phone": "937713500",
+   "sub": "Punt TIC"
+  },
+  {
+   "address": "Carretera Martorell-Capellades, km 23",
+   "cat": "Tecnologia. Innovació",
+   "cp": "08635",
+   "lat": "0",
+   "lon": "0",
+   "name": "Centre Penitenciari Brians II",
+   "phone": "932140100",
+   "sub": "Punt TIC"
+  }
+ ],
+ "fetched": "2026-11-23T14:08:48+01:00"
+}

@@ -1,0 +1,4 @@
+[
+{"id":"ajuntament","group":"media","name":"Ajuntament de Sant Esteve Sesrovires","desc":{"ca":"Compte oficial de l'Ajuntament: avisos, actes i actualitat municipal.","es":"Cuenta oficial del Ayuntamiento: avisos, actos y actualidad municipal.","en":"The town council's official account: notices, events and local news."},"links":{"instagram":"https://www.instagram.com/ajuntamentsesrovires/","web":"https://www.sesrovires.cat/"},"checked":"2026-11-23"},
+{"id":"rtv10","group":"media","name":"RTV10 Sesrovires","desc":{"ca":"La ràdio i televisió local: actualitat, plens municipals i programes.","es":"La radio y televisión local: actualidad, plenos municipales y programas.","en":"The local radio and TV station: news, council meetings and shows."},"links":{"youtube":"https://www.youtube.com/channel/UCcPjsJk9dy4XgUoJOpR4qOw","web":"https://www.rtv10.cat/"},"youtube_id":"UCcPjsJk9dy4XgUoJOpR4qOw","checked":"2026-11-23"}
+]

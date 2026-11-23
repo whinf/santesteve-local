@@ -1,0 +1,2538 @@
+{
+"elements": [
+{
+"id": 615793112,
+"lat": 41.4421429,
+"lon": 2.0673026,
+"tags": {
+"amenity": "restaurant",
+"name": "A'Feira"
+},
+"type": "node"
+},
+{
+"id": 815494276,
+"lat": 41.446872,
+"lon": 2.0751284,
+"tags": {
+"amenity": "restaurant",
+"name": "Rancho El Paso"
+},
+"type": "node"
+},
+{
+"id": 836424211,
+"lat": 41.4445741,
+"lon": 2.0667015,
+"tags": {
+"amenity": "restaurant",
+"name": "Catalan"
+},
+"type": "node"
+},
+{
+"id": 836427922,
+"lat": 41.4448145,
+"lon": 2.0615995,
+"tags": {
+"amenity": "restaurant",
+"name": "La Casa Blava"
+},
+"type": "node"
+},
+{
+"id": 845731179,
+"lat": 41.4759041,
+"lon": 2.0860527,
+"tags": {
+"amenity": "restaurant",
+"name": "Centro Andaluz"
+},
+"type": "node"
+},
+{
+"id": 1397834353,
+"lat": 41.4725908,
+"lon": 2.0993115,
+"tags": {
+"addr:street": "Avinguda de les Corts Catalanes",
+"amenity": "restaurant",
+"cuisine": "steak_house;local",
+"name": "Restaurant Hípica Can Caldés",
+"phone": "+34 695 309 933",
+"website": "https://masiacancaldes.cat/"
+},
+"type": "node"
+},
+{
+"id": 1398866151,
+"lat": 41.4718936,
+"lon": 2.0854534,
+"tags": {
+"amenity": "restaurant",
+"name": "La Flama"
+},
+"type": "node"
+},
+{
+"id": 1630310367,
+"lat": 41.4471641,
+"lon": 2.075242,
+"tags": {
+"amenity": "restaurant",
+"name": "Les Moreres"
+},
+"type": "node"
+},
+{
+"id": 1756181722,
+"lat": 41.4810957,
+"lon": 2.060826,
+"tags": {
+"addr:housenumber": "22",
+"addr:street": "Carrer d'Amposta",
+"amenity": "restaurant",
+"name": "Cafeteria Verjus",
+"phone": "+34 93 589 35 44"
+},
+"type": "node"
+},
+{
+"id": 2329772161,
+"lat": 41.433281,
+"lon": 2.094801,
+"tags": {
+"amenity": "restaurant",
+"name": "El talismán 2"
+},
+"type": "node"
+},
+{
+"id": 3011127633,
+"lat": 41.4732238,
+"lon": 2.0839598,
+"tags": {
+"amenity": "restaurant",
+"name": "Zuka"
+},
+"type": "node"
+},
+{
+"id": 3011143733,
+"lat": 41.4707185,
+"lon": 2.0859585,
+"tags": {
+"amenity": "restaurant",
+"name": "Vermell"
+},
+"type": "node"
+},
+{
+"id": 3384272083,
+"lat": 41.4681599,
+"lon": 2.0802193,
+"tags": {
+"addr:housenumber": "28",
+"addr:street": "Carrer Doctor Murillo",
+"amenity": "restaurant",
+"cuisine": "kebab",
+"name": "SANT CUGAT KEBAB",
+"opening_hours": "Mo-Su 13:30-16:00,20:00-23:30",
+"phone": "+34 935 831251"
+},
+"type": "node"
+},
+{
+"id": 3421372522,
+"lat": 41.4447343,
+"lon": 2.0664807,
+"tags": {
+"addr:housenumber": "86",
+"addr:street": "Carretera de Vallvidrera",
+"amenity": "restaurant",
+"cuisine": "italian",
+"name": "Piccola Cucina Italiana",
+"opening_hours": "13:30-15:30,20:30-23:30",
+"phone": "+34 628 638 878"
+},
+"type": "node"
+},
+{
+"id": 643805170,
+"lat": 41.4276503,
+"lon": 2.1153268,
+"tags": {
+"name": "Turó de Miralluna",
+"natural": "peak"
+},
+"type": "node"
+},
+{
+"id": 1249944945,
+"lat": 41.4468022,
+"lon": 2.0271702,
+"tags": {
+"name": "Puig del Rossinyol",
+"natural": "peak"
+},
+"type": "node"
+},
+{
+"id": 1249948042,
+"lat": 41.4649566,
+"lon": 2.0263245,
+"tags": {
+"name": "Puig Pedrós de l'Obac",
+"natural": "peak"
+},
+"type": "node"
+},
+{
+"id": 1249957066,
+"lat": 41.4420902,
+"lon": 2.0323758,
+"tags": {
+"name": "l'Alzinar",
+"natural": "peak"
+},
+"type": "node"
+},
+{
+"id": 2652138469,
+"lat": 41.5068376,
+"lon": 2.0716366,
+"tags": {
+"name": "Turó de Can Camps",
+"natural": "peak"
+},
+"type": "node"
+},
+{
+"id": 3285488261,
+"lat": 41.460408,
+"lon": 2.0300025,
+"tags": {
+"name": "Turó de Can Barba",
+"natural": "peak"
+},
+"type": "node"
+},
+{
+"id": 3886998975,
+"lat": 41.4563757,
+"lon": 2.1182134,
+"tags": {
+"name": "Turó de Sant Adjutori",
+"natural": "peak"
+},
+"type": "node"
+},
+{
+"id": 4017623371,
+"lat": 41.4757488,
+"lon": 2.0634131,
+"tags": {
+"name": "Turó de Can Mates",
+"natural": "peak"
+},
+"type": "node"
+},
+{
+"id": 4439289743,
+"lat": 41.460247,
+"lon": 2.0970562,
+"tags": {
+"name": "Turó de la Torre Negra",
+"natural": "peak"
+},
+"type": "node"
+},
+{
+"id": 4839573931,
+"lat": 41.4401546,
+"lon": 2.0991112,
+"tags": {
+"name": "Turó del Mallol",
+"natural": "peak"
+},
+"type": "node"
+},
+{
+"id": 4839631071,
+"lat": 41.4386339,
+"lon": 2.087332,
+"tags": {
+"name": "Turó del Fumet",
+"natural": "peak"
+},
+"type": "node"
+},
+{
+"id": 4839779462,
+"lat": 41.41889,
+"lon": 2.0707191,
+"tags": {
+"name": "Turó de Can Mallol",
+"natural": "peak"
+},
+"type": "node"
+},
+{
+"id": 7082270131,
+"lat": 41.4512621,
+"lon": 2.0240039,
+"tags": {
+"name": "Puig Madrona",
+"natural": "peak"
+},
+"type": "node"
+},
+{
+"id": 11917567767,
+"lat": 41.4328721,
+"lon": 2.0915437,
+"tags": {
+"name": "Turó dels Soldats",
+"natural": "peak"
+},
+"type": "node"
+},
+{
+"id": 840087503,
+"lat": 41.4438631,
+"lon": 2.1211322,
+"tags": {
+"amenity": "drinking_water",
+"historic": "fountain",
+"name": "Font del Camp del Miracle",
+"natural": "spring"
+},
+"type": "node"
+},
+{
+"id": 989000060,
+"lat": 41.4266801,
+"lon": 2.1207588,
+"tags": {
+"name": "Font de la Salamandra",
+"natural": "spring"
+},
+"type": "node"
+},
+{
+"id": 1550344383,
+"lat": 41.4558881,
+"lon": 2.098576,
+"tags": {
+"name": "Font de Sant Vicenç del Bosc",
+"natural": "spring"
+},
+"type": "node"
+},
+{
+"id": 3278193609,
+"lat": 41.4303055,
+"lon": 2.1069087,
+"tags": {
+"name": "Font del Rabassalet",
+"natural": "spring"
+},
+"type": "node"
+},
+{
+"id": 3285488333,
+"lat": 41.4592582,
+"lon": 2.0298196,
+"tags": {
+"name": "Font de Can Barba",
+"natural": "spring"
+},
+"type": "node"
+},
+{
+"id": 3908538571,
+"lat": 41.4472945,
+"lon": 2.1159166,
+"tags": {
+"name": "Font de Sant Sever",
+"natural": "spring"
+},
+"type": "node"
+},
+{
+"id": 4439309298,
+"lat": 41.4581877,
+"lon": 2.1019617,
+"tags": {
+"name": "Font de l'Ermetà",
+"natural": "spring"
+},
+"type": "node"
+},
+{
+"id": 4439425328,
+"lat": 41.4442241,
+"lon": 2.1189222,
+"tags": {
+"name": "Font de Can Gener",
+"natural": "spring"
+},
+"type": "node"
+},
+{
+"id": 4925787597,
+"lat": 41.430653,
+"lon": 2.1107054,
+"tags": {
+"name": "Font de la Rabassada",
+"natural": "spring"
+},
+"type": "node"
+},
+{
+"id": 5787401744,
+"lat": 41.4290509,
+"lon": 2.1194654,
+"tags": {
+"name": "Font de l'Estrangulador",
+"natural": "spring"
+},
+"type": "node"
+},
+{
+"id": 6062612419,
+"lat": 41.431394,
+"lon": 2.12175,
+"tags": {
+"name": "Font Groga",
+"natural": "spring"
+},
+"type": "node"
+},
+{
+"id": 6073417961,
+"lat": 41.4324505,
+"lon": 2.1172499,
+"tags": {
+"name": "Font d'en Sert",
+"natural": "spring"
+},
+"type": "node"
+},
+{
+"id": 6508036891,
+"lat": 41.4322177,
+"lon": 2.0670453,
+"tags": {
+"name": "Font del Bon Pastor",
+"natural": "spring"
+},
+"type": "node"
+},
+{
+"id": 6509350043,
+"lat": 41.430875,
+"lon": 2.1121452,
+"tags": {
+"name": "Font d'en Ribas",
+"natural": "spring"
+},
+"type": "node"
+},
+{
+"id": 8603122432,
+"lat": 41.4323285,
+"lon": 2.1103043,
+"tags": {
+"name": "Font Sulfurosa",
+"natural": "spring"
+},
+"type": "node"
+},
+{
+"id": 1395207483,
+"lat": 41.4620218,
+"lon": 2.0913234,
+"tags": {
+"leisure": "sports_centre",
+"name": "Club Tennis Natació Sant Cugat"
+},
+"type": "node"
+},
+{
+"id": 11175170208,
+"lat": 41.4769519,
+"lon": 2.0715986,
+"tags": {
+"addr:housenumber": "12",
+"addr:street": "Carrer de Vic",
+"contact:phone": "+34 690 98 29 91",
+"leisure": "sports_centre",
+"name": "Flashh",
+"opening_hours": "Mo-Fr 10:00-22:00; Sa-Su 10:00-21:00",
+"website": "https://www.flashh.es/"
+},
+"type": "node"
+},
+{
+"center": {
+"lat": 41.4702755,
+"lon": 2.0842601
+},
+"id": 125249111,
+"tags": {
+"addr:housenumber": "1",
+"addr:street": "Pasaje del Baró de Coubertin",
+"leisure": "sports_centre",
+"name": "Eurofitness Sant Cugat",
+"phone": "+34935830345"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4700838,
+"lon": 2.0836366
+},
+"id": 125249114,
+"tags": {
+"leisure": "sports_centre",
+"name": "Zona Esportiva Municipal Rambla del Celler PAV 2"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.488858,
+"lon": 2.0786374
+},
+"id": 125826838,
+"tags": {
+"leisure": "sports_centre",
+"name": "Club Esportiu Grup Catalana Occident"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4823183,
+"lon": 2.0769818
+},
+"id": 440148154,
+"tags": {
+"leisure": "sports_centre",
+"name": "Pista d'atletisme"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4501277,
+"lon": 2.0560802
+},
+"id": 810502564,
+"tags": {
+"leisure": "sports_centre",
+"name": "Club esportiu Valldoreix"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.5013339,
+"lon": 2.0624306
+},
+"id": 935668213,
+"tags": {
+"leisure": "sports_centre",
+"name": "Club Aeromodelisme Sant Cugat"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4545799,
+"lon": 2.0407969
+},
+"id": 1290247828,
+"tags": {
+"leisure": "sports_centre",
+"name": "Complex esportiu de Valldoreix"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4628174,
+"lon": 2.0769095
+},
+"id": 11163280,
+"tags": {
+"leisure": "sports_centre",
+"name": "Club de Golf Sant Cugat"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.4836847,
+"lon": 2.0774826
+},
+"id": 11208767,
+"tags": {
+"leisure": "sports_centre",
+"name": "Centre d'Alt Rendiment Esportiu de Sant Cugat"
+},
+"type": "relation"
+},
+{
+"id": 1397990354,
+"lat": 41.4720556,
+"lon": 2.0810046,
+"tags": {
+"amenity": "bar",
+"name": "Caballu Petit"
+},
+"type": "node"
+},
+{
+"id": 1398866083,
+"lat": 41.4715055,
+"lon": 2.0804602,
+"tags": {
+"amenity": "bar",
+"name": "Bar Teatre de la Unió"
+},
+"type": "node"
+},
+{
+"id": 1497405494,
+"lat": 41.4677908,
+"lon": 2.0795625,
+"tags": {
+"amenity": "bar",
+"name": "Dau's"
+},
+"type": "node"
+},
+{
+"id": 3283847054,
+"lat": 41.4747079,
+"lon": 2.0770052,
+"tags": {
+"addr:housenumber": "56",
+"addr:street": "Avinguda de Rius i Taulet",
+"amenity": "bar",
+"name": "Stop",
+"opening_hours": "07:00-00:00"
+},
+"type": "node"
+},
+{
+"id": 4014325152,
+"lat": 41.4578767,
+"lon": 2.0653613,
+"tags": {
+"amenity": "bar",
+"name": "Bar Ángel"
+},
+"type": "node"
+},
+{
+"id": 5842363084,
+"lat": 41.4898279,
+"lon": 2.081386,
+"tags": {
+"amenity": "bar",
+"name": "Bar Kaprofiti"
+},
+"type": "node"
+},
+{
+"id": 5918405998,
+"lat": 41.4749191,
+"lon": 2.0900816,
+"tags": {
+"addr:street": "Plaça Coll",
+"amenity": "bar",
+"name": "Peña madridista"
+},
+"type": "node"
+},
+{
+"id": 5918406395,
+"lat": 41.47383,
+"lon": 2.0885721,
+"tags": {
+"addr:housenumber": "18",
+"addr:street": "Avinguda de Cerdanyola",
+"amenity": "bar",
+"name": "Johnny bar"
+},
+"type": "node"
+},
+{
+"id": 5918407286,
+"lat": 41.4666708,
+"lon": 2.0808658,
+"tags": {
+"addr:housenumber": "36",
+"addr:street": "Rambla de Ribatallada",
+"amenity": "bar",
+"name": "Bar Hamburg"
+},
+"type": "node"
+},
+{
+"id": 6052524195,
+"lat": 41.473254,
+"lon": 2.0837697,
+"tags": {
+"addr:housenumber": "31",
+"addr:street": "Carrer Major",
+"amenity": "bar",
+"name": "La Fem"
+},
+"type": "node"
+},
+{
+"id": 6478761585,
+"lat": 41.4680845,
+"lon": 2.0805163,
+"tags": {
+"addr:housenumber": "18",
+"addr:street": "Carrer Doctor Murillo 28",
+"amenity": "bar",
+"name": "Muth"
+},
+"type": "node"
+},
+{
+"id": 7578197581,
+"lat": 41.4466855,
+"lon": 2.0496999,
+"tags": {
+"amenity": "bar",
+"name": "la Rampa 23"
+},
+"type": "node"
+},
+{
+"id": 9447305717,
+"lat": 41.4785937,
+"lon": 2.0676651,
+"tags": {
+"amenity": "bar",
+"name": "Akelarre",
+"phone": "+34 936745370",
+"website": "http://akelarresantcugat.com"
+},
+"type": "node"
+},
+{
+"id": 14097815535,
+"lat": 41.4721795,
+"lon": 2.0900001,
+"tags": {
+"amenity": "bar",
+"name": "Bar Cal Vicens"
+},
+"type": "node"
+},
+{
+"id": 1398866097,
+"lat": 41.4708401,
+"lon": 2.0838129,
+"tags": {
+"amenity": "cafe",
+"name": "Spoon"
+},
+"type": "node"
+},
+{
+"id": 1414448589,
+"lat": 41.4579863,
+"lon": 2.0680937,
+"tags": {
+"amenity": "cafe",
+"name": "Dumas Café"
+},
+"type": "node"
+},
+{
+"id": 2906848425,
+"lat": 41.4784156,
+"lon": 2.071282,
+"tags": {
+"amenity": "cafe",
+"name": "El Siglo"
+},
+"type": "node"
+},
+{
+"id": 3766993843,
+"lat": 41.4708091,
+"lon": 2.0836994,
+"tags": {
+"amenity": "cafe",
+"name": "Vallespan"
+},
+"type": "node"
+},
+{
+"id": 4281911436,
+"lat": 41.4680657,
+"lon": 2.0789203,
+"tags": {
+"amenity": "cafe",
+"name": "Santagloria",
+"opening_hours": "Mo-Fr 06:00-20:30; Sa 07:00-20:30; Su 08:00-20:00",
+"website": "https://www.santagloria.com/nuestros-locales/santagloria-placa-lluis-millet-sant-cugat-del-valles"
+},
+"type": "node"
+},
+{
+"id": 5130442845,
+"lat": 41.4702607,
+"lon": 2.0786484,
+"tags": {
+"amenity": "cafe",
+"name": "Color it"
+},
+"type": "node"
+},
+{
+"id": 5130442927,
+"lat": 41.4712962,
+"lon": 2.0790977,
+"tags": {
+"addr:street": "Avinguda de Lluís Companys",
+"amenity": "cafe",
+"name": "Bar granja la Ruleta"
+},
+"type": "node"
+},
+{
+"id": 5130443126,
+"lat": 41.470269,
+"lon": 2.0783968,
+"tags": {
+"amenity": "cafe",
+"name": "Granja bar Torcuato"
+},
+"type": "node"
+},
+{
+"id": 5130443127,
+"lat": 41.4710318,
+"lon": 2.0790089,
+"tags": {
+"addr:street": "Avinguda de Lluís Companys",
+"amenity": "cafe",
+"name": "Sorghum"
+},
+"type": "node"
+},
+{
+"id": 5132391527,
+"lat": 41.4683908,
+"lon": 2.0791272,
+"tags": {
+"amenity": "cafe",
+"name": "Serrajòrdia taller de pa"
+},
+"type": "node"
+},
+{
+"id": 5164895523,
+"lat": 41.4679774,
+"lon": 2.0789297,
+"tags": {
+"amenity": "cafe",
+"name": "Plaza"
+},
+"type": "node"
+},
+{
+"id": 5164895524,
+"lat": 41.4681964,
+"lon": 2.0798028,
+"tags": {
+"amenity": "cafe",
+"name": "Club del Café"
+},
+"type": "node"
+},
+{
+"id": 5164895525,
+"lat": 41.4684502,
+"lon": 2.0797876,
+"tags": {
+"addr:street": "Carrer Valldoreix",
+"amenity": "cafe",
+"name": "Mermelada Express"
+},
+"type": "node"
+},
+{
+"id": 5164895527,
+"lat": 41.4693645,
+"lon": 2.0803665,
+"tags": {
+"addr:housenumber": "45",
+"addr:street": "Carrer Valldoreix",
+"amenity": "cafe",
+"name": "Forn de pa Granier",
+"opening_hours": "Mo-Sa 07:00-21:00; Su 07:00-14:00",
+"website": "https://pansgranier.com"
+},
+"type": "node"
+},
+{
+"id": 1398866139,
+"lat": 41.47079,
+"lon": 2.0835581,
+"tags": {
+"amenity": "fast_food",
+"cuisine": "pizza",
+"name": "Telepizza"
+},
+"type": "node"
+},
+{
+"id": 1936571474,
+"lat": 41.4835522,
+"lon": 2.0532857,
+"tags": {
+"addr:housenumber": "2-14",
+"addr:street": "Avinguda de la Via Augusta",
+"amenity": "fast_food",
+"cuisine": "sandwich",
+"name": "Pans & Company",
+"opening_hours": "Mo-Sa 09:00-23:00; Su 11:00-23:00",
+"phone": "+34 936 74 54 02",
+"website": "https://www.pansandcompany.com/"
+},
+"type": "node"
+},
+{
+"id": 5164916724,
+"lat": 41.4703348,
+"lon": 2.0802748,
+"tags": {
+"addr:street": "Carrer Valldoreix",
+"amenity": "fast_food",
+"cuisine": "pizza",
+"name": "Pizza Market"
+},
+"type": "node"
+},
+{
+"id": 5164916726,
+"lat": 41.4712594,
+"lon": 2.0800777,
+"tags": {
+"addr:street": "Carrer del Torrent de la Bomba",
+"amenity": "fast_food",
+"cuisine": "pizza",
+"name": "Capote's"
+},
+"type": "node"
+},
+{
+"id": 5217998522,
+"lat": 41.4669977,
+"lon": 2.0783944,
+"tags": {
+"addr:street": "Plaça de Lluís Millet",
+"amenity": "fast_food",
+"name": "Cravings"
+},
+"type": "node"
+},
+{
+"id": 5299233623,
+"lat": 41.470533,
+"lon": 2.0806714,
+"tags": {
+"amenity": "fast_food",
+"name": "Mumbal"
+},
+"type": "node"
+},
+{
+"id": 5372864221,
+"lat": 41.4785148,
+"lon": 2.0686293,
+"tags": {
+"addr:housenumber": "1",
+"addr:street": "Passeig de, Camí de Can Ametller",
+"amenity": "fast_food",
+"name": "Viena",
+"opening_hours": "Mo-Su 12:00-23:00",
+"phone": "+34 935 90 66 17",
+"website": "https://www.viena.es"
+},
+"type": "node"
+},
+{
+"id": 5918406397,
+"lat": 41.4737549,
+"lon": 2.0867689,
+"tags": {
+"addr:housenumber": "10",
+"addr:street": "Passeig de Francesc Macià",
+"amenity": "fast_food",
+"cuisine": "pizza",
+"name": "Domino's",
+"website": "https://www.dominospizza.es/tiendas-dominos-pizza/tiendas/Barcelona-Sant-Cugat-Valles-Paseo-Francesc-Macia-10"
+},
+"type": "node"
+},
+{
+"id": 6052523994,
+"lat": 41.472949,
+"lon": 2.0826192,
+"tags": {
+"addr:housenumber": "6",
+"addr:street": "Carrer Major",
+"amenity": "fast_food",
+"name": "Rostisseria Ma. Àngels"
+},
+"type": "node"
+},
+{
+"id": 8848616217,
+"lat": 41.4837957,
+"lon": 2.0535673,
+"tags": {
+"addr:housenumber": "2-14",
+"addr:street": "Avinguda de la Via Augusta",
+"amenity": "fast_food",
+"cuisine": "burger",
+"name": "McDonald's"
+},
+"type": "node"
+},
+{
+"id": 9650246865,
+"lat": 41.483158,
+"lon": 2.0510507,
+"tags": {
+"addr:housenumber": "18",
+"addr:street": "Avinguda de la Via Augusta",
+"amenity": "fast_food",
+"cuisine": "pizza",
+"name": "Domino's",
+"opening_hours": "Mo-Su 13:00-23:59",
+"phone": "+34 930930659",
+"website": "https://www.dominospizza.es/"
+},
+"type": "node"
+},
+{
+"id": 12609394604,
+"lat": 41.4682668,
+"lon": 2.0792185,
+"tags": {
+"amenity": "fast_food",
+"cuisine": "burger",
+"name": "Ugga Street"
+},
+"type": "node"
+},
+{
+"id": 12947021187,
+"lat": 41.4743873,
+"lon": 2.0866665,
+"tags": {
+"addr:housenumber": "16",
+"addr:street": "Passeig de Francesc Macià",
+"amenity": "fast_food",
+"cuisine": "burger",
+"name": "Deleito",
+"phone": "+34936419181",
+"website": "https://www.quierodeleito.com/"
+},
+"type": "node"
+},
+{
+"id": 12977869449,
+"lat": 41.473435,
+"lon": 2.0838283,
+"tags": {
+"addr:housenumber": "4",
+"addr:street": "Plaça d'Octavià",
+"amenity": "fast_food",
+"cuisine": "burger",
+"name": "Timesburg",
+"phone": "+34935252336",
+"website": "https://www.timesburg.com/"
+},
+"type": "node"
+},
+{
+"id": 1411423602,
+"lat": 41.4781485,
+"lon": 2.0767112,
+"tags": {
+"historic": "monument",
+"name": "Pont de Can Vernet"
+},
+"type": "node"
+},
+{
+"id": 2020467637,
+"lat": 41.4422693,
+"lon": 2.1214893,
+"tags": {
+"historic": "fountain",
+"name": "Font de Sant Medir",
+"natural": "spring"
+},
+"type": "node"
+},
+{
+"id": 14073494845,
+"lat": 41.4396279,
+"lon": 2.0857635,
+"tags": {
+"historic": "fountain",
+"name": "Font del Fumet",
+"natural": "spring"
+},
+"type": "node"
+},
+{
+"id": 2340678467,
+"lat": 41.4673877,
+"lon": 2.1005414,
+"tags": {
+"name": "Pi d'en Xandri",
+"natural": "tree",
+"tourism": "attraction"
+},
+"type": "node"
+},
+{
+"id": 4439205989,
+"lat": 41.456277,
+"lon": 2.0880976,
+"tags": {
+"name": "Can Vasconcel",
+"tourism": "attraction"
+},
+"type": "node"
+},
+{
+"center": {
+"lat": 41.4651348,
+"lon": 2.1007751
+},
+"id": 125545717,
+"tags": {
+"name": "Torre Negra",
+"tourism": "attraction"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.459186,
+"lon": 2.0928001
+},
+"id": 446690734,
+"tags": {
+"name": "Casa Bertrand",
+"tourism": "attraction"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4736912,
+"lon": 2.084691
+},
+"id": 478756506,
+"tags": {
+"historic": "castle",
+"name": "Palau Abacial",
+"tourism": "attraction"
+},
+"type": "way"
+},
+{
+"id": 2352730101,
+"lat": 41.4562837,
+"lon": 2.1145233,
+"tags": {
+"historic": "archaeological_site",
+"name": "Forn ibèric"
+},
+"type": "node"
+},
+{
+"id": 2659242473,
+"lat": 41.4589942,
+"lon": 2.0399102,
+"tags": {
+"historic": "ruins",
+"name": "Paret de Canals"
+},
+"type": "node"
+},
+{
+"id": 3413212836,
+"lat": 41.4454358,
+"lon": 2.1011225,
+"tags": {
+"historic": "ruins",
+"name": "Can Gordi"
+},
+"type": "node"
+},
+{
+"center": {
+"lat": 41.4719695,
+"lon": 2.0850162
+},
+"id": 126104733,
+"tags": {
+"historic": "ruins",
+"name": "Celler Coopereatiu"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4707694,
+"lon": 2.1054264
+},
+"id": 1394184117,
+"tags": {
+"access": "yes",
+"historic": "ruins",
+"name": "Ruïnes Granja Torre Cendrera"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4321556,
+"lon": 2.1095467
+},
+"id": 1541457340,
+"tags": {
+"historic": "ruins",
+"name": "Casino de l'Arrabassada"
+},
+"type": "way"
+},
+{
+"id": 2667171097,
+"lat": 41.4817569,
+"lon": 2.0839193,
+"tags": {
+"historic": "memorial",
+"name": "Creu de Coll Favà"
+},
+"type": "node"
+},
+{
+"id": 6466401110,
+"lat": 41.4803493,
+"lon": 2.0802015,
+"tags": {
+"historic": "memorial",
+"name": "Pirulí de Coll Favà"
+},
+"type": "node"
+},
+{
+"id": 8180022103,
+"lat": 41.4273673,
+"lon": 2.1200556,
+"tags": {
+"historic": "memorial",
+"name": "Homenatge Any Josep Maria Planes i Martí"
+},
+"type": "node"
+},
+{
+"id": 13459731491,
+"lat": 41.4696535,
+"lon": 2.0814751,
+"tags": {
+"historic": "memorial",
+"name": "Bonaventura Bartralot Auladel"
+},
+"type": "node"
+},
+{
+"id": 13459750557,
+"lat": 41.4713886,
+"lon": 2.0835369,
+"tags": {
+"historic": "memorial",
+"name": "Miguel Sánchez García"
+},
+"type": "node"
+},
+{
+"id": 13459752599,
+"lat": 41.4670906,
+"lon": 2.0815638,
+"tags": {
+"historic": "memorial",
+"name": "Josep Puiggròs Paloma"
+},
+"type": "node"
+},
+{
+"id": 13459768044,
+"lat": 41.4734395,
+"lon": 2.0837261,
+"tags": {
+"historic": "memorial",
+"name": "Francisco Calventus Navarro"
+},
+"type": "node"
+},
+{
+"id": 13459775168,
+"lat": 41.4735598,
+"lon": 2.082846,
+"tags": {
+"historic": "memorial",
+"name": "Lorenzo Villa Gibanel"
+},
+"type": "node"
+},
+{
+"id": 13459796600,
+"lat": 41.474433,
+"lon": 2.0879274,
+"tags": {
+"historic": "memorial",
+"name": "Joaquín Moya Braulio"
+},
+"type": "node"
+},
+{
+"id": 2704482960,
+"lat": 41.4333243,
+"lon": 2.0890523,
+"tags": {
+"addr:housenumber": "22",
+"addr:street": "Carrer de Nostra Senyora de l'Estrada",
+"amenity": "pub",
+"name": "Bar Miguel"
+},
+"type": "node"
+},
+{
+"id": 10005239712,
+"lat": 41.4736777,
+"lon": 2.0840231,
+"tags": {
+"addr:housenumber": "6",
+"addr:street": "Plaça d'Octavià",
+"amenity": "pub",
+"name": "Bar Mono",
+"opening_hours": "Mo-Su 12:00-01:00"
+},
+"type": "node"
+},
+{
+"id": 3765708084,
+"lat": 41.4682498,
+"lon": 2.0823412,
+"tags": {
+"addr:housenumber": "11",
+"addr:street": "Rambla de Can Mora",
+"amenity": "community_centre",
+"name": "Local Social dels Castellers de Sant Cugat",
+"website": "https://www.castellersdesantcugat.cat/"
+},
+"type": "node"
+},
+{
+"id": 11470064329,
+"lat": 41.4585574,
+"lon": 2.0631573,
+"tags": {
+"amenity": "community_centre",
+"name": "Casal d'Avis de Valldoreix"
+},
+"type": "node"
+},
+{
+"id": 12981079878,
+"lat": 41.4749139,
+"lon": 2.0893976,
+"tags": {
+"addr:housenumber": "4",
+"addr:street": "Plaça del Coll",
+"amenity": "community_centre",
+"name": "Xalet Negre",
+"phone": "+34936030529",
+"website": "http://centresculturals.santcugat.cat/19824/descriptiu/"
+},
+"type": "node"
+},
+{
+"id": 14157659701,
+"lat": 41.4597017,
+"lon": 2.0990448,
+"tags": {
+"addr:housenumber": "2",
+"addr:street": "Camí de la Pedrera",
+"amenity": "community_centre",
+"name": "Can Bee"
+},
+"type": "node"
+},
+{
+"center": {
+"lat": 41.4703411,
+"lon": 2.0918406
+},
+"id": 125327530,
+"tags": {
+"amenity": "community_centre",
+"name": "Casal de Joves Torre Blanca"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4745089,
+"lon": 2.0844444
+},
+"id": 125343371,
+"tags": {
+"amenity": "community_centre",
+"name": "Casa de Cultura",
+"opening_hours": "Mo-Fr 08:00-23:30; Sa 09:00-21:00; PH off"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4676998,
+"lon": 2.0839417
+},
+"id": 126734454,
+"tags": {
+"addr:housenumber": "16",
+"addr:street": "Avinguda de Gràcia",
+"amenity": "community_centre",
+"name": "Ateneu Santcugatenc",
+"phone": "+34 93 674 51 95",
+"website": "https://www.ateneu.cat/"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4451846,
+"lon": 2.0747583
+},
+"id": 127609129,
+"tags": {
+"addr:housenumber": "36",
+"addr:street": "Carrer de Pearson",
+"amenity": "community_centre",
+"name": "Centre Social i Sanitari de la Floresta"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4432476,
+"lon": 2.0724855
+},
+"id": 150077505,
+"tags": {
+"addr:housenumber": "27",
+"addr:street": "Carrer del Casino",
+"amenity": "community_centre",
+"historic": "building",
+"name": "Casino la Floresta",
+"opening_hours": "Mo-Fr 16:00-22:00; PH off",
+"phone": "+34935838143",
+"ref": "14307",
+"website": "https://centresculturals.santcugat.cat/14307/centre/"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.433931,
+"lon": 2.0939806
+},
+"id": 345398845,
+"tags": {
+"addr:housenumber": "7",
+"addr:street": "Plaça del Coll de la Creu d'en Blau",
+"amenity": "community_centre",
+"name": "Casal Les Planes",
+"opening_hours": "Mo-Fr 15:30-21:30; PH off",
+"phone": "+34936755105",
+"website": "https://centresculturals.santcugat.cat/14318/centre/"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4449224,
+"lon": 2.0582825
+},
+"id": 1457934348,
+"tags": {
+"addr:housenumber": "4",
+"addr:street": "Avinguda de la Verge de Montserrat",
+"amenity": "community_centre",
+"name": "Associació de Veïns i Propietaris de Vallpineda",
+"website": "https://vallpineda.org/"
+},
+"type": "way"
+},
+{
+"id": 5800410184,
+"lat": 41.469542,
+"lon": 2.0775236,
+"tags": {
+"historic": "monument",
+"name": "Al vent",
+"tourism": "artwork"
+},
+"type": "node"
+},
+{
+"id": 5918407288,
+"lat": 41.4731734,
+"lon": 2.0853287,
+"tags": {
+"addr:street": "Carrer de la Torre",
+"amenity": "ice_cream",
+"name": "Joan Pros"
+},
+"type": "node"
+},
+{
+"id": 12600350393,
+"lat": 41.4683013,
+"lon": 2.0798698,
+"tags": {
+"amenity": "ice_cream",
+"name": "Pou De Glaç"
+},
+"type": "node"
+},
+{
+"id": 12977869447,
+"lat": 41.4731194,
+"lon": 2.0840097,
+"tags": {
+"addr:housenumber": "2",
+"addr:street": "Plaça d'Octavià",
+"amenity": "ice_cream",
+"name": "Gelats Maximum"
+},
+"type": "node"
+},
+{
+"id": 12977869448,
+"lat": 41.4732016,
+"lon": 2.0839734,
+"tags": {
+"addr:housenumber": "2",
+"addr:street": "Plaça d'Octavià",
+"amenity": "ice_cream",
+"name": "Badiani Gelato"
+},
+"type": "node"
+},
+{
+"id": 12977869451,
+"lat": 41.4732239,
+"lon": 2.0836832,
+"tags": {
+"addr:housenumber": "29",
+"addr:street": "Carrer Major",
+"amenity": "ice_cream",
+"name": "Jijonenca"
+},
+"type": "node"
+},
+{
+"id": 12977869455,
+"lat": 41.4731382,
+"lon": 2.0837725,
+"tags": {
+"addr:housenumber": "32",
+"addr:street": "Carrer Major",
+"amenity": "ice_cream",
+"name": "Criíms"
+},
+"type": "node"
+},
+{
+"id": 12980234287,
+"lat": 41.4730314,
+"lon": 2.0818213,
+"tags": {
+"addr:housenumber": "14",
+"addr:street": "Plaça de Sant Pere",
+"amenity": "ice_cream",
+"name": "Voglio, gelato e caffè"
+},
+"type": "node"
+},
+{
+"id": 6090305387,
+"lat": 41.475093,
+"lon": 2.0978593,
+"tags": {
+"addr:housenumber": "5",
+"addr:street": "Avinguda de les Corts Catalanes",
+"amenity": "nightclub",
+"name": "Moon Club"
+},
+"type": "node"
+},
+{
+"center": {
+"lat": 41.4766559,
+"lon": 2.0989904
+},
+"id": 1077743365,
+"tags": {
+"amenity": "nightclub",
+"name": "Teatre Sant Cugat · Night Scene"
+},
+"type": "way"
+},
+{
+"id": 6722151785,
+"lat": 41.4787145,
+"lon": 2.0702467,
+"tags": {
+"addr:housenumber": "15",
+"addr:street": "Carrer de Vic",
+"leisure": "fitness_centre",
+"name": "VTC Crossfit & Muay Thai",
+"opening_hours": "Mo-Fr 07:00-22:00; Sa 10:00-13:00"
+},
+"type": "node"
+},
+{
+"id": 12977869437,
+"lat": 41.4725708,
+"lon": 2.0881972,
+"tags": {
+"addr:housenumber": "8",
+"addr:street": "Carrer de Montserrat",
+"leisure": "fitness_centre",
+"name": "PASSIONFIT",
+"website": "https://passionfitpt.com/"
+},
+"type": "node"
+},
+{
+"center": {
+"lat": 41.4803888,
+"lon": 2.0589671
+},
+"id": 625745604,
+"tags": {
+"addr:housenumber": "76-80",
+"addr:street": "Carretera de Rubí",
+"leisure": "fitness_centre",
+"name": "Dirfit",
+"opening_hours": "Mo-Fr 06:00-22:45; Sa 07:30-19:00; Su 08:45-19:30",
+"phone": "+34 935442792"
+},
+"type": "way"
+},
+{
+"id": 7205580303,
+"lat": 41.467482,
+"lon": 2.0791261,
+"tags": {
+"addr:housenumber": "2",
+"addr:street": "Carrer d' Àngel Guimerà",
+"amenity": "arts_centre",
+"name": "Centre d'Art Maristany",
+"phone": "+34 93 165 85 89"
+},
+"type": "node"
+},
+{
+"center": {
+"lat": 41.4687171,
+"lon": 2.0824321
+},
+"id": 126150473,
+"tags": {
+"addr:housenumber": "1",
+"addr:street": "Plaça de Can Quitèria",
+"amenity": "arts_centre",
+"name": "Centre Grau-Garriga d'Art Tèxtil Contemporani",
+"opening_hours": "Tu-Fr 17:00-20:00; We,Sa 10:00-14:00,17:00-20:00; Su 10:00-14:00",
+"phone": "+34 677 490 164",
+"tourism": "museum",
+"website": "https://www.santcugat.cat/web/centre-grau-garriga"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4650987,
+"lon": 2.0774388
+},
+"id": 771834068,
+"tags": {
+"addr:housenumber": "68",
+"addr:street": "Carrer Villà",
+"amenity": "arts_centre",
+"name": "Casa Aymat",
+"opening_hours": "Mo-Fr 09:00-20:00",
+"website": "https://centresculturals.santcugat.cat/28682/centre/"
+},
+"type": "way"
+},
+{
+"id": 8848608418,
+"lat": 41.4832299,
+"lon": 2.0537817,
+"tags": {
+"addr:housenumber": "2-14",
+"addr:street": "Avinguda de la Via Augusta",
+"amenity": "cinema",
+"name": "Yelmo"
+},
+"type": "node"
+},
+{
+"center": {
+"lat": 41.4695172,
+"lon": 2.0900565
+},
+"id": 191056075,
+"tags": {
+"addr:housenumber": "50",
+"addr:street": "Avinguda Pla del Vinyet",
+"amenity": "cinema",
+"name": "Cinemes Sant Cugat",
+"phone": "+34938531462",
+"website": "https://cinemessantcugat.com/"
+},
+"type": "way"
+},
+{
+"id": 12906393125,
+"lat": 41.4811162,
+"lon": 2.0892496,
+"tags": {
+"access": "yes",
+"name": "Parc del Torrent de Ferrussons",
+"tourism": "picnic_site"
+},
+"type": "node"
+},
+{
+"id": 12977869442,
+"lat": 41.473008,
+"lon": 2.0843654,
+"tags": {
+"addr:housenumber": "42",
+"addr:street": "Carrer de Sant Medir",
+"name": "Casa museu - Cal Gerrer",
+"tourism": "museum",
+"website": "https://fundaciocabanas.org/la-fundacio/"
+},
+"type": "node"
+},
+{
+"id": 12978049863,
+"lat": 41.4743969,
+"lon": 2.0821155,
+"tags": {
+"addr:housenumber": "1",
+"addr:street": "Plaça de Pep Ventura",
+"name": "Museu del còmic i la il·lustració",
+"phone": "+34935891194",
+"tourism": "museum",
+"website": "https://museudelcomic.org/"
+},
+"type": "node"
+},
+{
+"id": 12978561003,
+"lat": 41.4728962,
+"lon": 2.0840933,
+"tags": {
+"addr:housenumber": "52",
+"addr:street": "Carrer de Santiago Rusiñol",
+"name": "Sala Rusiñol",
+"phone": "+34936754751",
+"tourism": "gallery",
+"website": "https://salarusinyol.net/"
+},
+"type": "node"
+},
+{
+"center": {
+"lat": 41.4775317,
+"lon": 2.08049
+},
+"id": 28027897,
+"tags": {
+"leisure": "park",
+"name": "Parc de Can Bernet"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4745804,
+"lon": 2.0852536
+},
+"id": 28038611,
+"tags": {
+"leisure": "park",
+"name": "Jardins del Monestir"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4679327,
+"lon": 2.0889849
+},
+"id": 125238226,
+"tags": {
+"addr:housenumber": "24",
+"addr:street": "Passeig d'Antoni Gaudí",
+"leisure": "park",
+"name": "Parc de l'Arborètum",
+"website": "https://visit.santcugat.cat/parc-de-larboretum"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4649377,
+"lon": 2.0802322
+},
+"id": 125239352,
+"tags": {
+"leisure": "park",
+"name": "Plaça de Sant Joaquim"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.470748,
+"lon": 2.0876466
+},
+"id": 125243950,
+"tags": {
+"leisure": "park",
+"name": "Parc de Ramon Barnils"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.467905,
+"lon": 2.0804253
+},
+"id": 125482350,
+"tags": {
+"leisure": "park",
+"name": "Plaça dels Jocs Florals"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4454669,
+"lon": 2.0747139
+},
+"id": 127609073,
+"tags": {
+"leisure": "park",
+"name": "Parc de la Pineda de les Dones"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4664717,
+"lon": 2.0708114
+},
+"id": 135693935,
+"tags": {
+"leisure": "park",
+"name": "Parc de Can Ganxet"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4664064,
+"lon": 2.0694382
+},
+"id": 170605825,
+"tags": {
+"leisure": "park",
+"name": "Parc de Can Ganxet"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4663386,
+"lon": 2.0682405
+},
+"id": 170605827,
+"tags": {
+"leisure": "park",
+"name": "Parc de Can Ganxet"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4662702,
+"lon": 2.0669849
+},
+"id": 170605843,
+"tags": {
+"leisure": "park",
+"name": "Parc de Can Ganxet"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4661745,
+"lon": 2.0653861
+},
+"id": 170605846,
+"tags": {
+"leisure": "park",
+"name": "Parc de Can Ganxet"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4685486,
+"lon": 2.0460572
+},
+"id": 339639202,
+"tags": {
+"leisure": "park",
+"name": "Jardins de Miquel Martí i Pol"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4747484,
+"lon": 2.0619211
+},
+"id": 399023353,
+"tags": {
+"leisure": "park",
+"name": "Parc del Turó de Can Mates"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4584495,
+"lon": 2.1123863
+},
+"id": 42749450,
+"tags": {
+"historic": "manor",
+"name": "Can Borrell"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4433345,
+"lon": 2.1208749
+},
+"id": 85313864,
+"tags": {
+"historic": "manor",
+"name": "Centre Sant Medir"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4294316,
+"lon": 2.1055442
+},
+"id": 116353434,
+"tags": {
+"historic": "manor",
+"name": "Can Cortès"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4584463,
+"lon": 2.0673113
+},
+"id": 127885927,
+"tags": {
+"historic": "manor",
+"name": "Rectoria de Sant Cebrià"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4370224,
+"lon": 2.0665419
+},
+"id": 225121001,
+"tags": {
+"historic": "manor",
+"name": "Can Bosquets"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4319432,
+"lon": 2.1087624
+},
+"id": 320743397,
+"tags": {
+"historic": "manor",
+"name": "el Rabassalet"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4445436,
+"lon": 2.1176429
+},
+"id": 385190802,
+"tags": {
+"historic": "manor",
+"name": "Can Gener"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4470048,
+"lon": 2.097162
+},
+"id": 449410240,
+"tags": {
+"historic": "manor",
+"name": "Mas del Bosc"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4352911,
+"lon": 2.076878
+},
+"id": 810506702,
+"tags": {
+"historic": "manor",
+"name": "Can Borrull"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4559124,
+"lon": 2.0908074
+},
+"id": 815748210,
+"tags": {
+"historic": "manor",
+"name": "Can Bell"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4509748,
+"lon": 2.0322552
+},
+"id": 1290249150,
+"tags": {
+"historic": "manor",
+"name": "Can Montmany"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4344983,
+"lon": 2.0984262
+},
+"id": 1541070437,
+"tags": {
+"historic": "manor",
+"name": "Can Cases"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4688367,
+"lon": 2.0620791
+},
+"id": 128109328,
+"tags": {
+"access": "yes",
+"leisure": "playground",
+"name": "Plaça del Baixador"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4819997,
+"lon": 2.0666649
+},
+"id": 807081696,
+"tags": {
+"leisure": "playground",
+"name": "Parc del Patufet"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4730064,
+"lon": 2.0745497
+},
+"id": 1290521842,
+"tags": {
+"access": "yes",
+"leisure": "playground",
+"name": "Tirolina del Parc Central"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4665457,
+"lon": 2.0896277
+},
+"id": 1393647101,
+"tags": {
+"access": "private",
+"leisure": "playground",
+"name": "Pistas"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4663106,
+"lon": 2.0892681
+},
+"id": 1393647102,
+"tags": {
+"leisure": "playground",
+"name": "Pati parvulari"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4667683,
+"lon": 2.0892508
+},
+"id": 1393647103,
+"tags": {
+"access": "private",
+"leisure": "playground",
+"name": "Pati cicle mitjà i superior"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4814082,
+"lon": 2.0890299
+},
+"id": 1394219697,
+"tags": {
+"access": "yes",
+"leisure": "playground",
+"name": "Parc del Torrent de Ferrussons"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4544051,
+"lon": 2.0418367
+},
+"id": 140767116,
+"tags": {
+"leisure": "stadium",
+"name": "Pavelló Municipal Valldoreix"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4691024,
+"lon": 2.0938627
+},
+"id": 189109320,
+"tags": {
+"leisure": "swimming_pool",
+"name": "Europa Sport Centre"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4695226,
+"lon": 2.0894923
+},
+"id": 191056074,
+"tags": {
+"addr:housenumber": "48",
+"addr:street": "Avinguda Pla del Vinyet",
+"amenity": "theatre",
+"name": "Teatre-Auditori Emma Vilarasau Sant Cugat",
+"phone": "+34935907690",
+"website": "https://taemmavilarasau.cat/"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4582546,
+"lon": 2.0628481
+},
+"id": 223654097,
+"tags": {
+"amenity": "theatre",
+"name": "Nau Cultural"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4716774,
+"lon": 2.0802786
+},
+"id": 1716973,
+"tags": {
+"amenity": "theatre",
+"name": "Teatre de la Unió"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.455546,
+"lon": 2.1142831
+},
+"id": 226444696,
+"tags": {
+"amenity": "place_of_worship",
+"name": "Sant Adjutori",
+"tourism": "attraction"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4737868,
+"lon": 2.0844543
+},
+"id": 473669023,
+"tags": {
+"addr:housenumber": "10",
+"addr:street": "Plaça d'Octavià",
+"historic": "tower",
+"name": "Oficina de Turisme",
+"phone": "+34936759952",
+"tourism": "information",
+"website": "http://www.visitsantcugat.cat/"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.4792026,
+"lon": 2.0978867
+},
+"id": 1090710626,
+"tags": {
+"amenity": "school",
+"leisure": "sports_centre",
+"name": "Barcelona Sports Academy",
+"website": "https://www.barcelonasportsacademy.com/"
+},
+"type": "way"
+},
+{
+"center": {
+"lat": 41.5150795,
+"lon": 1.9880348
+},
+"id": 1437838,
+"tags": {
+"distance": "52",
+"name": "Sender de Montserrat",
+"ref": "GR 6",
+"route": "hiking",
+"website": "https://senders.feec.cat/fem-muntanya/senders/sender/gr-6-sender-de-montserrat/"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.5101651,
+"lon": 1.9732096
+},
+"id": 1652288,
+"tags": {
+"name": "Camí Romeu a Montserrat",
+"ref": "GR 96",
+"route": "hiking",
+"website": "https://senders.feec.cat/fem-muntanya/senders/sender/gr-96-cami-romeu-a-montserrat/"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.4543704,
+"lon": 2.0924357
+},
+"id": 1659976,
+"tags": {
+"distance": "28.3",
+"name": "Carenejant Collserola",
+"ref": "PR-C 35",
+"route": "hiking"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.4452395,
+"lon": 2.1126493
+},
+"id": 1659983,
+"tags": {
+"distance": "14.5",
+"name": "Itinerari al Coll-s'Erola",
+"ref": "PR-C 38",
+"route": "hiking"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.5571662,
+"lon": 2.0524384
+},
+"id": 1810110,
+"tags": {
+"distance": "27.43",
+"name": "Camí dels Monjos",
+"ref": "PR-C 31",
+"route": "hiking",
+"website": "https://senders.feec.cat/pr-c-31-g57/pr-c-31"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.5567729,
+"lon": 2.0840416
+},
+"id": 3330576,
+"tags": {
+"distance": "74",
+"name": "Sender del Vallès Natural",
+"ref": "GR 173",
+"route": "hiking",
+"website": "https://senders.feec.cat/gr-173"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.42478,
+"lon": 2.1082779
+},
+"id": 4028646,
+"tags": {
+"name": "Passejada per la serra d'en Cardona",
+"route": "hiking"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.4189559,
+"lon": 2.1380626
+},
+"id": 4100440,
+"tags": {
+"distance": "19.6",
+"name": "PR-C 171 Barcelona (Parc de Cervantes) - Barcelona (Trinitat Nova)",
+"ref": "PR-C 171",
+"route": "hiking",
+"website": "https://senders.feec.cat/fem-muntanya/senders/sender/pr-c-171/"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.479619,
+"lon": 2.117026
+},
+"id": 10328631,
+"tags": {
+"distance": "13.6",
+"name": "Sant Cugat-Cerdanyola per les rieres",
+"route": "hiking",
+"website": "https://itineraris-senyalitzats.diba.cat/dibaparcs/routes/view/de-sant-cugat-a-cerdanyola-per-les-rieres-del-valles"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.4204037,
+"lon": 2.0307033
+},
+"id": 10330736,
+"tags": {
+"distance": "26.9",
+"name": "Els dos castells. De Sant Feliu al Papiol per Molins de Rei",
+"route": "hiking",
+"website": "https://itineraris-senyalitzats.diba.cat/dibaparcs/routes/view/els-dos-castells-de-sant-feliu-al-papiol-per-molins-de-rei"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.439143,
+"lon": 2.1483429
+},
+"id": 13804667,
+"tags": {
+"distance": "9.5",
+"name": "Barcelona als peus - de Torre Baró al Tibidabo",
+"route": "hiking"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.4448651,
+"lon": 2.0976
+},
+"id": 13814911,
+"tags": {
+"distance": "10",
+"name": "L'Obaga de Collserola",
+"route": "hiking"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.4475668,
+"lon": 2.0228388
+},
+"id": 13834885,
+"tags": {
+"distance": "8",
+"name": "Del Baix Llobregat al Vallès, pel Puig Madrona",
+"route": "hiking"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.4800252,
+"lon": 2.0979474
+},
+"id": 18705602,
+"tags": {
+"name": "El Camí IT3TR2 El Camí Metropolità: de Montserrat a Barcelona",
+"ref": "CC-C",
+"route": "hiking",
+"website": "https://www.elcami.cat/el-cami-metropolita-de-montserrat-barcelona"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.4348047,
+"lon": 2.0935915
+},
+"id": 2065063,
+"tags": {
+"access": "no",
+"leisure": "nature_reserve",
+"name": "Parc Natural de Collserola",
+"opening_hours": "24/7",
+"website": "https://parcnaturalcollserola.cat/"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.4773548,
+"lon": 2.0871479
+},
+"id": 12587524,
+"tags": {
+"name": "Bicivia 9",
+"ref": "B9",
+"route": "bicycle"
+},
+"type": "relation"
+},
+{
+"center": {
+"lat": 41.4738773,
+"lon": 2.0851767
+},
+"id": 21038780,
+"tags": {
+"amenity": "monastery",
+"historic": "monastery",
+"name": "Monestir de Sant Cugat",
+"opening_hours": "Mo-Sa 10:30-13:30,17:00-20:00; PH off",
+"tourism": "museum",
+"website": "https://museu.santcugat.cat/espais/monestir-de-sant-cugat/"
+},
+"type": "relation"
+}
+]
+}

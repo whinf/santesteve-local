@@ -1,0 +1,23 @@
+# Worker del tauler veïnal (Cloudflare Workers + D1). Ver README.md.
+name = "santesteve-board"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "santesteve-board"
+database_id = "PENDIENTE"  # lo imprime `npx wrangler d1 create santesteve-board`
+
+[vars]
+ALLOWED_ORIGINS = "https://santesteve.horaverda.es,http://localhost:8004"
+SITE_URL = "https://santesteve.horaverda.es"
+FROM_NAME = "Tauler veïnal de Sant Esteve"
+# URL pública de este worker (la da `npx wrangler deploy`); la usa el cron para los enlaces de los correos.
+API_URL = "https://santesteve-board.chatcerdanyola.workers.dev"
+
+[triggers]
+crons = ["17 3 * * *"]
+
+# Secretos (npx wrangler secret put NOMBRE):
+#   TURNSTILE_SECRET, GMAIL_CLIENT_ID, GMAIL_CLIENT_SECRET, GMAIL_REFRESH_TOKEN,
+#   GMAIL_FROM, ADMIN_KEY, ADMIN_EMAIL, IP_SALT

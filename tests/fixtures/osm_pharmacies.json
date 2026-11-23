@@ -1,0 +1,273 @@
+{
+"elements": [
+{
+"id": 845727504,
+"lat": 41.4583785,
+"lon": 2.0663142,
+"tags": {
+"addr:housenumber": "3",
+"addr:street": "Carrer de l'Església",
+"amenity": "pharmacy",
+"contact:phone": "+34936742871",
+"name": "Farmàcia Pinto Arellano, Bernardo"
+},
+"type": "node"
+},
+{
+"id": 1602517902,
+"lat": 41.4447451,
+"lon": 2.0727951,
+"tags": {
+"addr:housenumber": "9",
+"addr:street": "passeig de la Floresta",
+"amenity": "pharmacy",
+"contact:phone": "+34936741863",
+"name": "Farmàcia M. Àngels Isern Perramon"
+},
+"type": "node"
+},
+{
+"id": 1772834815,
+"lat": 41.4345537,
+"lon": 2.0914832,
+"tags": {
+"addr:housenumber": "24",
+"addr:street": "Carrer del Molí de les Planes",
+"amenity": "pharmacy",
+"name": "Farmàcia Les Planes",
+"phone": "+34 936755237"
+},
+"type": "node"
+},
+{
+"id": 3753132448,
+"lat": 41.4675092,
+"lon": 2.0868875,
+"tags": {
+"addr:housenumber": "40",
+"addr:street": "Carrer de Santa Teresa",
+"amenity": "pharmacy",
+"contact:phone": "+34936753344",
+"name": "Farmàcia Ruíz Rodríguez, Ma. Isabel"
+},
+"type": "node"
+},
+{
+"id": 3753142268,
+"lat": 41.4717953,
+"lon": 2.0793777,
+"tags": {
+"addr:housenumber": "46",
+"addr:street": "Avinguda de Lluís Companys",
+"amenity": "pharmacy",
+"contact:phone": "+34935893968",
+"name": "Farmàcia Beringues Sorribas, Lluís"
+},
+"type": "node"
+},
+{
+"id": 3753149002,
+"lat": 41.4754881,
+"lon": 2.0886458,
+"tags": {
+"addr:housenumber": "6",
+"addr:street": "Passatge de la Diputació",
+"amenity": "pharmacy",
+"contact:phone": "+34936740364",
+"name": "Farmàcia M. Cristina Cullell del Valle"
+},
+"type": "node"
+},
+{
+"id": 3753151992,
+"lat": 41.4752295,
+"lon": 2.0802614,
+"tags": {
+"addr:housenumber": "50",
+"addr:street": "Passeig de Sant Magí",
+"amenity": "pharmacy",
+"name": "Farmàcia Díaz de Concepción - Puerto Rodríguez",
+"phone": "+34 936 743 353"
+},
+"type": "node"
+},
+{
+"id": 3753172697,
+"lat": 41.472556,
+"lon": 2.0835008,
+"tags": {
+"addr:housenumber": "50",
+"addr:street": "Carrer de Santiago Rusiñol",
+"amenity": "pharmacy",
+"name": "Farmàcia Monestir",
+"phone": "+34 935 898 014"
+},
+"type": "node"
+},
+{
+"id": 3757012329,
+"lat": 41.4676401,
+"lon": 2.0815497,
+"tags": {
+"addr:housenumber": "1",
+"addr:street": "Carrer Doctor Murillo",
+"amenity": "pharmacy",
+"name": "Farmàcia Riera Riviere, Isabel i Mònica",
+"phone": "+34 936 740 430"
+},
+"type": "node"
+},
+{
+"id": 3757018059,
+"lat": 41.4738866,
+"lon": 2.0710115,
+"tags": {
+"addr:housenumber": "95-97",
+"addr:street": "Carrer de Manel Farrés",
+"amenity": "pharmacy",
+"name": "Farmàcia Parc Central",
+"phone": "+34 936 74 05 12;+34 933 95 45 55"
+},
+"type": "node"
+},
+{
+"id": 3757018080,
+"lat": 41.4757941,
+"lon": 2.0860923,
+"tags": {
+"addr:housenumber": "34",
+"addr:street": "Passeig de Francesc Macià",
+"amenity": "pharmacy",
+"name": "Farmàcia Carme Ollé Cuellar",
+"phone": "+34 936 759 778"
+},
+"type": "node"
+},
+{
+"id": 3757025635,
+"lat": 41.4653525,
+"lon": 2.0721543,
+"tags": {
+"addr:housenumber": "50",
+"addr:street": "Passeig d'Olabarria",
+"amenity": "pharmacy",
+"name": "Farmàcia Josefina Quirante Serrano",
+"phone": "+34 936 75 33 11;+34 936 75 49 92"
+},
+"type": "node"
+},
+{
+"id": 3757028329,
+"lat": 41.4720599,
+"lon": 2.0898211,
+"tags": {
+"addr:housenumber": "97",
+"addr:street": "Rambla del Celler",
+"amenity": "pharmacy",
+"name": "Farmàcia Sant Cugat Torreblanca",
+"phone": "+34 936 74 77 49"
+},
+"type": "node"
+},
+{
+"id": 3757038021,
+"lat": 41.471467,
+"lon": 2.0814886,
+"tags": {
+"addr:housenumber": "27",
+"addr:street": "Carrer de Santa Maria",
+"amenity": "pharmacy",
+"name": "Farmàcia Ros Morte, Alberto",
+"phone": "+34 936 741 531"
+},
+"type": "node"
+},
+{
+"id": 3757040219,
+"lat": 41.4814743,
+"lon": 2.0700507,
+"tags": {
+"addr:housenumber": "12-14",
+"addr:street": "Avinguda de la Clota",
+"amenity": "pharmacy",
+"name": "Farmàcia Volpelleres",
+"phone": "+34 936 243 427"
+},
+"type": "node"
+},
+{
+"id": 4731007042,
+"lat": 41.4669559,
+"lon": 2.0553438,
+"tags": {
+"addr:housenumber": "78",
+"addr:street": "Passeig del Baixador",
+"amenity": "pharmacy",
+"contact:phone": "+34936742372",
+"name": "Farmàcia José Ramón Pérez Ebri"
+},
+"type": "node"
+},
+{
+"id": 7323611521,
+"lat": 41.4777526,
+"lon": 2.083492,
+"tags": {
+"addr:housenumber": "61",
+"addr:street": "Passeig de Francesc Macià",
+"amenity": "pharmacy",
+"contact:phone": "+34938552841",
+"name": "Farmàcia Concepció Masó Mimó"
+},
+"type": "node"
+},
+{
+"id": 7323611525,
+"lat": 41.4737402,
+"lon": 2.0895683,
+"tags": {
+"addr:housenumber": "26",
+"addr:street": "Avinguda de Cerdanyola",
+"amenity": "pharmacy",
+"contact:phone": "+34935901035",
+"name": "Farmàcia Ruiz de Bustillo, Joan"
+},
+"type": "node"
+},
+{
+"id": 7323611527,
+"lat": 41.469875,
+"lon": 2.0605086,
+"tags": {
+"addr:housenumber": "9",
+"addr:street": "Plaça d'Ausias March",
+"amenity": "pharmacy",
+"contact:phone": "+34932051664",
+"name": "Farmàcia Casacuberta Bausili, Alícia"
+},
+"type": "node"
+},
+{
+"id": 12600431108,
+"lat": 41.4695203,
+"lon": 2.0802896,
+"tags": {
+"amenity": "pharmacy",
+"name": "Farmacia Cugat Centre"
+},
+"type": "node"
+},
+{
+"center": {
+"lat": 41.4737107,
+"lon": 2.0838193
+},
+"id": 125571273,
+"tags": {
+"amenity": "pharmacy",
+"name": "farmàcia Joan Maragall"
+},
+"type": "way"
+}
+]
+}

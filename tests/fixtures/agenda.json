@@ -1,0 +1,185 @@
+[
+{
+"data_fi": "2027-05-31T00:00:00.000",
+"data_inici": "2027-01-23T00:00:00.000",
+"denominaci": "El fil de la modernitat",
+"enlla_os": "",
+"espai": "Centre Grau-Garriga d’Art Tèxtil Contemporani",
+"gratuita": "Sí",
+"horari": "De dimarts a dissabte de 17 a 20 h Dimecres, dissabte i diumenge de 10 a 14 h Dilluns tancat",
+"permanent": "No",
+"tags_categor_es": "agenda:categories/exposicions,agenda:categories/commemoracions"
+},
+{
+"data_fi": "2026-12-20T00:00:00.000",
+"data_inici": "2026-12-20T00:00:00.000",
+"denominaci": "Meritxell i Judit Neddermann",
+"enlla_os": "",
+"espai": "Nau de Cultura de Valldoreix",
+"gratuita": "No",
+"horari": "19 h",
+"permanent": "No",
+"tags_categor_es": "agenda:categories/concerts"
+},
+{
+"data_fi": "2027-01-10T00:00:00.000",
+"data_inici": "2026-12-04T00:00:00.000",
+"denominaci": "Terra",
+"enlla_os": "",
+"espai": "Carpa del Circ Raluy Històric",
+"gratuita": "No",
+"horari": "Del 4 al 20 de desembre: Dijous i divendres: 18.30 h Dissabtes: 17 i 19.30 h Diumenges: 12.15 i 17 h Dilluns 7 de desembre: 18.30 h Dimarts 8 de desembre: 12.15 i 17 h Del 22 de desembre al 7 de gener: Cada dia: 17 i 19.30 h 26 de desembre i 2 de gener: 12.15, 17 i 19.30 h 7 de gener: 12.15 i 17 h Del 8 al 10 de gener: Divendres 8 de gener: 18.30 h Dissabte 9 de gener: 17 i 19.30 h Diumenge 10 de gener: 12.15 i 17 h Durada aproximada: 2 h (amb una pausa de 15 minuts).",
+"permanent": "No",
+"tags_categor_es": "agenda:categories/infantil,agenda:categories/nadal,agenda:categories/circ"
+},
+{
+"data_fi": "2026-12-01T00:00:00.000",
+"data_inici": "2026-12-01T00:00:00.000",
+"denominaci": "Poetes imprescindibles: Clementina Arderiu",
+"enlla_os": "",
+"espai": "Ateneu Santcugatenc",
+"gratuita": "Sí",
+"horari": "19 h",
+"permanent": "No",
+"tags_categor_es": "agenda:categories/conferencies"
+},
+{
+"data_fi": "2026-11-28T00:00:00.000",
+"data_inici": "2026-11-28T00:00:00.000",
+"denominaci": "Caga, Tió! (o les aventures de l'Oncle Buscall)",
+"enlla_os": "",
+"espai": "Plaça de l’Estació de Valldoreix",
+"gratuita": "Sí",
+"horari": "11 h",
+"permanent": "No",
+"tags_categor_es": "agenda:categories/teatre,agenda:categories/infantil,agenda:categories/nadal"
+},
+{
+"data_fi": "2026-11-27T00:00:00.000",
+"data_inici": "2026-11-27T00:00:00.000",
+"denominaci": "Circus Show",
+"enlla_os": "",
+"espai": "Plaça de Maria Sabater",
+"gratuita": "Sí",
+"horari": "17 h",
+"permanent": "No",
+"tags_categor_es": "agenda:categories/infantil,agenda:categories/circ"
+},
+{
+"data_fi": "2026-12-01T00:00:00.000",
+"data_inici": "2026-10-29T00:00:00.000",
+"denominaci": "Exposició \"Burs-Urbs\"",
+"enlla_os": "",
+"espai": "Sala Rusiñol",
+"gratuita": "No",
+"horari": "De dilluns a divendres: de 10 a 14 h i de 17 a 20 h Dissabtes: de 10 a 14 h Diumenges i festius: tancat",
+"permanent": "No",
+"tags_categor_es": "agenda:categories/exposicions"
+},
+{
+"data_fi": "2026-11-30T00:00:00.000",
+"data_inici": "2026-09-01T00:00:00.000",
+"denominaci": "Exposició \"Maria Girona i el tapís\"",
+"enlla_os": "",
+"espai": "Canals Galeria d'Art",
+"gratuita": "No",
+"horari": "De dimarts a divendres: de 18 a 20 h",
+"permanent": "No",
+"tags_categor_es": "agenda:categories/exposicions"
+},
+{
+"data_fi": "2026-11-30T00:00:00.000",
+"data_inici": "2026-06-19T00:00:00.000",
+"denominaci": "Un museu fora del museu",
+"enlla_os": "",
+"espai": "Pastisseria Sàbat",
+"gratuita": "No",
+"horari": "",
+"permanent": "No",
+"tags_categor_es": "agenda:categories/exposicions"
+},
+{
+"data_fi": "2026-12-15T00:00:00.000",
+"data_inici": "2025-11-25T00:00:00.000",
+"denominaci": "Exposició \"Les parets criden: Franco ha mort!\"",
+"enlla_os": "",
+"espai": "Arxiu Nacional de Catalunya",
+"gratuita": "Sí",
+"horari": "De dilluns a dijous: de 9 a 18.30 h Divendres: de 9 a 17 h",
+"permanent": "No",
+"tags_categor_es": "agenda:categories/activitats-virtuals,agenda:categories/exposicions"
+},
+{
+"denominaci": "Activitats a Canals, Galeria d'Art",
+"enlla_os": "http://www.canals-art.com/index.html,https://agenda.cultura.gencat.cat/content/agenda/ca/results.html?c=eyJrZXl3b3JkcyI6IiIsImRhdGFPcHRpb24iOiIiLCJkYXRhRGVzZGUiOiIiLCJkYXRhRmluc2EiOiIiLCJlc3BhaSI6IiIsInBvYmxhY2lvIjoic2FudCBjdWdhdCIsImFtYml0cyI6WyJhZ2VuZGE6YW1iaXRzL2FydHMtdmlzdWFscyJdLCJjYXRlZ29yaWVzIjpbImFnZW5kYTpjYXRlZ29yaWVzL2V4cG9zaWNpb25zIl19&page=0,https://agenda.cultura.gencat.cat",
+"espai": "Canals Galeria d'Art",
+"gratuita": "No",
+"horari": "",
+"permanent": "Sí",
+"tags_categor_es": "agenda:categories/exposicions,agenda:categories/conferencies,agenda:categories/concerts"
+},
+{
+"denominaci": "Visita al Celler modernista de St. Cugat del Vallès",
+"enlla_os": "",
+"espai": "Celler modernista de St. Cugat del Vallès",
+"gratuita": "Sí",
+"horari": "Diumenges i festius: de 10.30 a 14.30 h",
+"permanent": "Sí",
+"tags_categor_es": "agenda:categories/infantil,agenda:categories/rutes-i-visites,agenda:categories/exposicions"
+},
+{
+"data_fi": "2026-10-28T00:00:00.000",
+"data_inici": "2026-10-28T00:00:00.000",
+"denominaci": "Conferència \"El temple de la Sagrada Família com a obra colossal d’organeria\"",
+"enlla_os": "",
+"espai": "La Unió Santcugatenca",
+"gratuita": "Sí",
+"horari": "De 19 a 20.30 h",
+"permanent": "No",
+"tags_categor_es": "agenda:categories/conferencies,agenda:categories/commemoracions,agenda:categories/any-gaudi"
+},
+{
+"data_fi": "2026-10-15T00:00:00.000",
+"data_inici": "2026-10-15T00:00:00.000",
+"denominaci": "\"Com més tinc, més dono al vent\"",
+"enlla_os": "",
+"espai": "Arxiu Nacional de Catalunya",
+"gratuita": "Sí",
+"horari": "19 h",
+"permanent": "No",
+"tags_categor_es": "agenda:categories/commemoracions,agenda:categories/festivals-i-mostres"
+},
+{
+"data_fi": "2026-10-15T00:00:00.000",
+"data_inici": "2026-10-15T00:00:00.000",
+"denominaci": "Acte d'inauguració de l'exposició \"Si visc no visc. L'aventura poètica de Clementina Arderiu\"",
+"enlla_os": "",
+"espai": "Arxiu Nacional de Catalunya",
+"gratuita": "Sí",
+"horari": "Dijous a les 18.30 h Durada: 30 minuts",
+"permanent": "No",
+"tags_categor_es": "agenda:categories/exposicions"
+},
+{
+"data_fi": "2026-11-05T00:00:00.000",
+"data_inici": "2026-10-05T00:00:00.000",
+"denominaci": "Lletres Il·lustrades: Blai Bonet",
+"enlla_os": "",
+"espai": "Comerços de Sant Cugat del Vallès",
+"gratuita": "Sí",
+"horari": "Permanent o 24 hores ja que les obres són visibles als aparadors de les botigues.",
+"permanent": "No",
+"tags_categor_es": "agenda:categories/commemoracions,agenda:categories/rutes-i-visites"
+},
+{
+"data_fi": "2026-10-31T00:00:00.000",
+"data_inici": "2026-10-01T00:00:00.000",
+"denominaci": "“De claror i de cor”",
+"enlla_os": "",
+"espai": "Biblioteca de Volpelleres Miquel Batllori",
+"gratuita": "Sí",
+"horari": "Dilluns, dimarts i dijous: de 16 a 20:30 h Dimecres i divendres: 10 a 14 h i 15:30 a 20:30 h Dissabte: de 10 a 14 h",
+"permanent": "No",
+"tags_categor_es": "agenda:categories/commemoracions,agenda:categories/exposicions"
+}
+]
