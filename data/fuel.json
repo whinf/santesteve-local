@@ -38,6 +38,18 @@
     "town": "Martorell"
    },
    {
+    "address": "Carretera Nacional Ii Km. 588",
+    "hours": "L-D: 24H",
+    "lat": "41.482111",
+    "lon": "1.919500",
+    "name": "CARREFOUR",
+    "prices": {
+     "diesel": 1.779,
+     "g95": 1.479
+    },
+    "town": "Martorell"
+   },
+   {
     "address": "Avinguda Compte del Llobregat, 35",
     "hours": "L-D: 24H",
     "lat": "41.484889",
@@ -98,18 +110,6 @@
     "town": "Martorell"
    },
    {
-    "address": "Carretera Nacional Ii Km. 588",
-    "hours": "L-D: 24H",
-    "lat": "41.482111",
-    "lon": "1.919500",
-    "name": "CARREFOUR",
-    "prices": {
-     "diesel": 1.779,
-     "g95": 1.479
-    },
-    "town": "Martorell"
-   },
-   {
     "address": "Poligono Ind. la Pedrosa, S/N",
     "hours": "L-D: 24H",
     "lat": "41.499528",
@@ -141,7 +141,7 @@
     "name": "Q8",
     "prices": {
      "diesel": 1.749,
-     "g95": 1.544
+     "g95": 1.534
     },
     "town": "Sant Andreu de la Barca"
    },
@@ -194,6 +194,18 @@
     "town": "Abrera"
    },
    {
+    "address": "Calle Salvador Segui,1,",
+    "hours": "L-D: 24H",
+    "lat": "41.515306",
+    "lon": "1.897556",
+    "name": "GALP",
+    "prices": {
+     "diesel": 1.749,
+     "g95": 1.549
+    },
+    "town": "Abrera"
+   },
+   {
     "address": "Calle Treball, 1",
     "hours": "L-D: 24H",
     "lat": "41.514583",
@@ -212,18 +224,6 @@
     "name": "BALTRAN S.A",
     "prices": {
      "diesel": 1.67
-    },
-    "town": "Abrera"
-   },
-   {
-    "address": "Calle Salvador Segui,1,",
-    "hours": "L-D: 24H",
-    "lat": "41.515306",
-    "lon": "1.897556",
-    "name": "GALP",
-    "prices": {
-     "diesel": 1.749,
-     "g95": 1.549
     },
     "town": "Abrera"
    },
@@ -252,7 +252,7 @@
     "town": "Gelida"
    }
   ],
-  "updated": "23/11/2026 14:47:19"
+  "updated": "23/11/2026 15:30:53"
  },
- "fetched": "2026-11-23T14:42:13+01:00"
+ "fetched": "2026-11-23T15:26:23+01:00"
 }
