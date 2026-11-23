@@ -1,27 +1,27 @@
 {
  "agenda": {
-  "last_ok": "2026-11-23T21:19:50+01:00"
+  "last_ok": "2026-11-23T21:23:40+01:00"
  },
  "aids": {
-  "last_ok": "2026-11-23T21:19:50+01:00"
+  "last_ok": "2026-11-23T21:23:40+01:00"
  },
  "air": {
-  "last_ok": "2026-11-23T21:19:50+01:00"
+  "last_ok": "2026-11-23T21:23:40+01:00"
  },
  "alerts": {
-  "last_ok": "2026-11-23T21:19:50+01:00"
+  "last_ok": "2026-11-23T21:23:40+01:00"
  },
  "board": {
-  "last_ok": "2026-11-23T21:19:50+01:00"
+  "last_ok": "2026-11-23T21:23:40+01:00"
  },
  "chargers": {
   "last_ok": "2026-11-23T14:08:48+01:00"
  },
  "cido": {
-  "last_ok": "2026-11-23T21:19:50+01:00"
+  "last_ok": "2026-11-23T21:23:40+01:00"
  },
  "companies": {
-  "last_ok": "2026-11-23T21:19:50+01:00"
+  "last_ok": "2026-11-23T21:23:40+01:00"
  },
  "contracts": {
   "last_ok": "2026-11-23T14:08:48+01:00"
@@ -30,14 +30,13 @@
   "last_ok": "2026-11-23T14:08:48+01:00"
  },
  "fuel": {
-  "last_error": "https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestres/FiltroMunicipio/1070: <urlopen error [WinError 10054] Se ha forzado la interrupción de una conexión existente por el host remoto>",
-  "last_ok": "2026-11-23T20:40:05+01:00"
+  "last_ok": "2026-11-23T21:23:40+01:00"
  },
  "leisure": {
   "last_ok": "2026-11-23T14:26:38+01:00"
  },
  "light": {
-  "last_ok": "2026-11-23T21:19:50+01:00"
+  "last_ok": "2026-11-23T21:23:40+01:00"
  },
  "nightlife": {
   "last_ok": "2026-11-23T14:26:38+01:00"
@@ -52,6 +51,6 @@
   "last_ok": "2026-11-23T20:40:05+01:00"
  },
  "weather": {
-  "last_ok": "2026-11-23T21:19:50+01:00"
+  "last_ok": "2026-11-23T21:23:40+01:00"
  }
 }
