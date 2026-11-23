@@ -6,7 +6,7 @@ compatibility_date = "2026-10-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "santesteve-board"
-database_id = "PENDIENTE"  # lo imprime `npx wrangler d1 create santesteve-board`
+database_id = "9c60ca8f-5c2e-4c89-8ddf-662edd09b74e"  # lo imprime `npx wrangler d1 create santesteve-board`
 
 [vars]
 ALLOWED_ORIGINS = "https://santesteve.horaverda.es,http://localhost:8004"

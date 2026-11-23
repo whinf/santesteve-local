@@ -6,7 +6,7 @@
  "donate_url": "https://ko-fi.com/onestudioman",
  "studio_url": "https://onestudioman.horaverda.es",
  "owner": {"name": "", "nif": "", "email": "onestudioman.contact@gmail.com"},
- "board_api_url": "",
+ "board_api_url": "https://santesteve-board.chatcerdanyola.workers.dev",
  "visits_url": "https://cerdanyola-board.chatcerdanyola.workers.dev/hit?site=se",
- "turnstile_site_key": ""
+ "turnstile_site_key": "0x4AAAAAAF_zDwIonphDfQvJ"
 }
