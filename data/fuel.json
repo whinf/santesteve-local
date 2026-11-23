@@ -158,11 +158,11 @@
     "town": "Sant Andreu de la Barca"
    },
    {
-    "address": "Carretera Nacional Ii Km. 593",
+    "address": "Calle Carretera de Martorell, 24",
     "hours": "L-D: 24H",
-    "lat": "41.452806",
-    "lon": "1.969167",
-    "name": "PETROMIRALLES",
+    "lat": "41.453250",
+    "lon": "1.969639",
+    "name": "NIEVES",
     "prices": {
      "diesel": 1.759,
      "g95": 1.544
@@ -170,11 +170,11 @@
     "town": "Sant Andreu de la Barca"
    },
    {
-    "address": "Calle Carretera de Martorell, 24",
+    "address": "Carretera Nacional Ii Km. 593",
     "hours": "L-D: 24H",
-    "lat": "41.453250",
-    "lon": "1.969639",
-    "name": "NIEVES",
+    "lat": "41.452806",
+    "lon": "1.969167",
+    "name": "PETROMIRALLES",
     "prices": {
      "diesel": 1.759,
      "g95": 1.544
@@ -252,7 +252,7 @@
     "town": "Gelida"
    }
   ],
-  "updated": "23/11/2026 21:28:13"
+  "updated": "23/11/2026 21:35:31"
  },
- "fetched": "2026-11-23T21:23:40+01:00"
+ "fetched": "2026-11-23T21:31:30+01:00"
 }

@@ -1,10 +1,37 @@
 {
  "data": {
-  "events": [],
+  "events": [
+   {
+    "activity": "La fundicion, afinacion, purificacion y recuperacion de metales preciosos. el comercio al por mayor, compraventa,…",
+    "capital": 3000.0,
+    "date": "2026-08-27",
+    "id": "2026-08-27-393836-new",
+    "kind": "new",
+    "name": "GESTION ESPECIALIZADA EN METALES PRECIOSOS S.L.",
+    "url": "https://www.boe.es/diario_borme/txt.php?id=BORME-A-2026-165-08"
+   },
+   {
+    "date": "2026-08-21",
+    "id": "2026-08-21-387375-moved_in",
+    "kind": "moved_in",
+    "name": "SESROVIRES ASSEGURANCES SL",
+    "url": "https://www.boe.es/diario_borme/txt.php?id=BORME-A-2026-161-08"
+   },
+   {
+    "activity": "Instalacion y montaje de muebles y carpinteria (cnae 4332); transporte de mercancias por carretera (4941);…",
+    "capital": 3000.0,
+    "date": "2026-08-11",
+    "id": "2026-08-11-372664-new",
+    "kind": "new",
+    "name": "MONTELIER S.L.",
+    "url": "https://www.boe.es/diario_borme/txt.php?id=BORME-A-2026-153-08"
+   }
+  ],
   "known": {
    "B 191353": "BEGUVERD SL",
    "B 254665": "TELELAN TELECOMUNICACIONES SL",
    "B 269342": "REPARACIONS CATASTUR SL",
+   "B 288994": "SESROVIRES ASSEGURANCES SL",
    "B 369321": "REMAKE TAKARA SL",
    "B 419599": "NORD CARGO TRUCKING SL",
    "B 548157": "COVER DREAM CORREDURIA DE SEGUROS S.L.",
@@ -25,10 +52,13 @@
    "B 657968": "EVENTS HUB LOOK S.L.",
    "B 658067": "TEFF TECHNICAL REPRESENTATION S.L.",
    "B 659612": "CHAMUYO BAR S.L.",
-   "B 659976": "DISRECAT MROSA S.L."
+   "B 659976": "DISRECAT MROSA S.L.",
+   "B 660725": "JMD OFFSHORE ENGINEERING S.L.",
+   "B 661876": "MONTELIER S.L.",
+   "B 662555": "GESTION ESPECIALIZADA EN METALES PRECIOSOS S.L."
   },
-  "last": "2026-07-21",
+  "last": "2026-08-30",
   "since": "2025-11-24"
  },
- "fetched": "2026-11-23T21:23:40+01:00"
+ "fetched": "2026-11-23T21:31:30+01:00"
 }
