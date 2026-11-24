@@ -232,19 +232,6 @@
    "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202632419"
   },
   {
-   "company": "RAMCON EMPRESA DE SERVICIOS, S.A",
-   "contract": "Contracte laboral temporal (3 mesos)",
-   "date": "2026-11-11",
-   "hours": "Jornada parcial (12 hores - jornada setmanal)",
-   "salary": [
-    400,
-    410
-   ],
-   "title": "Operario/aria de limpieza en martorell",
-   "town": "MARTORELL",
-   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92328720"
-  },
-  {
    "company": "EMPRESA DEL SECTOR DE LA FORMACIÓ",
    "contract": "Contracte laboral indefinit",
    "date": "2026-11-09",
@@ -815,5 +802,5 @@
    "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202630486"
   }
  ],
- "fetched": "2026-11-23T14:08:48+01:00"
+ "fetched": "2026-11-24T03:32:45+01:00"
 }

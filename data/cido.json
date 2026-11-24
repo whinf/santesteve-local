@@ -1,50 +1,6 @@
 {
  "data": [
   {
-   "end": "2026-11-23",
-   "group": "A",
-   "kind": "Laboral temporal",
-   "km": 26.8,
-   "org": "Fira 2000, SA",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça de Tècnic del Departament d'instal·lacions i sostenibilitat",
-   "url": "https://cido.diba.cat/oposicions/22437388"
-  },
-  {
-   "end": "2026-11-23",
-   "group": "C1",
-   "kind": "Laboral temporal",
-   "km": 25.7,
-   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça d'Administrative \"Finestra Unica\" - Temporary contract",
-   "url": "https://cido.diba.cat/oposicions/22404520"
-  },
-  {
-   "end": "2026-11-23",
-   "group": "A1",
-   "kind": "Laboral temporal",
-   "km": 25.7,
-   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça de Clinical Trials Study Coordinator - Nephrology and renal transplantation",
-   "url": "https://cido.diba.cat/oposicions/22468839"
-  },
-  {
-   "end": "2026-11-23",
-   "group": "A1",
-   "kind": "Laboral temporal",
-   "km": 25.7,
-   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça de Specialist Technician - Cognition and Brain Plasticity Unit",
-   "url": "https://cido.diba.cat/oposicions/22468828"
-  },
-  {
    "end": "2026-11-24",
    "group": "A",
    "kind": "Laboral",
@@ -1211,5 +1167,5 @@
    "url": "https://cido.diba.cat/oposicions/22220170"
   }
  ],
- "fetched": "2026-11-23T21:31:30+01:00"
+ "fetched": "2026-11-24T03:32:45+01:00"
 }

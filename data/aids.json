@@ -1339,42 +1339,6 @@
      "business"
     ]
    },
-   "936148": {
-    "budget": 282800,
-    "checked": "2026-11-23",
-    "end": "",
-    "id": "936148",
-    "level": "ESTADO",
-    "organ": "DIRECCIÓN GENERAL DEL INSTITUTO GEOGRÁFICO NACIONAL",
-    "purpose": "Educación",
-    "received": "2026-10-19",
-    "region": "MINISTERIO DE TRANSPORTES Y MOVILIDAD SOSTENIBLE",
-    "start": "",
-    "term": "20 días hábiles",
-    "title": "Resolución, de 5 de octubre de 2026, de la Subsecretaría de Transportes y Movilidad, por la que se hace pública la convocatoria de becas para la formación en el Instituto Geográfico Nacional",
-    "title_ca": "",
-    "who": [
-     "people"
-    ]
-   },
-   "936187": {
-    "budget": 230000,
-    "checked": "2026-11-23",
-    "end": "",
-    "id": "936187",
-    "level": "AUTONOMICA",
-    "organ": "AGÈNCIA DE GESTIÓ D'AJUTS UNIVERSITARIS I DE RECERCA (AGAUR)",
-    "purpose": "Educación",
-    "received": "2026-10-19",
-    "region": "CATALUÑA",
-    "start": "2026-10-24",
-    "term": "1 Mesos",
-    "title": "Ayudas para promover la formación y la acreditación de terceras lenguas para los estudiantes matriculados en estudios de grado en una universidad catalana el curso 2025-2026 (Parla 3)",
-    "title_ca": "Ajuts per promoure la formacuó i l'acreditació de terceres llengües per als estudiants matriculats en estudis de grau en una universitat catallana el curs 2025-2026 (Parla 3)",
-    "who": [
-     "people"
-    ]
-   },
    "936950": {
     "budget": 3000000,
     "checked": "2026-11-23",
@@ -1427,25 +1391,6 @@
     "title_ca": "Subvencions per a projectes d'inversions productives a Catalunya 2027 (anticipada)",
     "who": [
      "business"
-    ]
-   },
-   "937455": {
-    "budget": 697200,
-    "checked": "2026-11-23",
-    "end": "2026-11-23",
-    "id": "937455",
-    "level": "ESTADO",
-    "organ": "CONSEJO ECONÓMICO Y SOCIAL",
-    "purpose": "Otras Prestaciones económicas",
-    "received": "2026-10-23",
-    "region": "MINISTERIO DE TRABAJO Y ECONOMÍA SOCIAL",
-    "start": "2026-10-23",
-    "term": "",
-    "title": "Resolución del presidente del consejo económico y social por la que se establecen las normas reguladoras para la concesión de compensaciones establecidas en el concepto 485 del presupuesto de gastos del ces para el año 2026",
-    "title_ca": "",
-    "who": [
-     "entities",
-     "people"
     ]
    },
    "938077": {
@@ -1770,24 +1715,6 @@
     "title_ca": "",
     "who": [
      "business"
-    ]
-   },
-   "938518": {
-    "budget": 63000,
-    "checked": "2026-11-23",
-    "end": "",
-    "id": "938518",
-    "level": "AUTONOMICA",
-    "organ": "INSTITUT PER AL DESENVOLUPAMENT I LA PROMOCIÓ DE L'ALT PIRINEU I ARAN (IDAPA)",
-    "purpose": "Otras actuaciones de carácter económico",
-    "received": "2026-10-28",
-    "region": "CATALUÑA",
-    "start": "2026-11-03",
-    "term": "20 Dies Naturals",
-    "title": "Resolución xxx/yyyy/aaaa, de dd de mes, por la que se aprueba la convocatoria derivada de las bases reguladoras de las subvenciones para el fomento y la consolidación de los museos y equipamientos patrimoniales de l'Alt Pirineu i Aran, para el añ",
-    "title_ca": "Resolució xxx/yyyy/aaaa, de dd de mes, per la qual s'aprova la convocatòria derivada de les bases reguladores de les subvencions per al foment i la consolidació dels museus i equipaments patrimonials de l'Alt Pirineu i Aran, per a l'any 2026",
-    "who": [
-     "entities"
     ]
    },
    "938522": {
@@ -4472,6 +4399,8 @@
    "935686",
    "935713",
    "936008",
+   "936148",
+   "936187",
    "936341",
    "936346",
    "936756",
@@ -4480,6 +4409,7 @@
    "937168",
    "937238",
    "937399",
+   "937455",
    "937486",
    "937490",
    "937528",
@@ -4493,6 +4423,7 @@
    "938468",
    "938488",
    "938491",
+   "938518",
    "938582",
    "938643",
    "938649",
@@ -4628,5 +4559,5 @@
    "944079"
   ]
  },
- "fetched": "2026-11-23T21:31:30+01:00"
+ "fetched": "2026-11-24T03:32:45+01:00"
 }
