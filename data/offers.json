@@ -1,6 +1,18 @@
 {
  "data": [
   {
+   "company": "Empresa gestora de residuos",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-24",
+   "hours": "Jornada completa",
+   "salary": [
+    1300
+   ],
+   "title": "Auxiliar administrativo/a",
+   "town": "SANT ESTEVE SESROVIRES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92329483"
+  },
+  {
    "company": "Beguverd, SLU",
    "contract": "Contracte laboral indefinit",
    "date": "2026-11-19",
@@ -191,6 +203,19 @@
    "title": "Gerocultor/a residència geriàtrica suplència tardes",
    "town": "SANT ESTEVE SESROVIRES",
    "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92325846"
+  },
+  {
+   "company": "CATERING CASANOVAS",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-24",
+   "hours": "Jornada parcial (3 hores - jornada diaria)",
+   "salary": [
+    650,
+    690
+   ],
+   "title": "Xofer",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92329494"
   },
   {
    "company": "GRUP CATALA DE TREBALL, ETT, S.L.",
@@ -512,6 +537,19 @@
    "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326011"
   },
   {
+   "company": "Com a casa menjadors escolars S.L",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-24",
+   "hours": "Jornada parcial (3 hores - jornada diaria)",
+   "salary": [
+    410,
+    515
+   ],
+   "title": "Monitors/monitores de menjador (sant andreu de la barca)",
+   "town": "SANT ANDREU DE LA BARCA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92329530"
+  },
+  {
    "company": "Empresa sector construcció",
    "contract": "Contracte laboral indefinit",
    "date": "2026-11-17",
@@ -575,16 +613,6 @@
    "title": "Mozos/zas especialistas - carretilleros/as - sant andreu de la barca - lliçà d'amun",
    "town": "SANT ANDREU DE LA BARCA",
    "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92327215"
-  },
-  {
-   "company": "Com a casa menjadors escolars S.L",
-   "contract": "Contracte laboral indiferent",
-   "date": "2026-10-13",
-   "hours": "Jornada parcial (3 hores - jornada diaria)",
-   "salary": [],
-   "title": "Monitors/monitores de menjador (sant andreu de la barca)",
-   "town": "SANT ANDREU DE LA BARCA",
-   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326742"
   },
   {
    "company": "JAN BCS, S.L",
@@ -802,5 +830,5 @@
    "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202630486"
   }
  ],
- "fetched": "2026-11-24T03:32:45+01:00"
+ "fetched": "2026-11-24T17:19:52+01:00"
 }

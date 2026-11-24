@@ -8,8 +8,8 @@
     "lon": "1.883722",
     "name": "REPSOL",
     "prices": {
-     "diesel": 1.799,
-     "g95": 1.599
+     "diesel": 1.809,
+     "g95": 1.609
     },
     "town": "Sant Esteve Sesrovires"
    },
@@ -38,18 +38,6 @@
     "town": "Martorell"
    },
    {
-    "address": "Carretera Nacional Ii Km. 588",
-    "hours": "L-D: 24H",
-    "lat": "41.482111",
-    "lon": "1.919500",
-    "name": "CARREFOUR",
-    "prices": {
-     "diesel": 1.779,
-     "g95": 1.479
-    },
-    "town": "Martorell"
-   },
-   {
     "address": "Avinguda Compte del Llobregat, 35",
     "hours": "L-D: 24H",
     "lat": "41.484889",
@@ -57,7 +45,43 @@
     "name": "PETROLOWCOST SL",
     "prices": {
      "diesel": 1.689,
-     "g95": 1.409
+     "g95": 1.399
+    },
+    "town": "Martorell"
+   },
+   {
+    "address": "Carretera Nacional Ii Km. 588",
+    "hours": "L-D: 24H",
+    "lat": "41.482111",
+    "lon": "1.919500",
+    "name": "CARREFOUR",
+    "prices": {
+     "diesel": 1.789,
+     "g95": 1.479
+    },
+    "town": "Martorell"
+   },
+   {
+    "address": "Cr N-2, 591,3",
+    "hours": "L-D: 06:00-22:00",
+    "lat": "41.464778",
+    "lon": "1.948361",
+    "name": "MOEVE",
+    "prices": {
+     "diesel": 1.844,
+     "g95": 1.624
+    },
+    "town": "Martorell"
+   },
+   {
+    "address": "Cl Pau Claris, 13",
+    "hours": "L-D: 24H",
+    "lat": "41.475167",
+    "lon": "1.927778",
+    "name": "REPSOL",
+    "prices": {
+     "diesel": 1.829,
+     "g95": 1.609
     },
     "town": "Martorell"
    },
@@ -86,38 +110,14 @@
     "town": "Martorell"
    },
    {
-    "address": "Cr N-2, 591,3",
-    "hours": "L-D: 06:00-22:00",
-    "lat": "41.464778",
-    "lon": "1.948361",
-    "name": "MOEVE",
-    "prices": {
-     "diesel": 1.844,
-     "g95": 1.624
-    },
-    "town": "Martorell"
-   },
-   {
-    "address": "Cl Pau Claris, 13",
-    "hours": "L-D: 24H",
-    "lat": "41.475167",
-    "lon": "1.927778",
-    "name": "REPSOL",
-    "prices": {
-     "diesel": 1.819,
-     "g95": 1.599
-    },
-    "town": "Martorell"
-   },
-   {
     "address": "Calle Lapedrosa, 20",
     "hours": "L-D: 24H",
     "lat": "41.496417",
     "lon": "1.825611",
     "name": "PEDROSA CENTER",
     "prices": {
-     "diesel": 1.599,
-     "g95": 1.339
+     "diesel": 1.569,
+     "g95": 1.329
     },
     "town": "Masquefa"
    },
@@ -140,8 +140,8 @@
     "lon": "1.969167",
     "name": "PETROMIRALLES",
     "prices": {
-     "diesel": 1.759,
-     "g95": 1.544
+     "diesel": 1.729,
+     "g95": 1.514
     },
     "town": "Sant Andreu de la Barca"
    },
@@ -158,18 +158,6 @@
     "town": "Sant Andreu de la Barca"
    },
    {
-    "address": "Carretera Ctra Nacional Ii (SECTOR 21) Parking C. Comercial Atrium Km.",
-    "hours": "L-D: 24H",
-    "lat": "41.452611",
-    "lon": "1.969083",
-    "name": "Q8",
-    "prices": {
-     "diesel": 1.749,
-     "g95": 1.534
-    },
-    "town": "Sant Andreu de la Barca"
-   },
-   {
     "address": "Calle Mexico, S/N",
     "hours": "L-D: 24H",
     "lat": "41.443167",
@@ -178,6 +166,18 @@
     "prices": {
      "diesel": 1.785,
      "g95": 1.599
+    },
+    "town": "Sant Andreu de la Barca"
+   },
+   {
+    "address": "Carretera Ctra Nacional Ii (SECTOR 21) Parking C. Comercial Atrium Km.",
+    "hours": "L-D: 24H",
+    "lat": "41.452611",
+    "lon": "1.969083",
+    "name": "Q8",
+    "prices": {
+     "diesel": 1.749,
+     "g95": 1.534
     },
     "town": "Sant Andreu de la Barca"
    },
@@ -252,7 +252,7 @@
     "town": "Gelida"
    }
   ],
-  "updated": "24/11/2026 3:33:21"
+  "updated": "24/11/2026 17:21:28"
  },
- "fetched": "2026-11-24T03:32:45+01:00"
+ "fetched": "2026-11-24T17:19:52+01:00"
 }

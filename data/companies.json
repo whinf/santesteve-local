@@ -2,6 +2,45 @@
  "data": {
   "events": [
    {
+    "date": "2026-11-17",
+    "id": "2026-11-17-515437-moved_in",
+    "kind": "moved_in",
+    "name": "TREBALLS DE CONSTRUCCIO NOVOA SL",
+    "url": "https://www.boe.es/diario_borme/txt.php?id=BORME-A-2026-220-08"
+   },
+   {
+    "activity": "Actividades de valorizacion de materiales clasificados (cnae principal: 3832). prestacion de servicios de comida…",
+    "capital": 14000.0,
+    "date": "2026-11-11",
+    "id": "2026-11-11-502596-new",
+    "kind": "new",
+    "name": "GERMAN ZERO INVERSIONES S.L.",
+    "url": "https://www.boe.es/diario_borme/txt.php?id=BORME-A-2026-216-08"
+   },
+   {
+    "date": "2026-11-10",
+    "id": "2026-11-10-500192-moved_in",
+    "kind": "moved_in",
+    "name": "CRYSTAL VENUS S.L.",
+    "url": "https://www.boe.es/diario_borme/txt.php?id=BORME-A-2026-215-08"
+   },
+   {
+    "activity": "Actividad principal: el comercio al mayor no especializado, cnae 4690. otras actividades: importacion y exportacion…",
+    "capital": 13576.0,
+    "date": "2026-10-20",
+    "id": "2026-10-20-464537-new",
+    "kind": "new",
+    "name": "AGAM INTERNACIONAL CARIBE S.L.",
+    "url": "https://www.boe.es/diario_borme/txt.php?id=BORME-A-2026-202-08"
+   },
+   {
+    "date": "2026-10-16",
+    "id": "2026-10-16-460051-moved_in",
+    "kind": "moved_in",
+    "name": "BCN RENOBREX S.L.",
+    "url": "https://www.boe.es/diario_borme/txt.php?id=BORME-A-2026-200-08"
+   },
+   {
     "date": "2026-09-18",
     "id": "2026-09-18-419176-closed",
     "kind": "closed",
@@ -39,6 +78,7 @@
    "B 254665": "TELELAN TELECOMUNICACIONES SL",
    "B 269342": "REPARACIONS CATASTUR SL",
    "B 288994": "SESROVIRES ASSEGURANCES SL",
+   "B 347845": "TREBALLS DE CONSTRUCCIO NOVOA SL",
    "B 369321": "REMAKE TAKARA SL",
    "B 419599": "NORD CARGO TRUCKING SL",
    "B 548157": "COVER DREAM CORREDURIA DE SEGUROS S.L.",
@@ -60,12 +100,16 @@
    "B 658067": "TEFF TECHNICAL REPRESENTATION S.L.",
    "B 659612": "CHAMUYO BAR S.L.",
    "B 659976": "DISRECAT MROSA S.L.",
+   "B 660039": "CRYSTAL VENUS S.L.",
    "B 660725": "JMD OFFSHORE ENGINEERING S.L.",
+   "B 660958": "BCN RENOBREX S.L.",
    "B 661876": "MONTELIER S.L.",
-   "B 662555": "GESTION ESPECIALIZADA EN METALES PRECIOSOS S.L."
+   "B 662555": "GESTION ESPECIALIZADA EN METALES PRECIOSOS S.L.",
+   "B 664964": "AGAM INTERNACIONAL CARIBE S.L.",
+   "B 666080": "GERMAN ZERO INVERSIONES S.L."
   },
-  "last": "2026-10-09",
+  "last": "2026-11-18",
   "since": "2025-11-24"
  },
- "fetched": "2026-11-24T03:32:45+01:00"
+ "fetched": "2026-11-24T17:19:52+01:00"
 }

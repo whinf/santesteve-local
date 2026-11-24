@@ -5,10 +5,19 @@
     "R4"
    ],
    "text": {
+    "ca": "Circulació restablerta entre Sant Sadurní d'Anoia i Sant Vicenç de Calders. Els trens circulen amb demores que poden superar els 20 minuts de mitjana.",
+    "es": "Circulación restablecida entre Sant Sadurní d'Anoia y Sant Vicenç de Calders. Los trenes circulan con demoras que pueden superar los 20 minutos de media."
+   }
+  },
+  {
+   "lines": [
+    "R4"
+   ],
+   "text": {
     "ca": "Sense servei ferroviari per obres a l'entorn de Montcada Bifurcació. El tram entre Fabra i Puig i Montcada Bifurcació es realitza mitjançant els serveis de la línia R4. Servei alternatiu per carretera entre Cerdanyola del Vallès i Cerdanyola Universitat.",
     "es": "Sin servicio ferroviario por obras en el entorno de Montcada Bifurcació. El trayecto entre Fabra i Puig y Montcada Bifurcació se realiza mediante los servicios de la línea R4. Servicio alternativo por carretera entre Cerdanyola del Vallès y Cerdanyola Universitat."
    }
   }
  ],
- "fetched": "2026-11-24T03:32:45+01:00"
+ "fetched": "2026-11-24T17:19:52+01:00"
 }

@@ -529,6 +529,17 @@
    "url": "https://cido.diba.cat/oposicions/21917329"
   },
   {
+   "end": "2026-12-07",
+   "group": "C1",
+   "kind": "Laboral temporal",
+   "km": 25.7,
+   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
+   "places": 1,
+   "pool": false,
+   "title": "1 plaça de Research Technician - Preclinical and Experimental Research in Thoracic Tumors (PRETT Group)",
+   "url": "https://cido.diba.cat/oposicions/22545417"
+  },
+  {
    "end": "2026-12-09",
    "group": "A1",
    "kind": "Funcionari",
@@ -538,6 +549,17 @@
    "pool": false,
    "title": "1 plaça de Tècnic d'esports - Cap del servei d'esports",
    "url": "https://cido.diba.cat/oposicions/22327369"
+  },
+  {
+   "end": "2026-12-09",
+   "group": "A2",
+   "kind": "Interí o temporal",
+   "km": 14.8,
+   "org": "Ajuntament de Molins de Rei",
+   "places": 0,
+   "pool": true,
+   "title": "Borsa de treball de places d'Educador social",
+   "url": "https://cido.diba.cat/oposicions/22545466"
   },
   {
    "end": "2026-12-09",
@@ -659,6 +681,17 @@
    "pool": true,
    "title": "Borsa de treball de places d'Educador social (EBAS)",
    "url": "https://cido.diba.cat/oposicions/22488173"
+  },
+  {
+   "end": "2026-12-14",
+   "group": "A1",
+   "kind": "Funcionari",
+   "km": 5.6,
+   "org": "Ajuntament d'Olesa de Montserrat",
+   "places": 1,
+   "pool": false,
+   "title": "1 plaça de Tècnic superior en dret",
+   "url": "https://cido.diba.cat/oposicions/22544984"
   },
   {
    "end": "2026-12-14",
@@ -857,6 +890,17 @@
    "pool": false,
    "title": "1 plaça de Fisioterapeuta al Centre d'Atenció Primària (CAP) La Torrassa de l'Hospitalet de Llobregat",
    "url": "https://cido.diba.cat/oposicions/21980978"
+  },
+  {
+   "end": "2026-12-31",
+   "group": "C1",
+   "kind": "Laboral temporal",
+   "km": 21.3,
+   "org": "Consorci Sanitari Integral (CSI)",
+   "places": 1,
+   "pool": false,
+   "title": "1 plaça d'Administratiu de gestió de residències - Residència Collblanc",
+   "url": "https://cido.diba.cat/oposicions/22547597"
   },
   {
    "end": "2026-12-31",
@@ -1167,5 +1211,5 @@
    "url": "https://cido.diba.cat/oposicions/22220170"
   }
  ],
- "fetched": "2026-11-24T03:32:45+01:00"
+ "fetched": "2026-11-24T17:19:52+01:00"
 }
