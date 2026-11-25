@@ -205,6 +205,70 @@
    "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92325846"
   },
   {
+   "company": "LYL INGENIERIA, S.L.",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-25",
+   "hours": "Jornada completa",
+   "salary": [
+    1424
+   ],
+   "title": "Operarios/as de instalación",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92329574"
+  },
+  {
+   "company": "Oficina de Treball del SOC",
+   "contract": "Contracte laboral temporal (6 mesos)",
+   "date": "2026-11-25",
+   "hours": "Jornada completa",
+   "salary": [
+    3674,
+    3674
+   ],
+   "title": "Metge/essa especialista en obstetrícia i ginecologia",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202633072"
+  },
+  {
+   "company": "Oficina de Treball del SOC",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-25",
+   "hours": "Jornada completa",
+   "salary": [
+    3674,
+    3674
+   ],
+   "title": "Metges/esses especialistes en servei d'urgències",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202633060"
+  },
+  {
+   "company": "Oficina de Treball del SOC",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-25",
+   "hours": "Jornada completa",
+   "salary": [
+    3674,
+    3674
+   ],
+   "title": "Metges/esses especialistes en anestesiologia i reanimació",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202633078"
+  },
+  {
+   "company": "Oficina de Treball del SOC",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-25",
+   "hours": "Jornada completa",
+   "salary": [
+    3674,
+    3674
+   ],
+   "title": "Metge/essa cap servei d'urologia",
+   "town": "MARTORELL",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202633069"
+  },
+  {
    "company": "CATERING CASANOVAS",
    "contract": "Contracte laboral indefinit",
    "date": "2026-11-24",
@@ -537,6 +601,19 @@
    "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326011"
   },
   {
+   "company": "EULEN.SA",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-25",
+   "hours": "Jornada parcial (8 hores - jornada setmanal)",
+   "salary": [
+    243,
+    304
+   ],
+   "title": "Limpiadores/as - fines de semana / indefinido (sant andreu de la barca)",
+   "town": "SANT ANDREU DE LA BARCA",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92329599"
+  },
+  {
    "company": "Com a casa menjadors escolars S.L",
    "contract": "Contracte laboral indefinit",
    "date": "2026-11-24",
@@ -807,5 +884,5 @@
    "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202630486"
   }
  ],
- "fetched": "2026-11-25T04:09:21+01:00"
+ "fetched": "2026-11-25T16:59:43+01:00"
 }

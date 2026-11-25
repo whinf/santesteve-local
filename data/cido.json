@@ -509,6 +509,50 @@
   {
    "end": "2026-12-07",
    "group": "C1",
+   "kind": "Laboral",
+   "km": 21.3,
+   "org": "Consorci Sanitari Integral (CSI)",
+   "places": 3,
+   "pool": false,
+   "title": "3 places d'Administratiu de gestió",
+   "url": "https://cido.diba.cat/oposicions/22556314"
+  },
+  {
+   "end": "2026-12-07",
+   "group": "C1",
+   "kind": "Laboral",
+   "km": 21.3,
+   "org": "Consorci Sanitari Integral (CSI)",
+   "places": 35,
+   "pool": false,
+   "title": "35 places d'Administratiu assistencial",
+   "url": "https://cido.diba.cat/oposicions/22556164"
+  },
+  {
+   "end": "2026-12-07",
+   "group": "C1",
+   "kind": "Laboral",
+   "km": 21.3,
+   "org": "Consorci Sanitari Integral (CSI)",
+   "places": 6,
+   "pool": false,
+   "title": "6 places d'Administratiu d'atenció al ciutadà",
+   "url": "https://cido.diba.cat/oposicions/22556261"
+  },
+  {
+   "end": "2026-12-07",
+   "group": "C1",
+   "kind": "Laboral",
+   "km": 21.3,
+   "org": "Consorci Sanitari Integral (CSI)",
+   "places": 7,
+   "pool": false,
+   "title": "7 places d'Auxiliar UAC - Recepcionista telefonista",
+   "url": "https://cido.diba.cat/oposicions/22556282"
+  },
+  {
+   "end": "2026-12-07",
+   "group": "C1",
    "kind": "Laboral temporal",
    "km": 25.7,
    "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
@@ -516,6 +560,28 @@
    "pool": false,
    "title": "1 plaça de Research Technician - Preclinical and Experimental Research in Thoracic Tumors (PRETT Group)",
    "url": "https://cido.diba.cat/oposicions/22545417"
+  },
+  {
+   "end": "2026-12-08",
+   "group": "A1",
+   "kind": "Laboral temporal",
+   "km": 25.7,
+   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
+   "places": 1,
+   "pool": false,
+   "title": "1 plaça de CM Research Dietitian - Clinical Nutrition Unit",
+   "url": "https://cido.diba.cat/oposicions/22553542"
+  },
+  {
+   "end": "2026-12-08",
+   "group": "C1",
+   "kind": "Laboral temporal",
+   "km": 25.7,
+   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
+   "places": 1,
+   "pool": false,
+   "title": "1 plaça de Research Support - Cancer Metabolism Group",
+   "url": "https://cido.diba.cat/oposicions/22553788"
   },
   {
    "end": "2026-12-09",
@@ -626,6 +692,17 @@
    "pool": true,
    "title": "7 places d'Educador social",
    "url": "https://cido.diba.cat/oposicions/16773104"
+  },
+  {
+   "end": "2026-12-10",
+   "group": "A1",
+   "kind": "Funcionari",
+   "km": 22.1,
+   "org": "Ajuntament d'Esplugues de Llobregat",
+   "places": 1,
+   "pool": false,
+   "title": "1 plaça de Director d'Organització i Gestió de les Persones",
+   "url": "https://cido.diba.cat/oposicions/22551813"
   },
   {
    "end": "2026-12-13",
@@ -740,6 +817,17 @@
   {
    "end": "2026-12-15",
    "group": "A1",
+   "kind": "Funcionari",
+   "km": 15.9,
+   "org": "Ajuntament de Sant Vicenç dels Horts",
+   "places": 2,
+   "pool": true,
+   "title": "2 places de Tècnic superior d'economia i hisenda",
+   "url": "https://cido.diba.cat/oposicions/21030385"
+  },
+  {
+   "end": "2026-12-15",
+   "group": "A1",
    "kind": "Interí o temporal",
    "km": 19.9,
    "org": "Consell Comarcal del Baix Llobregat",
@@ -758,6 +846,28 @@
    "pool": true,
    "title": "Borsa de treball de places de Tècnic superior psicòleg per al Servei d'Atenció a la Infància i l'Adolescència del Baix Llobregat (SEAIA)",
    "url": "https://cido.diba.cat/oposicions/22538186"
+  },
+  {
+   "end": "2026-12-16",
+   "group": "A2",
+   "kind": "Estatutari fix",
+   "km": 24.9,
+   "org": "Generalitat de Catalunya - Hospital Universitari de Bellvitge",
+   "places": 2,
+   "pool": false,
+   "title": "2 places de Comandament adjunt de supervisió d'infermeria de la Direcció Infermera",
+   "url": "https://cido.diba.cat/oposicions/22552802"
+  },
+  {
+   "end": "2026-12-17",
+   "group": "A1",
+   "kind": "Funcionari",
+   "km": 22.1,
+   "org": "Ajuntament d'Esplugues de Llobregat",
+   "places": 1,
+   "pool": false,
+   "title": "1 plaça de Director de l'Oficina de Transformació Digital (OTD)",
+   "url": "https://cido.diba.cat/oposicions/22498191"
   },
   {
    "end": "2026-12-17",
@@ -1189,5 +1299,5 @@
    "url": "https://cido.diba.cat/oposicions/22220170"
   }
  ],
- "fetched": "2026-11-25T04:09:21+01:00"
+ "fetched": "2026-11-25T16:59:43+01:00"
 }

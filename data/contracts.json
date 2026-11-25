@@ -1,6 +1,21 @@
 {
  "data": [
   {
+   "amount": 1469100.78,
+   "date": "2026-11-24",
+   "deadline": "2026-04-08T13:00",
+   "id": "203633/OP. ENE-12243",
+   "lots": 0,
+   "organ": "Infraestructures de la Generalitat de Catalunya, SAU",
+   "phase": "Adjudicació",
+   "title": "Execució de les obres d'Instal·lació fotovoltaica al Centre Penitenciari Brians 2 (Edificis interns) de Sant Esteve Sesrovires. Clau: ENE-12243",
+   "type": "Obres",
+   "url": "https://contractaciopublica.cat/ca/detall-publicacio/53bc3067-e47e-40d1-832c-1035d203c08a/300948540",
+   "winners": [
+    "FERROVIAL ENERGÍA, S.A.U."
+   ]
+  },
+  {
    "amount": 41816.59,
    "date": "2026-11-17",
    "deadline": "2026-03-04T13:00",
@@ -184,19 +199,6 @@
    "winners": [
     "Labocat Calidad S.L."
    ]
-  },
-  {
-   "amount": 1742419.34,
-   "date": "2026-09-01",
-   "deadline": "2026-04-08T13:00",
-   "id": "203633/OP. ENE-12243",
-   "lots": 0,
-   "organ": "Infraestructures de la Generalitat de Catalunya, SAU",
-   "phase": "Expedient en avaluació",
-   "title": "Execució de les obres d'Instal·lació fotovoltaica al Centre Penitenciari Brians 2 (Edificis interns) de Sant Esteve Sesrovires. Clau: ENE-12243",
-   "type": "Obres",
-   "url": "https://contractaciopublica.cat/ca/detall-publicacio/53bc3067-e47e-40d1-832c-1035d203c08a/300871115",
-   "winners": []
   },
   {
    "amount": 33000.0,
@@ -721,5 +723,5 @@
    ]
   }
  ],
- "fetched": "2026-11-25T04:09:21+01:00"
+ "fetched": "2026-11-25T16:59:43+01:00"
 }

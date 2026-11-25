@@ -11,12 +11,12 @@
   },
   {
    "access": "targeta",
-   "address": "Calle de Isaac Peral",
-   "lat": "41.50124",
-   "lon": "1.88388",
-   "name": "Atlante - Nieves Sant Esteve",
+   "address": "CLUB DE GOLF BARCELONA Av. Golf Masia Bach",
+   "lat": "41.492126",
+   "lon": "1.848447",
+   "name": "21XP22T3KK4AM00312",
    "operator": "Institut Català d'Energia - Ajuntament de Sant Esteve Sesrovires",
-   "speed": "superRAPID i semiRAPID"
+   "speed": "semiRAPID"
   },
   {
    "access": "targeta",
@@ -29,21 +29,12 @@
   },
   {
    "access": "targeta",
-   "address": "CLUB DE GOLF BARCELONA Av. Golf Masia Bach",
-   "lat": "41.492058",
-   "lon": "1.848557",
-   "name": "C6E06BCC21GBJMCHMG",
+   "address": "Calle de Isaac Peral",
+   "lat": "41.50124",
+   "lon": "1.88388",
+   "name": "Atlante - Nieves Sant Esteve",
    "operator": "Institut Català d'Energia - Ajuntament de Sant Esteve Sesrovires",
-   "speed": "RAPID i semiRAPID"
-  },
-  {
-   "access": "targeta",
-   "address": "CLUB DE GOLF BARCELONA Av. Golf Masia Bach",
-   "lat": "41.49209",
-   "lon": "1.848522",
-   "name": "C6E06BCC21JAHWSMNH",
-   "operator": "Institut Català d'Energia - Ajuntament de Sant Esteve Sesrovires",
-   "speed": "RAPID i semiRAPID"
+   "speed": "superRAPID i semiRAPID"
   },
   {
    "access": "targeta",
@@ -57,12 +48,21 @@
   {
    "access": "targeta",
    "address": "CLUB DE GOLF BARCELONA Av. Golf Masia Bach",
-   "lat": "41.492126",
-   "lon": "1.848447",
-   "name": "21XP22T3KK4AM00312",
+   "lat": "41.49209",
+   "lon": "1.848522",
+   "name": "C6E06BCC21JAHWSMNH",
    "operator": "Institut Català d'Energia - Ajuntament de Sant Esteve Sesrovires",
-   "speed": "semiRAPID"
+   "speed": "RAPID i semiRAPID"
+  },
+  {
+   "access": "targeta",
+   "address": "CLUB DE GOLF BARCELONA Av. Golf Masia Bach",
+   "lat": "41.492058",
+   "lon": "1.848557",
+   "name": "C6E06BCC21GBJMCHMG",
+   "operator": "Institut Català d'Energia - Ajuntament de Sant Esteve Sesrovires",
+   "speed": "RAPID i semiRAPID"
   }
  ],
- "fetched": "2026-11-24T17:19:52+01:00"
+ "fetched": "2026-11-25T16:59:43+01:00"
 }
