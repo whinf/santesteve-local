@@ -1807,24 +1807,6 @@
      "business"
     ]
    },
-   "938580": {
-    "budget": 18000,
-    "checked": "2026-11-23",
-    "end": "2026-11-24",
-    "id": "938580",
-    "level": "ESTADO",
-    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
-    "purpose": "Comercio, Turismo y Pymes",
-    "received": "2026-10-28",
-    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
-    "start": "2026-10-28",
-    "term": "",
-    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación FA BAU 2027 Múnich del 11 de enero de 2027 al 15 de enero de 2027",
-    "title_ca": "",
-    "who": [
-     "business"
-    ]
-   },
    "938586": {
     "budget": 35000,
     "checked": "2026-11-23",
@@ -2733,7 +2715,6 @@
    }
   },
   "closed": [
-   "870675",
    "870720",
    "870726",
    "870729",
@@ -4442,6 +4423,7 @@
    "938488",
    "938491",
    "938518",
+   "938580",
    "938582",
    "938643",
    "938649",
@@ -4583,5 +4565,5 @@
    "944506"
   ]
  },
- "fetched": "2026-11-24T17:19:52+01:00"
+ "fetched": "2026-11-25T04:09:21+01:00"
 }

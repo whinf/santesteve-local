@@ -1,28 +1,6 @@
 {
  "data": [
   {
-   "end": "2026-11-24",
-   "group": "A",
-   "kind": "Laboral",
-   "km": 23.4,
-   "org": "Ajuntament de Gavà - Prestació de Serveis a la Ciutadania, SA",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça de Tècnic de jardineria",
-   "url": "https://cido.diba.cat/oposicions/22456830"
-  },
-  {
-   "end": "2026-11-24",
-   "group": "A1",
-   "kind": "Laboral temporal",
-   "km": 26.0,
-   "org": "Fundació privada Centre de Recerca en Economia i Desenvolupament Agroalimentari CREDA-UPC-IRTA",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça de Promotor de projectes de R+D+I (Pre-Award)",
-   "url": "https://cido.diba.cat/oposicions/22508023"
-  },
-  {
    "end": "2026-11-25",
    "group": "A1",
    "kind": "Funcionari",
@@ -1211,5 +1189,5 @@
    "url": "https://cido.diba.cat/oposicions/22220170"
   }
  ],
- "fetched": "2026-11-24T17:19:52+01:00"
+ "fetched": "2026-11-25T04:09:21+01:00"
 }

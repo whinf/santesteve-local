@@ -638,16 +638,6 @@
    "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326359"
   },
   {
-   "company": "SOLDUCT S.L",
-   "contract": "Contracte laboral indefinit",
-   "date": "2026-09-25",
-   "hours": "Jornada completa",
-   "salary": [],
-   "title": "Tecnico/a prevencion (construccion)",
-   "town": "SANT ANDREU DE LA BARCA",
-   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92325547"
-  },
-  {
    "company": "EMPRESA SECTOR QUÍMIC",
    "contract": "Contracte laboral indefinit",
    "date": "2026-11-19",
@@ -765,19 +755,6 @@
    "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92325872"
   },
   {
-   "company": "Empresa automoción",
-   "contract": "Contracte laboral indefinit",
-   "date": "2026-09-25",
-   "hours": "Jornada completa",
-   "salary": [
-    1300,
-    1500
-   ],
-   "title": "Administrativo/a logística",
-   "town": "ABRERA",
-   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92325592"
-  },
-  {
    "company": "LLAR SANT JORDI, S.L",
    "contract": "Contracte laboral indefinit",
    "date": "2026-10-01",
@@ -830,5 +807,5 @@
    "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202630486"
   }
  ],
- "fetched": "2026-11-24T17:19:52+01:00"
+ "fetched": "2026-11-25T04:09:21+01:00"
 }
