@@ -2984,6 +2984,79 @@
      "entities",
      "people"
     ]
+   },
+   "944949": {
+    "budget": 1000000,
+    "checked": "2026-11-26",
+    "end": "",
+    "id": "944949",
+    "level": "AUTONOMICA",
+    "organ": "DEPARTAMENT D'AGRICULTURA, RAMADERIA, PESCA I ALIMENTACIÓ",
+    "purpose": "Agricultura, Pesca y Alimentación",
+    "received": "2026-11-26",
+    "region": "CATALUÑA",
+    "start": "",
+    "term": "01 Mesos",
+    "title": "Ayudas para el fomento de la recogida de desperdicios marinos con la participación del sector pesquero que establece el Fondo Europeo Marítimo, de Pesca y de Acuicultura (FEMPA)",
+    "title_ca": "Ajuts per al foment de la recollida de deixalles marines amb la participació del sector pesquer que estableix el Fons Europeu Marítim, de Pesca i d'Aqüicultura (FEMPA)",
+    "who": [
+     "entities"
+    ]
+   },
+   "945017": {
+    "budget": 1800000,
+    "checked": "2026-11-26",
+    "end": "2027-07-20",
+    "id": "945017",
+    "level": "AUTONOMICA",
+    "organ": "DEPARTAMENT D'AGRICULTURA, RAMADERIA, PESCA I ALIMENTACIÓ",
+    "purpose": "Agricultura, Pesca y Alimentación",
+    "received": "2026-11-26",
+    "region": "CATALUÑA",
+    "start": "",
+    "term": "",
+    "title": "Ayudas a la destilación de subproductos de la vinificación campaña 2026-2027",
+    "title_ca": "Ajut a la destillació de subproductes de la vinificació, campanya 2026/2027",
+    "who": [
+     "business"
+    ]
+   },
+   "945034": {
+    "budget": 12000,
+    "checked": "2026-11-26",
+    "end": "2026-12-29",
+    "id": "945034",
+    "level": "AUTONOMICA",
+    "organ": "AGÈNCIA CATALANA DE LA JOVENTUT",
+    "purpose": "Educación",
+    "received": "2026-11-26",
+    "region": "CATALUÑA",
+    "start": "",
+    "term": "25 d'octubre de 2021",
+    "title": "El objetivo de la ayuda Carnet Jove de Còmic es fomentar y promover el acceso profesional de los jóvenes dibujantes y guionistas de viñetas.",
+    "title_ca": "L'objecte de l'ajut Carnet Jove de Còmic és fomentar i promoure l'accés al món professional dels joves dibuixants i guionistes de vinyetes.",
+    "who": [
+     "people"
+    ]
+   },
+   "945036": {
+    "budget": 280000,
+    "checked": "2026-11-26",
+    "end": "",
+    "id": "945036",
+    "level": "AUTONOMICA",
+    "organ": "DEPARTAMENT D'EDUCACIÓ I FORMACIÓ PROFESSIONAL",
+    "purpose": "Educación",
+    "received": "2026-11-26",
+    "region": "CATALUÑA",
+    "start": "",
+    "term": "10 Dies Hàbils",
+    "title": "Subvencionar a centros privados concertados en el marco del Plan para la mejora de las oportunidades educativas,con un índice de complejidad igual o superior a 2 recogidos en la Classificació de complejidad 2021 del Consejo Superior de Evaluación",
+    "title_ca": "Subvencionar als centres privats concertats en el marc del Pla de millora d'oportunitats educatives, amb un índex de complexitat igual o superior a 2 recollits a la Classificació de complexitat 2021 del Consell Superior d'Avaluació del Sistema Educatiu.",
+    "who": [
+     "business",
+     "entities"
+    ]
    }
   },
   "closed": [
@@ -4840,8 +4913,9 @@
    "944709",
    "944714",
    "944814",
-   "944853"
+   "944853",
+   "945086"
   ]
  },
- "fetched": "2026-11-26T03:25:57+01:00"
+ "fetched": "2026-11-26T16:42:31+01:00"
 }

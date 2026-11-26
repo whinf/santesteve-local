@@ -180,6 +180,17 @@
    "end": "2026-11-30",
    "group": "A1",
    "kind": "Laboral temporal",
+   "km": 25.7,
+   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
+   "places": 1,
+   "pool": false,
+   "title": "1 plaça de Clinical Scientist - Biostatistics and Data Science - BIO-HEART",
+   "url": "https://cido.diba.cat/oposicions/22561914"
+  },
+  {
+   "end": "2026-11-30",
+   "group": "A1",
+   "kind": "Laboral temporal",
    "km": 26.1,
    "org": "Institut de Ciències Fotòniques (ICFO)",
    "places": 1,
@@ -401,6 +412,17 @@
    "group": "C1",
    "kind": "Laboral temporal",
    "km": 25.7,
+   "org": "Generalitat de Catalunya - Institut Català d'Oncologia (ICO)",
+   "places": 1,
+   "pool": false,
+   "title": "1 plaça de Tècnic en farmàcia",
+   "url": "https://cido.diba.cat/oposicions/22563475"
+  },
+  {
+   "end": "2026-12-04",
+   "group": "C1",
+   "kind": "Laboral temporal",
+   "km": 25.7,
    "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
    "places": 1,
    "pool": false,
@@ -497,7 +519,7 @@
   },
   {
    "end": "2026-12-08",
-   "group": "C1",
+   "group": "C2",
    "kind": "Laboral temporal",
    "km": 25.7,
    "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
@@ -615,6 +637,28 @@
    "pool": true,
    "title": "7 places d'Educador social",
    "url": "https://cido.diba.cat/oposicions/16773104"
+  },
+  {
+   "end": "2026-12-09",
+   "group": "C1",
+   "kind": "Laboral temporal",
+   "km": 25.7,
+   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
+   "places": 1,
+   "pool": false,
+   "title": "1 plaça de Healthcare Documentation and Administration Technician for the Health Services Research Group",
+   "url": "https://cido.diba.cat/oposicions/22561729"
+  },
+  {
+   "end": "2026-12-09",
+   "group": "A1",
+   "kind": "Laboral temporal",
+   "km": 25.7,
+   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
+   "places": 1,
+   "pool": false,
+   "title": "1 plaça de Specialist Technician - Tobacco Control research group",
+   "url": "https://cido.diba.cat/oposicions/22561648"
   },
   {
    "end": "2026-12-10",
@@ -901,6 +945,50 @@
    "pool": false,
    "title": "1 plaça de Fisioterapeuta al Centre d'Atenció Primària (CAP) La Torrassa de l'Hospitalet de Llobregat",
    "url": "https://cido.diba.cat/oposicions/21980978"
+  },
+  {
+   "end": "2026-12-28",
+   "group": "A1",
+   "kind": "Funcionari interí",
+   "km": 14.8,
+   "org": "Ajuntament de Molins de Rei",
+   "places": 1,
+   "pool": true,
+   "title": "1 plaça de Cap del negociat d'informàtica",
+   "url": "https://cido.diba.cat/oposicions/22561119"
+  },
+  {
+   "end": "2026-12-28",
+   "group": "A2",
+   "kind": "Funcionari",
+   "km": 12.8,
+   "org": "Ajuntament de Vallirana",
+   "places": 1,
+   "pool": true,
+   "title": "1 plaça de Tècnic mitjà - Intervenció",
+   "url": "https://cido.diba.cat/oposicions/21485826"
+  },
+  {
+   "end": "2026-12-28",
+   "group": "A2",
+   "kind": "Funcionari",
+   "km": 12.8,
+   "org": "Ajuntament de Vallirana",
+   "places": 1,
+   "pool": true,
+   "title": "1 plaça de Tècnic mitjà - Tresoreria",
+   "url": "https://cido.diba.cat/oposicions/21485829"
+  },
+  {
+   "end": "2026-12-28",
+   "group": "A2",
+   "kind": "Funcionari",
+   "km": 12.8,
+   "org": "Ajuntament de Vallirana",
+   "places": 1,
+   "pool": true,
+   "title": "1 plaça de Tècnic mitjà reactivació econòmica",
+   "url": "https://cido.diba.cat/oposicions/18050707"
   },
   {
    "end": "2026-12-31",
@@ -1222,5 +1310,5 @@
    "url": "https://cido.diba.cat/oposicions/22220170"
   }
  ],
- "fetched": "2026-11-26T03:25:57+01:00"
+ "fetched": "2026-11-26T16:42:31+01:00"
 }

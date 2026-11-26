@@ -8,8 +8,8 @@
     "lon": "1.883722",
     "name": "REPSOL",
     "prices": {
-     "diesel": 1.749,
-     "g95": 1.575
+     "diesel": 1.759,
+     "g95": 1.585
     },
     "town": "Sant Esteve Sesrovires"
    },
@@ -20,8 +20,8 @@
     "lon": "1.883639",
     "name": "NIEVES",
     "prices": {
-     "diesel": 1.729,
-     "g95": 1.529
+     "diesel": 1.689,
+     "g95": 1.479
     },
     "town": "Sant Esteve Sesrovires"
    },
@@ -38,38 +38,14 @@
     "town": "Martorell"
    },
    {
-    "address": "Avinguda Compte del Llobregat, 35",
-    "hours": "L-D: 24H",
-    "lat": "41.484889",
-    "lon": "1.915806",
-    "name": "PETROLOWCOST SL",
-    "prices": {
-     "diesel": 1.659,
-     "g95": 1.399
-    },
-    "town": "Martorell"
-   },
-   {
     "address": "Carretera Nacional Ii Km. 588",
     "hours": "L-D: 24H",
     "lat": "41.482111",
     "lon": "1.919500",
     "name": "CARREFOUR",
     "prices": {
-     "diesel": 1.789,
+     "diesel": 1.749,
      "g95": 1.479
-    },
-    "town": "Martorell"
-   },
-   {
-    "address": "Avenida Comte Llobregat, 107",
-    "hours": "L-D: 24H",
-    "lat": "41.491111",
-    "lon": "1.912722",
-    "name": "NIEVES",
-    "prices": {
-     "diesel": 1.659,
-     "g95": 1.369
     },
     "town": "Martorell"
    },
@@ -98,6 +74,30 @@
     "town": "Martorell"
    },
    {
+    "address": "Avinguda Compte del Llobregat, 35",
+    "hours": "L-D: 24H",
+    "lat": "41.484889",
+    "lon": "1.915806",
+    "name": "PETROLOWCOST SL",
+    "prices": {
+     "diesel": 1.639,
+     "g95": 1.379
+    },
+    "town": "Martorell"
+   },
+   {
+    "address": "Avenida Comte Llobregat, 107",
+    "hours": "L-D: 24H",
+    "lat": "41.491111",
+    "lon": "1.912722",
+    "name": "NIEVES",
+    "prices": {
+     "diesel": 1.599,
+     "g95": 1.369
+    },
+    "town": "Martorell"
+   },
+   {
     "address": "Cl Pau Claris, 13",
     "hours": "L-D: 24H",
     "lat": "41.475167",
@@ -116,8 +116,8 @@
     "lon": "1.825611",
     "name": "PEDROSA CENTER",
     "prices": {
-     "diesel": 1.569,
-     "g95": 1.329
+     "diesel": 1.559,
+     "g95": 1.319
     },
     "town": "Masquefa"
    },
@@ -128,22 +128,10 @@
     "lon": "1.822000",
     "name": "BONAREA",
     "prices": {
-     "diesel": 1.492,
-     "g95": 1.229
+     "diesel": 1.41,
+     "g95": 1.177
     },
     "town": "Masquefa"
-   },
-   {
-    "address": "Carretera Nacional Ii Km. 593",
-    "hours": "L-D: 24H",
-    "lat": "41.452806",
-    "lon": "1.969167",
-    "name": "PETROMIRALLES",
-    "prices": {
-     "diesel": 1.729,
-     "g95": 1.514
-    },
-    "town": "Sant Andreu de la Barca"
    },
    {
     "address": "Calle Carretera de Martorell, 24",
@@ -158,11 +146,11 @@
     "town": "Sant Andreu de la Barca"
    },
    {
-    "address": "Carretera Ctra Nacional Ii (SECTOR 21) Parking C. Comercial Atrium Km.",
+    "address": "Carretera Nacional Ii Km. 593",
     "hours": "L-D: 24H",
-    "lat": "41.452611",
-    "lon": "1.969083",
-    "name": "Q8",
+    "lat": "41.452806",
+    "lon": "1.969167",
+    "name": "PETROMIRALLES",
     "prices": {
      "diesel": 1.729,
      "g95": 1.514
@@ -182,25 +170,26 @@
     "town": "Sant Andreu de la Barca"
    },
    {
+    "address": "Carretera Ctra Nacional Ii (SECTOR 21) Parking C. Comercial Atrium Km.",
+    "hours": "L-D: 24H",
+    "lat": "41.452611",
+    "lon": "1.969083",
+    "name": "Q8",
+    "prices": {
+     "diesel": 1.729,
+     "g95": 1.514
+    },
+    "town": "Sant Andreu de la Barca"
+   },
+   {
     "address": "Calle Hostal del Pi S/N, S/N",
     "hours": "L-V: 07:00-22:00; S: 08:00-22:00; D: 10:00-22:00",
     "lat": "41.507833",
     "lon": "1.902972",
     "name": "NIEVES",
     "prices": {
-     "diesel": 1.729,
-     "g95": 1.529
-    },
-    "town": "Abrera"
-   },
-   {
-    "address": "Calle Treball, 1",
-    "hours": "L-D: 24H",
-    "lat": "41.514583",
-    "lon": "1.897944",
-    "name": "HAM",
-    "prices": {
-     "diesel": 1.709
+     "diesel": 1.689,
+     "g95": 1.479
     },
     "town": "Abrera"
    },
@@ -228,16 +217,15 @@
     "town": "Abrera"
    },
    {
-    "address": "Cami Can Valls, S/N",
-    "hours": "L-V: 06:00-22:00; S-D: 07:00-22:00",
-    "lat": "41.446500",
-    "lon": "1.865250",
-    "name": "CACENCA",
+    "address": "Calle Treball, 1",
+    "hours": "L-D: 24H",
+    "lat": "41.514583",
+    "lon": "1.897944",
+    "name": "HAM",
     "prices": {
-     "diesel": 1.749,
-     "g95": 1.499
+     "diesel": 1.709
     },
-    "town": "Gelida"
+    "town": "Abrera"
    },
    {
     "address": "Calle Anselm Clave, 5176901",
@@ -246,13 +234,25 @@
     "lon": "1.863806",
     "name": "E.S.GELIDA",
     "prices": {
-     "diesel": 1.699,
-     "g95": 1.449
+     "diesel": 1.649,
+     "g95": 1.399
+    },
+    "town": "Gelida"
+   },
+   {
+    "address": "Cami Can Valls, S/N",
+    "hours": "L-V: 06:00-22:00; S-D: 07:00-22:00",
+    "lat": "41.446500",
+    "lon": "1.865250",
+    "name": "CACENCA",
+    "prices": {
+     "diesel": 1.679,
+     "g95": 1.429
     },
     "town": "Gelida"
    }
   ],
-  "updated": "26/11/2026 3:26:37"
+  "updated": "26/11/2026 16:43:18"
  },
- "fetched": "2026-11-26T03:25:57+01:00"
+ "fetched": "2026-11-26T16:42:31+01:00"
 }

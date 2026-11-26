@@ -1,6 +1,18 @@
 {
  "data": [
   {
+   "company": "Oficina de Treball del SOC",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-26",
+   "hours": "Jornada intensiva",
+   "salary": [
+    1979
+   ],
+   "title": "Operari/a de la indústria metal·lúrgica i fabricació de productes metàl·lics",
+   "town": "SANT ESTEVE SESROVIRES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202633239"
+  },
+  {
    "company": "Empresa gestora de residuos",
    "contract": "Contracte laboral indefinit",
    "date": "2026-11-24",
@@ -884,5 +896,5 @@
    "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202630486"
   }
  ],
- "fetched": "2026-11-26T03:25:57+01:00"
+ "fetched": "2026-11-26T16:42:31+01:00"
 }
