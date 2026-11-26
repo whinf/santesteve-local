@@ -1,83 +1,6 @@
 {
  "data": [
   {
-   "end": "2026-11-25",
-   "group": "A1",
-   "kind": "Funcionari",
-   "km": 21.5,
-   "org": "Ajuntament de Sant Boi de Llobregat",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça d'Enginyer de telecomunicacions",
-   "url": "https://cido.diba.cat/oposicions/17090638"
-  },
-  {
-   "end": "2026-11-25",
-   "group": "A1",
-   "kind": "Interí o temporal",
-   "km": 21.5,
-   "org": "Ajuntament de Sant Boi de Llobregat",
-   "places": 0,
-   "pool": true,
-   "title": "Borsa de treball de places de Tècnic superior de l'àmbit econòmic",
-   "url": "https://cido.diba.cat/oposicions/22442834"
-  },
-  {
-   "end": "2026-11-25",
-   "group": "A1",
-   "kind": "Laboral temporal",
-   "km": 25.7,
-   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça de Clinical Trial Assistant (CTA)",
-   "url": "https://cido.diba.cat/oposicions/22485346"
-  },
-  {
-   "end": "2026-11-25",
-   "group": "A2",
-   "kind": "Laboral temporal",
-   "km": 25.7,
-   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça de Clinical Trials Study Nurse - Vascular Risk Unit",
-   "url": "https://cido.diba.cat/oposicions/22485234"
-  },
-  {
-   "end": "2026-11-25",
-   "group": "A1",
-   "kind": "Laboral temporal",
-   "km": 25.7,
-   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça de Postdoctoral Researcher in Bioinformatics",
-   "url": "https://cido.diba.cat/oposicions/22485386"
-  },
-  {
-   "end": "2026-11-25",
-   "group": "A2",
-   "kind": "Laboral temporal",
-   "km": 25.7,
-   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça de Specialist Technician in Traslational Biomedical Research",
-   "url": "https://cido.diba.cat/oposicions/22485327"
-  },
-  {
-   "end": "2026-11-25",
-   "group": "A1",
-   "kind": "Laboral temporal",
-   "km": 25.7,
-   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça de Study Coordinator - Neurologic diseases and neurogenetics",
-   "url": "https://cido.diba.cat/oposicions/22485421"
-  },
-  {
    "end": "2026-11-26",
    "group": "A2",
    "kind": "Funcionari",
@@ -1299,5 +1222,5 @@
    "url": "https://cido.diba.cat/oposicions/22220170"
   }
  ],
- "fetched": "2026-11-25T16:59:43+01:00"
+ "fetched": "2026-11-26T03:25:57+01:00"
 }

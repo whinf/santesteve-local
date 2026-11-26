@@ -1195,24 +1195,6 @@
      "business"
     ]
    },
-   "930722": {
-    "budget": 2200000,
-    "checked": "2026-11-23",
-    "end": "2026-11-25",
-    "id": "930722",
-    "level": "AUTONOMICA",
-    "organ": "ESCOLA D'ADMINISTRACIÓ PÚBLICA DE CATALUNYA (EAPC)",
-    "purpose": "Otras actuaciones de carácter económico",
-    "received": "2026-09-21",
-    "region": "CATALUÑA",
-    "start": "2026-10-15",
-    "term": "",
-    "title": "Subvenciones destinadas a la financiación de planes de formación para el empleo de los empleados y empleadas públicos de las administraciones locales para el año 2027.",
-    "title_ca": "Subvencions destinades al finanament de plans de formació per a l'ocupació dels empleats i empleades públics de les administracions locals per a l'any 2027.",
-    "who": [
-     "entities"
-    ]
-   },
    "931088": {
     "budget": 50000000,
     "checked": "2026-11-23",
@@ -1465,24 +1447,6 @@
      "entities"
     ]
    },
-   "938244": {
-    "budget": 8000,
-    "checked": "2026-11-23",
-    "end": "",
-    "id": "938244",
-    "level": "AUTONOMICA",
-    "organ": "DEPARTAMENT DE LA PRESIDÈNCIA",
-    "purpose": "Otras actuaciones de carácter económico",
-    "received": "2026-10-27",
-    "region": "CATALUÑA",
-    "start": "2026-11-10",
-    "term": "15 Dies Naturals",
-    "title": "Premios Instituto de Estudios del Autogobierno en las categorías de artículo en el ámbito de la ciencia política y artículo en el ámbito del derecho público",
-    "title_ca": "Premis Institut d'Estudis de l'Autogovern a les categories d'article en l'àmbit de la ciència política i article en l'àmbit del dret públic",
-    "who": [
-     "people"
-    ]
-   },
    "938389": {
     "budget": 80000,
     "checked": "2026-11-23",
@@ -1591,24 +1555,6 @@
      "business"
     ]
    },
-   "938416": {
-    "budget": 6820,
-    "checked": "2026-11-23",
-    "end": "",
-    "id": "938416",
-    "level": "ESTADO",
-    "organ": "CENTRO DE INVESTIGACIONES SOCIOLÓGICAS",
-    "purpose": "Educación",
-    "received": "2026-10-28",
-    "region": "MINISTERIO DE LA PRESIDENCIA, JUSTICIA Y RELACIONES CON LAS CORTES",
-    "start": "",
-    "term": "15 días hábiles tras la publicación del extracto en BOE",
-    "title": "Resolución de Convocatoria de 20 de octubre de 2026 del XXXV Curso de Posgrado del CIS 2026-2027",
-    "title_ca": "",
-    "who": [
-     "business"
-    ]
-   },
    "938420": {
     "budget": 50000,
     "checked": "2026-11-23",
@@ -1663,24 +1609,6 @@
      "business"
     ]
    },
-   "938479": {
-    "budget": 17000,
-    "checked": "2026-11-23",
-    "end": "2026-11-25",
-    "id": "938479",
-    "level": "ESTADO",
-    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
-    "purpose": "Comercio, Turismo y Pymes",
-    "received": "2026-10-28",
-    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
-    "start": "2026-10-28",
-    "term": "",
-    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación PERFORMANCE DAYS I Munich del 17 de marzo de 2027 al 18 de marzo de 2027",
-    "title_ca": "",
-    "who": [
-     "business"
-    ]
-   },
    "938482": {
     "budget": 60000,
     "checked": "2026-11-23",
@@ -1712,24 +1640,6 @@
     "start": "2026-10-30",
     "term": "",
     "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación MICAM Milano I Milán del 21 de febrero de 2027 al 23 de febrero de 2027.",
-    "title_ca": "",
-    "who": [
-     "business"
-    ]
-   },
-   "938522": {
-    "budget": 40000,
-    "checked": "2026-11-23",
-    "end": "2026-11-25",
-    "id": "938522",
-    "level": "ESTADO",
-    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
-    "purpose": "Comercio, Turismo y Pymes",
-    "received": "2026-10-28",
-    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
-    "start": "2026-10-30",
-    "term": "",
-    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación BAREFOOT EUROPEAN SHOE FAIR I Offenbach del 29 al 31 de enero de 2027.",
     "title_ca": "",
     "who": [
      "business"
@@ -1784,24 +1694,6 @@
     "start": "2026-10-28",
     "term": "",
     "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la FA SPORT ACHAT HIVER Grenoble del 25 de enero de 2027 al 27 de enero de 2027",
-    "title_ca": "",
-    "who": [
-     "business"
-    ]
-   },
-   "938576": {
-    "budget": 60000,
-    "checked": "2026-11-23",
-    "end": "2026-11-25",
-    "id": "938576",
-    "level": "ESTADO",
-    "organ": "ICEX ESPAÑA EXPORTACIÓN E INVERSIONES, EP E.",
-    "purpose": "Comercio, Turismo y Pymes",
-    "received": "2026-10-28",
-    "region": "MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA",
-    "start": "2026-10-28",
-    "term": "",
-    "title": "Resolución de 27 de octubre de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convoca concesión de ayudas para la Participación Agrupada en la Feria_Asociación MAISON&OBJET París del 14 de enero de 2027 al 18 de enero de 2027",
     "title_ca": "",
     "who": [
      "business"
@@ -3095,14 +2987,6 @@
    }
   },
   "closed": [
-   "870720",
-   "870726",
-   "870729",
-   "870732",
-   "870743",
-   "870774",
-   "870813",
-   "870871",
    "871045",
    "871053",
    "871062",
@@ -4638,6 +4522,7 @@
    "930282",
    "930313",
    "930714",
+   "930722",
    "930760",
    "930787",
    "930983",
@@ -4794,15 +4679,20 @@
    "937528",
    "937540",
    "937657",
+   "938244",
    "938362",
    "938365",
+   "938416",
    "938437",
    "938459",
    "938461",
    "938468",
+   "938479",
    "938488",
    "938491",
    "938518",
+   "938522",
+   "938576",
    "938580",
    "938582",
    "938643",
@@ -4953,5 +4843,5 @@
    "944853"
   ]
  },
- "fetched": "2026-11-25T16:59:43+01:00"
+ "fetched": "2026-11-26T03:25:57+01:00"
 }
