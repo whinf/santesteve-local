@@ -1879,24 +1879,6 @@
      "business"
     ]
    },
-   "940568": {
-    "budget": 9900000,
-    "checked": "2026-11-23",
-    "end": "",
-    "id": "940568",
-    "level": "AUTONOMICA",
-    "organ": "DEPARTAMENT D'EMPRESA I TREBALL  ",
-    "purpose": "Fomento del Empleo",
-    "received": "2026-11-06",
-    "region": "CATALUÑA",
-    "start": "2026-11-12",
-    "term": "10 Dies Hàbils",
-    "title": "Subvenciones del Programa Ocell de Foc",
-    "title_ca": "Subvencions del Programa Ocell de Foc",
-    "who": [
-     "entities"
-    ]
-   },
    "940640": {
     "budget": 669016,
     "checked": "2026-11-23",
@@ -2145,24 +2127,6 @@
     "start": "",
     "term": "El plazo de presentación de las candidaturas será de tres meses.",
     "title": "Premio Nacional de Estadística 2026",
-    "title_ca": "",
-    "who": [
-     "people"
-    ]
-   },
-   "941797": {
-    "budget": 150000,
-    "checked": "2026-11-23",
-    "end": "2026-11-26",
-    "id": "941797",
-    "level": "ESTADO",
-    "organ": "SECRETARÍA DE ESTADO DE TELECOMUNICACIONES E INFRAESTRUCTURAS DIGITALES",
-    "purpose": "Investigación, desarrollo e innovación",
-    "received": "2026-11-12",
-    "region": "MINISTERIO PARA LA TRANSFORMACIÓN DIGITAL Y DE LA FUNCIÓN PÚBLICA",
-    "start": "2026-11-13",
-    "term": "",
-    "title": "Real Decreto 987/2026, de 11 de noviembre, por el que se regula la concesión directa de una subvención a la Asociación Española de Normalización (UNE) destinada a impulsar la actividad de normalización y estandarización, secretaría y acción internacional",
     "title_ca": "",
     "who": [
      "people"
@@ -3060,39 +3024,6 @@
    }
   },
   "closed": [
-   "871045",
-   "871053",
-   "871062",
-   "871068",
-   "871077",
-   "871093",
-   "871097",
-   "871106",
-   "871110",
-   "871115",
-   "871119",
-   "871122",
-   "871126",
-   "871143",
-   "871144",
-   "871150",
-   "871151",
-   "871153",
-   "871156",
-   "871157",
-   "871158",
-   "871159",
-   "871161",
-   "871162",
-   "871166",
-   "871169",
-   "871170",
-   "871181",
-   "871187",
-   "871209",
-   "871224",
-   "871227",
-   "871230",
    "871366",
    "871368",
    "871377",
@@ -4811,6 +4742,7 @@
    "940565",
    "940566",
    "940567",
+   "940568",
    "940645",
    "940650",
    "940653",
@@ -4826,6 +4758,7 @@
    "941561",
    "941562",
    "941563",
+   "941797",
    "941997",
    "942178",
    "942184",
@@ -4917,5 +4850,5 @@
    "945086"
   ]
  },
- "fetched": "2026-11-26T16:42:31+01:00"
+ "fetched": "2026-11-27T03:23:21+01:00"
 }

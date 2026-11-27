@@ -1,83 +1,6 @@
 {
  "data": [
   {
-   "end": "2026-11-26",
-   "group": "A2",
-   "kind": "Funcionari",
-   "km": 23.6,
-   "org": "Ajuntament de Gavà",
-   "places": 1,
-   "pool": true,
-   "title": "1 plaça de Tècnic mitjà - Tècnic de mobilitat",
-   "url": "https://cido.diba.cat/oposicions/22365729"
-  },
-  {
-   "end": "2026-11-26",
-   "group": "A1",
-   "kind": "Funcionari",
-   "km": 21.5,
-   "org": "Ajuntament de Sant Boi de Llobregat",
-   "places": 1,
-   "pool": true,
-   "title": "1 plaça d'Advocat",
-   "url": "https://cido.diba.cat/oposicions/16027180"
-  },
-  {
-   "end": "2026-11-26",
-   "group": "A1",
-   "kind": "",
-   "km": 24.9,
-   "org": "Generalitat de Catalunya - Hospital Universitari de Bellvitge",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça de Cap de Secció de Citologia del Servei d'Anatomia Patològica",
-   "url": "https://cido.diba.cat/oposicions/22489149"
-  },
-  {
-   "end": "2026-11-26",
-   "group": "A1",
-   "kind": "",
-   "km": 24.9,
-   "org": "Generalitat de Catalunya - Hospital Universitari de Bellvitge",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça de Cap de secció d'Hemostàsia i Trombosi del Laboratori Clínic de la Gerència Hospital Universitari de Bellvitge - Hospital de Viladecans",
-   "url": "https://cido.diba.cat/oposicions/22489120"
-  },
-  {
-   "end": "2026-11-26",
-   "group": "C2",
-   "kind": "Laboral temporal",
-   "km": 25.7,
-   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça d'Auxiliary Support - Animal Facility",
-   "url": "https://cido.diba.cat/oposicions/22491364"
-  },
-  {
-   "end": "2026-11-26",
-   "group": "A",
-   "kind": "Laboral temporal",
-   "km": 25.7,
-   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça de Bioinformatician - Bio-Heart Research Group",
-   "url": "https://cido.diba.cat/oposicions/22491425"
-  },
-  {
-   "end": "2026-11-26",
-   "group": "A1",
-   "kind": "Laboral temporal",
-   "km": 25.7,
-   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça de Predoctoral Researcher in Stem Cell and Molecular Biology to join the Neurometabolic Diseases Laboratory",
-   "url": "https://cido.diba.cat/oposicions/22491384"
-  },
-  {
    "end": "2026-11-27",
    "group": "C1",
    "kind": "Laboral",
@@ -991,6 +914,17 @@
    "url": "https://cido.diba.cat/oposicions/18050707"
   },
   {
+   "end": "2026-12-29",
+   "group": "C1",
+   "kind": "Funcionari",
+   "km": 0.1,
+   "org": "Ajuntament de Sant Esteve Sesrovires",
+   "places": 3,
+   "pool": true,
+   "title": "3 places d'Agent de la Policia Local",
+   "url": "https://cido.diba.cat/oposicions/21589744"
+  },
+  {
    "end": "2026-12-31",
    "group": "C1",
    "kind": "Laboral temporal",
@@ -1310,5 +1244,5 @@
    "url": "https://cido.diba.cat/oposicions/22220170"
   }
  ],
- "fetched": "2026-11-26T16:42:31+01:00"
+ "fetched": "2026-11-27T03:23:21+01:00"
 }
