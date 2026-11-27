@@ -1,94 +1,6 @@
 {
  "data": [
   {
-   "end": "2026-11-27",
-   "group": "C1",
-   "kind": "Laboral",
-   "km": 23.5,
-   "org": "Ajuntament de Cornellà de Llobregat - Empresa Municipal de Promoció Social, Urbana i Econòmica de Cornellà, SA (Procornellà)",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça d'Administratiu comptable",
-   "url": "https://cido.diba.cat/oposicions/22498882"
-  },
-  {
-   "end": "2026-11-27",
-   "group": "A2",
-   "kind": "Funcionari interí",
-   "km": 15.9,
-   "org": "Ajuntament de Sant Vicenç dels Horts",
-   "places": 0,
-   "pool": true,
-   "title": "Borsa de treball de places d'Enginyer tècnic de la Unitat Tècnica",
-   "url": "https://cido.diba.cat/oposicions/22488986"
-  },
-  {
-   "end": "2026-11-27",
-   "group": "A2",
-   "kind": "Funcionari interí",
-   "km": 15.9,
-   "org": "Ajuntament de Sant Vicenç dels Horts",
-   "places": 0,
-   "pool": true,
-   "title": "Borsa de treball de places de Tècnic de medi ambient de la Unitat Tècnica",
-   "url": "https://cido.diba.cat/oposicions/22488989"
-  },
-  {
-   "end": "2026-11-27",
-   "group": "C1",
-   "kind": "Funcionari interí",
-   "km": 12.8,
-   "org": "Ajuntament de Vallirana",
-   "places": 3,
-   "pool": false,
-   "title": "3 places d'Agent de la Policia Local",
-   "url": "https://cido.diba.cat/oposicions/22507142"
-  },
-  {
-   "end": "2026-11-27",
-   "group": "A1",
-   "kind": "Funcionari",
-   "km": 23.2,
-   "org": "Ajuntament de Viladecans",
-   "places": 1,
-   "pool": true,
-   "title": "1 plaça de Tècnic superior de Gestió - Departament Sistemes d'informació",
-   "url": "https://cido.diba.cat/oposicions/22346721"
-  },
-  {
-   "end": "2026-11-27",
-   "group": "A1",
-   "kind": "Laboral temporal",
-   "km": 25.7,
-   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça de Postdoctoral Researcher Oncology Data Analytics",
-   "url": "https://cido.diba.cat/oposicions/22498265"
-  },
-  {
-   "end": "2026-11-27",
-   "group": "A1",
-   "kind": "Laboral temporal",
-   "km": 25.7,
-   "org": "Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça de Postdoctoral Researcher in Cardiomyocyte Maturation",
-   "url": "https://cido.diba.cat/oposicions/22498287"
-  },
-  {
-   "end": "2026-11-27",
-   "group": "A1",
-   "kind": "Laboral temporal",
-   "km": 26.1,
-   "org": "Institut de Ciències Fotòniques (ICFO)",
-   "places": 1,
-   "pool": false,
-   "title": "1 plaça de Financial Project Manager",
-   "url": "https://cido.diba.cat/oposicions/22413896"
-  },
-  {
    "end": "2026-11-30",
    "group": "A1",
    "kind": "Funcionari",
@@ -1310,5 +1222,5 @@
    "url": "https://cido.diba.cat/oposicions/22220170"
   }
  ],
- "fetched": "2026-11-27T16:32:07+01:00"
+ "fetched": "2026-11-28T00:42:12+01:00"
 }

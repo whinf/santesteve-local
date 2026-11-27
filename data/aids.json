@@ -1339,24 +1339,6 @@
      "business"
     ]
    },
-   "936968": {
-    "budget": 2750000,
-    "checked": "2026-11-23",
-    "end": "",
-    "id": "936968",
-    "level": "AUTONOMICA",
-    "organ": "AGÈNCIA DE GESTIÓ D'AJUTS UNIVERSITARIS I DE RECERCA (AGAUR)",
-    "purpose": "Educación",
-    "received": "2026-10-21",
-    "region": "CATALUÑA",
-    "start": "2026-10-28",
-    "term": "1 Mesos",
-    "title": "Convocatoria de ayudas a la movilidad internacional del estudiantado con reconocimiento académico y a la movilidad del estudiantado en el marco del Programa de Mejora e Innovación en la Formación de docentes de las universidades catalanas (MOBINT - MIF)",
-    "title_ca": "Convocatòria d'ajuts a la mobilitat internacional de l’estudiantat amb reconeixement acadèmic i a la mobilitat de l’estudiantat en el marc del Programa de millora i innovació en la formació de mestres de les universitats catalanes (MOBINT-MIF)",
-    "who": [
-     "people"
-    ]
-   },
    "937289": {
     "budget": 37628660.23,
     "checked": "2026-11-23",
@@ -2478,42 +2460,6 @@
      "entities"
     ]
    },
-   "943812": {
-    "budget": 60000,
-    "checked": "2026-11-23",
-    "end": "2026-11-27",
-    "id": "943812",
-    "level": "ESTADO",
-    "organ": "SECRETARÍA DE ESTADO DE TURISMO",
-    "purpose": "Comercio, Turismo y Pymes",
-    "received": "2026-11-20",
-    "region": "MINISTERIO DE INDUSTRIA Y TURISMO",
-    "start": "2026-11-21",
-    "term": "",
-    "title": "Subvención a FEMP, prevista en el RD 1016/2026, de 18 de noviembre, de concesión directa de subv en materia de turismo por el MINTUR, ejercicio 2026",
-    "title_ca": "",
-    "who": [
-     "business"
-    ]
-   },
-   "943813": {
-    "budget": 80000,
-    "checked": "2026-11-23",
-    "end": "2026-11-27",
-    "id": "943813",
-    "level": "ESTADO",
-    "organ": "SECRETARÍA DE ESTADO DE TURISMO",
-    "purpose": "Comercio, Turismo y Pymes",
-    "received": "2026-11-20",
-    "region": "MINISTERIO DE INDUSTRIA Y TURISMO",
-    "start": "2026-11-21",
-    "term": "",
-    "title": "Subvención a la Confederación Empresarial de Hostelería de España CEHE , prevista en el RD 1016/2026, de 18 de noviembre, de concesión directa de subv en materia de turismo por el MINTUR, ejercicio 2026",
-    "title_ca": "",
-    "who": [
-     "business"
-    ]
-   },
    "943899": {
     "budget": 1000000,
     "checked": "2026-11-23",
@@ -3169,19 +3115,6 @@
    }
   },
   "closed": [
-   "871366",
-   "871368",
-   "871377",
-   "871387",
-   "871409",
-   "871418",
-   "871422",
-   "871427",
-   "871443",
-   "871569",
-   "871574",
-   "871575",
-   "871582",
    "871616",
    "871619",
    "871629",
@@ -4818,6 +4751,7 @@
    "936346",
    "936756",
    "936963",
+   "936968",
    "937166",
    "937168",
    "937238",
@@ -4958,6 +4892,8 @@
    "943546",
    "943547",
    "943548",
+   "943812",
+   "943813",
    "943863",
    "943864",
    "943865",
@@ -4998,5 +4934,5 @@
    "945397"
   ]
  },
- "fetched": "2026-11-27T16:32:07+01:00"
+ "fetched": "2026-11-28T00:42:12+01:00"
 }

@@ -8,8 +8,8 @@
     "lon": "1.883722",
     "name": "REPSOL",
     "prices": {
-     "diesel": 1.759,
-     "g95": 1.569
+     "diesel": 1.729,
+     "g95": 1.559
     },
     "town": "Sant Esteve Sesrovires"
    },
@@ -26,14 +26,14 @@
     "town": "Sant Esteve Sesrovires"
    },
    {
-    "address": "Carretera Nacional Ii Km. 588",
+    "address": "Avenida Comte Llobregat, 107",
     "hours": "L-D: 24H",
-    "lat": "41.482111",
-    "lon": "1.919500",
-    "name": "CARREFOUR",
+    "lat": "41.491111",
+    "lon": "1.912722",
+    "name": "NIEVES",
     "prices": {
-     "diesel": 1.749,
-     "g95": 1.479
+     "diesel": 1.599,
+     "g95": 1.299
     },
     "town": "Martorell"
    },
@@ -50,14 +50,38 @@
     "town": "Martorell"
    },
    {
-    "address": "Avenida Comte Llobregat, 107",
-    "hours": "L-D: 24H",
-    "lat": "41.491111",
-    "lon": "1.912722",
-    "name": "NIEVES",
+    "address": "Carretera N-2 Km. 593,5",
+    "hours": "L-V: 06:00-21:00; S: 08:00-13:00",
+    "lat": "41.489222",
+    "lon": "1.913083",
+    "name": "PETRONOR",
     "prices": {
-     "diesel": 1.599,
-     "g95": 1.299
+     "diesel": 1.749,
+     "g95": 1.559
+    },
+    "town": "Martorell"
+   },
+   {
+    "address": "Cl Pau Claris, 13",
+    "hours": "L-D: 24H",
+    "lat": "41.475167",
+    "lon": "1.927778",
+    "name": "REPSOL",
+    "prices": {
+     "diesel": 1.749,
+     "g95": 1.569
+    },
+    "town": "Martorell"
+   },
+   {
+    "address": "Carretera Nacional Ii Km. 588",
+    "hours": "L-D: 24H",
+    "lat": "41.482111",
+    "lon": "1.919500",
+    "name": "CARREFOUR",
+    "prices": {
+     "diesel": 1.749,
+     "g95": 1.479
     },
     "town": "Martorell"
    },
@@ -74,52 +98,16 @@
     "town": "Martorell"
    },
    {
-    "address": "Carretera N-2 Km. 593,5",
-    "hours": "L-V: 06:00-21:00; S: 08:00-13:00",
-    "lat": "41.489222",
-    "lon": "1.913083",
-    "name": "PETRONOR",
-    "prices": {
-     "diesel": 1.779,
-     "g95": 1.569
-    },
-    "town": "Martorell"
-   },
-   {
     "address": "Cr N-2, 591,3",
     "hours": "L-D: 06:00-22:00",
     "lat": "41.464778",
     "lon": "1.948361",
     "name": "MOEVE",
     "prices": {
-     "diesel": 1.824,
+     "diesel": 1.809,
      "g95": 1.604
     },
     "town": "Martorell"
-   },
-   {
-    "address": "Cl Pau Claris, 13",
-    "hours": "L-D: 24H",
-    "lat": "41.475167",
-    "lon": "1.927778",
-    "name": "REPSOL",
-    "prices": {
-     "diesel": 1.779,
-     "g95": 1.579
-    },
-    "town": "Martorell"
-   },
-   {
-    "address": "Poligono Ind. la Pedrosa, S/N",
-    "hours": "L-D: 24H",
-    "lat": "41.499528",
-    "lon": "1.822000",
-    "name": "BONAREA",
-    "prices": {
-     "diesel": 1.41,
-     "g95": 1.177
-    },
-    "town": "Masquefa"
    },
    {
     "address": "Calle Lapedrosa, 20",
@@ -134,14 +122,26 @@
     "town": "Masquefa"
    },
    {
-    "address": "Carretera Nacional Ii Km. 593",
+    "address": "Poligono Ind. la Pedrosa, S/N",
     "hours": "L-D: 24H",
-    "lat": "41.452806",
-    "lon": "1.969167",
-    "name": "PETROMIRALLES",
+    "lat": "41.499528",
+    "lon": "1.822000",
+    "name": "BONAREA",
+    "prices": {
+     "diesel": 1.41,
+     "g95": 1.177
+    },
+    "town": "Masquefa"
+   },
+   {
+    "address": "Calle Mexico, S/N",
+    "hours": "L-D: 24H",
+    "lat": "41.443167",
+    "lon": "1.981333",
+    "name": "PETROCAT DIRECTE",
     "prices": {
      "diesel": 1.729,
-     "g95": 1.514
+     "g95": 1.559
     },
     "town": "Sant Andreu de la Barca"
    },
@@ -158,14 +158,14 @@
     "town": "Sant Andreu de la Barca"
    },
    {
-    "address": "Calle Mexico, S/N",
+    "address": "Carretera Nacional Ii Km. 593",
     "hours": "L-D: 24H",
-    "lat": "41.443167",
-    "lon": "1.981333",
-    "name": "PETROCAT DIRECTE",
+    "lat": "41.452806",
+    "lon": "1.969167",
+    "name": "PETROMIRALLES",
     "prices": {
-     "diesel": 1.739,
-     "g95": 1.569
+     "diesel": 1.729,
+     "g95": 1.514
     },
     "town": "Sant Andreu de la Barca"
    },
@@ -252,7 +252,7 @@
     "town": "Gelida"
    }
   ],
-  "updated": "27/11/2026 16:39:15"
+  "updated": "28/11/2026 0:47:27"
  },
- "fetched": "2026-11-27T16:32:07+01:00"
+ "fetched": "2026-11-28T00:42:12+01:00"
 }
