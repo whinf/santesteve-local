@@ -5,10 +5,39 @@
     "R4"
    ],
    "text": {
+    "ca": "Circulació amb demores que poden superar els 30 minuts a causa d'una incidència a la infraestructura.",
+    "es": "Circulación con demoras que pueden superar los 30 minutos a causa de una incidencia en la infraestructura."
+   }
+  },
+  {
+   "lines": [
+    "R4",
+    "R8"
+   ],
+   "text": {
+    "ca": "Un cop resolta la incidència a la infraestructura entre Sitges i Vilanova i la Geltrú, els trens recuperen progressivament les freqüències de pas habituals, tot i que poden mantenir demores superiors als 15 minuts de mitjana.",
+    "es": "Una vez resuelta la incidencia en la infraestructura entre Sitges y Vilanova i la Geltrú, los trenes recuperan progresivamente sus frecuencias de paso habituales, aunque pueden mantener demoras superiores a 15 minutos de media."
+   }
+  },
+  {
+   "lines": [
+    "R4",
+    "R8"
+   ],
+   "text": {
+    "ca": "Un cop resolta la incidència a la infraestructura entre Sitges i Vilanova i la Geltrú, els trens recuperen progressivament les freqüències de pas habituals.",
+    "es": "Una vez resuelta la incidencia en la infraestructura entre Sitges y Vilanova i la Geltrú, los trenes recuperan progresivamente sus frecuencias de paso habituales."
+   }
+  },
+  {
+   "lines": [
+    "R4"
+   ],
+   "text": {
     "ca": "Sense servei ferroviari per obres a l'entorn de Montcada Bifurcació. El tram entre Fabra i Puig i Montcada Bifurcació es realitza mitjançant els serveis de la línia R4. Servei alternatiu per carretera entre Cerdanyola del Vallès i Cerdanyola Universitat.",
     "es": "Sin servicio ferroviario por obras en el entorno de Montcada Bifurcació. El trayecto entre Fabra i Puig y Montcada Bifurcació se realiza mediante los servicios de la línea R4. Servicio alternativo por carretera entre Cerdanyola del Vallès y Cerdanyola Universitat."
    }
   }
  ],
- "fetched": "2026-11-27T03:23:21+01:00"
+ "fetched": "2026-11-27T16:32:07+01:00"
 }

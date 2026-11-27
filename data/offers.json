@@ -333,19 +333,6 @@
    "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202632419"
   },
   {
-   "company": "EMPRESA DEL SECTOR DE LA FORMACIÓ",
-   "contract": "Contracte laboral indefinit",
-   "date": "2026-11-09",
-   "hours": "Jornada completa",
-   "salary": [
-    2215,
-    2230
-   ],
-   "title": "Orientador/a laboral projecte fpo dual",
-   "town": "MARTORELL",
-   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92328513"
-  },
-  {
    "company": "Supermercado de Martorell",
    "contract": "Contracte laboral indefinit",
    "date": "2026-11-05",
@@ -870,6 +857,19 @@
    "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92326020"
   },
   {
+   "company": "ONACARE GLOBAL S.L",
+   "contract": "Contracte laboral indefinit",
+   "date": "2026-11-27",
+   "hours": "Jornada completa",
+   "salary": [
+    1510,
+    1762
+   ],
+   "title": "Educador/a social, jornada completa estable a onacare can sunyer, castellví de rosanes (barcelona)",
+   "town": "CASTELLVÍ DE ROSANES",
+   "url": "https://feinaactiva.gencat.cat/search/offers/detail/FA92329844"
+  },
+  {
    "company": "RESIDÈNCIA PER LA TERCERA EDAT L'ONADA SL",
    "contract": "Contracte laboral indefinit",
    "date": "2026-10-09",
@@ -896,5 +896,5 @@
    "url": "https://feinaactiva.gencat.cat/search/offers/detail/09202630486"
   }
  ],
- "fetched": "2026-11-27T03:23:21+01:00"
+ "fetched": "2026-11-27T16:32:07+01:00"
 }

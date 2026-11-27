@@ -2,15 +2,6 @@
  "data": [
   {
    "access": "targeta",
-   "address": "Calle de Isaac Peral",
-   "lat": "41.50124",
-   "lon": "1.88388",
-   "name": "Atlante - Nieves Sant Esteve",
-   "operator": "Institut Català d'Energia - Ajuntament de Sant Esteve Sesrovires",
-   "speed": "superRAPID i semiRAPID"
-  },
-  {
-   "access": "targeta",
    "address": "CLUB DE GOLF BARCELONA Av. Golf Masia Bach",
    "lat": "41.492126",
    "lon": "1.848447",
@@ -26,15 +17,6 @@
    "name": "Carrer Martorell, Sant Esteve Sesrovires",
    "operator": "Institut Català d'Energia - Ajuntament de Sant Esteve Sesrovires",
    "speed": "semiRAPID"
-  },
-  {
-   "access": "targeta",
-   "address": "Calle de Isaac Peral",
-   "lat": "41.50124",
-   "lon": "1.88388",
-   "name": "ATLANTE - Nieves Sant Esteve",
-   "operator": "Institut Català d'Energia - Ajuntament de Sant Esteve Sesrovires",
-   "speed": "superRAPID i semiRAPID"
   },
   {
    "access": "targeta",
@@ -56,6 +38,24 @@
   },
   {
    "access": "targeta",
+   "address": "Calle de Isaac Peral",
+   "lat": "41.50124",
+   "lon": "1.88388",
+   "name": "ATLANTE - Nieves Sant Esteve",
+   "operator": "Institut Català d'Energia - Ajuntament de Sant Esteve Sesrovires",
+   "speed": "superRAPID i semiRAPID"
+  },
+  {
+   "access": "targeta",
+   "address": "Calle de Isaac Peral",
+   "lat": "41.50124",
+   "lon": "1.88388",
+   "name": "Atlante - Nieves Sant Esteve",
+   "operator": "Institut Català d'Energia - Ajuntament de Sant Esteve Sesrovires",
+   "speed": "superRAPID i semiRAPID"
+  },
+  {
+   "access": "targeta",
    "address": "CLUB DE GOLF BARCELONA Av. Golf Masia Bach",
    "lat": "41.49209",
    "lon": "1.848522",
@@ -64,5 +64,5 @@
    "speed": "RAPID i semiRAPID"
   }
  ],
- "fetched": "2026-11-26T16:42:31+01:00"
+ "fetched": "2026-11-27T16:32:07+01:00"
 }

@@ -3021,6 +3021,151 @@
      "business",
      "entities"
     ]
+   },
+   "945161": {
+    "budget": 140000,
+    "checked": "2026-11-27",
+    "end": "2027-01-20",
+    "id": "945161",
+    "level": "LOCAL",
+    "organ": "DIPUTACIÓN PROVINCIAL DE BARCELONA",
+    "purpose": "Cultura",
+    "received": "2026-11-27",
+    "region": "DIPUTACIÓN PROV. DE BARCELONA",
+    "start": "",
+    "term": "",
+    "title": "Concesión de subvenciones, destinadas a financiar proyectos y actividades de las orquestas simfónicas o de cámara profesionales y estables con sede en la demarcación de Barcelona (excluyendo Barcelona ciudad) durante la temporada 2026-2027",
+    "title_ca": "Concessió de subvencions, destinades a finançar projectes i activitats de les orquestres simfòniques o de cambra professionals i estables que tinguin la seva seu social a la demarcació de Barcelona (excloent Barcelona ciutat) durant la temporada 2026-2027",
+    "who": [
+     "entities"
+    ]
+   },
+   "945164": {
+    "budget": 4000000,
+    "checked": "2026-11-27",
+    "end": "2027-03-18",
+    "id": "945164",
+    "level": "ESTADO",
+    "organ": "INSTITUTO DE LA CINEMATOGRAFÍA Y DE LAS ARTES AUDIOVISUALES",
+    "purpose": "Cultura",
+    "received": "2026-11-27",
+    "region": "MINISTERIO DE CULTURA",
+    "start": "2027-02-01",
+    "term": "18/03/2027",
+    "title": "Resolución de 26 de noviembre de 2026 del Instituto de la Cinematografía y de las Artes Audiovisuales por la que se convocan ayudas a la distribución de películas de largometraje y conjuntos de cortometrajes comunitarios e iberoamericanos para el año 2027",
+    "title_ca": "",
+    "who": [
+     "business"
+    ]
+   },
+   "945201": {
+    "budget": 1000000,
+    "checked": "2026-11-27",
+    "end": "2027-01-18",
+    "id": "945201",
+    "level": "LOCAL",
+    "organ": "DIPUTACIÓN PROVINCIAL DE BARCELONA",
+    "purpose": "Servicios Sociales y Promoción Social",
+    "received": "2026-11-27",
+    "region": "DIPUTACIÓN PROV. DE BARCELONA",
+    "start": "2026-12-04",
+    "term": "",
+    "title": "Subvenciones en régimen de concurrencia competitiva a favor de entidades sin finalidad de lucro que gestionan viviendas de inserción social, año 2027.",
+    "title_ca": "Subvencions en règim de concurrència competitiva a favor d'entitats sense finalitat de lucre que gestionen habitatges d'inserció social, any 2027.",
+    "who": [
+     "entities"
+    ]
+   },
+   "945229": {
+    "budget": 300000,
+    "checked": "2026-11-27",
+    "end": "",
+    "id": "945229",
+    "level": "AUTONOMICA",
+    "organ": "DEPARTAMENT DE DRETS SOCIALS I INCLUSIÓ",
+    "purpose": "Servicios Sociales y Promoción Social",
+    "received": "2026-11-27",
+    "region": "CATALUÑA",
+    "start": "",
+    "term": "15 Dies Hàbils",
+    "title": "Proyectos de inversión en locales destinados al desarrollo de actividades de educación en el ocio por parte de entidades sin afán de lucro. Línea de actuación subvencionable en esta convocatoria: a) Inversiones destinadas a mejorar la seguridad",
+    "title_ca": "Projectes d'inversió en locals destinats al desenvolupament d'activitats d'educació en el lleure per part d'entitats sense afany de lucre. Línia d'actuació subvencionable en aquesta convocatòria: a) Inversions destinades a millorar la seguretat",
+    "who": [
+     "entities"
+    ]
+   },
+   "945238": {
+    "budget": 200000,
+    "checked": "2026-11-27",
+    "end": "2027-01-29",
+    "id": "945238",
+    "level": "LOCAL",
+    "organ": "DIPUTACIÓN PROVINCIAL DE BARCELONA",
+    "purpose": "Cultura",
+    "received": "2026-11-27",
+    "region": "DIPUTACIÓN PROV. DE BARCELONA",
+    "start": "",
+    "term": "",
+    "title": "Subvenciones Cocrea Bibliolab para financiar proyectos de creación comunitaria que se desarrollen en una o más bibliotecas o bibliobuses del Sistema de Lectura Pública de Cataluña en la província de Barcelona, 2027-2028",
+    "title_ca": "Subvencions Cocrea Bibliolab per finançar projectes de creació comunitària que es desenvolupin en una o més biblioteques o bibliobusos del Sistema de Lectura Pública de Catalunya a la Província de Barcelona, 2027-2028",
+    "who": [
+     "entities"
+    ]
+   },
+   "945340": {
+    "budget": 2194800,
+    "checked": "2026-11-27",
+    "end": "",
+    "id": "945340",
+    "level": "ESTADO",
+    "organ": "DIRECCIÓN GENERAL DEL LIBRO, DEL CÓMIC Y DE LA LECTURA",
+    "purpose": "Cultura",
+    "received": "2026-11-27",
+    "region": "MINISTERIO DE CULTURA",
+    "start": "",
+    "term": "Quince días hábiles contados a partir del día siguiente al de la publicación en el BOE",
+    "title": "Resolución de 27 de noviembre de 2026 de la Secretaría de Estado de Cultura por la que se convocan subvenciones, en régimen de concurrencia competitiva, para la promoción de la lectura y las letras españolas, correspondientes al año 2027",
+    "title_ca": "",
+    "who": [
+     "business",
+     "entities"
+    ]
+   },
+   "945376": {
+    "budget": 2300000,
+    "checked": "2026-11-27",
+    "end": "2027-01-18",
+    "id": "945376",
+    "level": "AUTONOMICA",
+    "organ": "INSTITUT CATALÀ DE LES EMPRESES CULTURALS (ICEC)",
+    "purpose": "Cultura",
+    "received": "2026-11-27",
+    "region": "CATALUÑA",
+    "start": "2026-12-18",
+    "term": "",
+    "title": "Resolución de convocatoria anticipada para la concesión de subvenciones para colaborar con salas privadas de Cataluña para apoyar la programación de espectáculos de artes escénicas",
+    "title_ca": "Resolució de convocatòria anticipada per a la concessió de subvencions per collaborar amb sales privades de Catalunya per donar suport a la programació d'espectacles d'arts escèniques",
+    "who": [
+     "business"
+    ]
+   },
+   "945390": {
+    "budget": 1817944,
+    "checked": "2026-11-27",
+    "end": "",
+    "id": "945390",
+    "level": "AUTONOMICA",
+    "organ": "DEPARTAMENT D'EMPRESA I TREBALL  ",
+    "purpose": "Fomento del Empleo",
+    "received": "2026-11-27",
+    "region": "CATALUÑA",
+    "start": "",
+    "term": "05 Dies Hàbils",
+    "title": "Subvenciones para la financiación de planes de formación del ámbito de Cataluña dirigidos a la capacitación para el desarrollo de las funciones relacionadas con el diálogo social y la negociación colectiva",
+    "title_ca": "Subvencions per al finanament de plans de formació de l'àmbit de Catalunya adreats a la capacitació per al desenvolupament de les funcions relacionades amb el diàleg social i la negociació collectiva",
+    "who": [
+     "entities"
+    ]
    }
   },
   "closed": [
@@ -4847,8 +4992,11 @@
    "944714",
    "944814",
    "944853",
-   "945086"
+   "945086",
+   "945255",
+   "945392",
+   "945397"
   ]
  },
- "fetched": "2026-11-27T03:23:21+01:00"
+ "fetched": "2026-11-27T16:32:07+01:00"
 }

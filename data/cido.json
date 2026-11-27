@@ -420,6 +420,17 @@
   },
   {
    "end": "2026-12-07",
+   "group": "C2",
+   "kind": "Laboral temporal",
+   "km": 22.3,
+   "org": "Generalitat de Catalunya - Departament d'Esports",
+   "places": 1,
+   "pool": false,
+   "title": "1 plaça d'Oficial 1a de manteniment al Servei de Recursos Humans i Règim Interior (Esplugues de Llobregat)",
+   "url": "https://cido.diba.cat/oposicions/22572517"
+  },
+  {
+   "end": "2026-12-07",
    "group": "C1",
    "kind": "Laboral temporal",
    "km": 25.7,
@@ -637,6 +648,28 @@
    "pool": false,
    "title": "1 plaça de Tècnic superior en dret",
    "url": "https://cido.diba.cat/oposicions/22544984"
+  },
+  {
+   "end": "2026-12-14",
+   "group": "Agrupacions professionals",
+   "kind": "Laboral temporal",
+   "km": 15.9,
+   "org": "Ajuntament de Sant Vicenç dels Horts",
+   "places": 6,
+   "pool": false,
+   "title": "6 places d'Agent comunitari antiracista i intercultural. Línia ACOL - Programa Treball i Formació 2026",
+   "url": "https://cido.diba.cat/oposicions/22569755"
+  },
+  {
+   "end": "2026-12-14",
+   "group": "A2",
+   "kind": "Funcionari interí",
+   "km": 15.9,
+   "org": "Ajuntament de Sant Vicenç dels Horts",
+   "places": 0,
+   "pool": true,
+   "title": "Borsa de treball de places de Tècnic mitjà de sistemes d'informació",
+   "url": "https://cido.diba.cat/oposicions/22570340"
   },
   {
    "end": "2026-12-14",
@@ -912,6 +945,39 @@
    "pool": true,
    "title": "1 plaça de Tècnic mitjà reactivació econòmica",
    "url": "https://cido.diba.cat/oposicions/18050707"
+  },
+  {
+   "end": "2026-12-29",
+   "group": "A2",
+   "kind": "Funcionari",
+   "km": 5.0,
+   "org": "Ajuntament d'Esparreguera",
+   "places": 1,
+   "pool": false,
+   "title": "1 plaça de Tècnic mitjà de territori i sostenibilitat",
+   "url": "https://cido.diba.cat/oposicions/22484820"
+  },
+  {
+   "end": "2026-12-29",
+   "group": "A1",
+   "kind": "Funcionari",
+   "km": 5.0,
+   "org": "Ajuntament d'Esparreguera",
+   "places": 1,
+   "pool": false,
+   "title": "1 plaça de Tècnic superior de territori i sostenibilitat",
+   "url": "https://cido.diba.cat/oposicions/22484862"
+  },
+  {
+   "end": "2026-12-29",
+   "group": "C1",
+   "kind": "Laboral",
+   "km": 5.0,
+   "org": "Ajuntament d'Esparreguera",
+   "places": 3,
+   "pool": false,
+   "title": "3 places de Tècnic auxiliar d'educació",
+   "url": "https://cido.diba.cat/oposicions/20851426"
   },
   {
    "end": "2026-12-29",
@@ -1244,5 +1310,5 @@
    "url": "https://cido.diba.cat/oposicions/22220170"
   }
  ],
- "fetched": "2026-11-27T03:23:21+01:00"
+ "fetched": "2026-11-27T16:32:07+01:00"
 }
